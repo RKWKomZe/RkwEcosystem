@@ -1,0 +1,262 @@
+<T3DataStructure>
+	<sheets>
+		<filteroptions>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.general</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+                    <!--
+					<settings.entryText>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.entryText</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.entryText>
+					<settings.showRemark>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.showRemark</label>
+						<config>
+							<type>check</type>
+						</config>
+					</settings.showRemark>
+					<settings.remarkPlaceholder>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.remarkPlaceholder</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.remarkPlaceholder>
+					-->
+					<settings.backendUser>
+						<TCEforms>
+							<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.backendUser</label>
+							<config>
+								<size>5</size>
+								<maxitems>99</maxitems>
+								<minitems>1</minitems>
+								<type>select</type>
+								<foreign_table>be_users</foreign_table>
+								<foreign_table_where>
+									AND be_users.deleted = 0 AND be_users.disable = 0 ORDER BY be_users.username
+								</foreign_table_where>
+							</config>
+						</TCEforms>
+					</settings.backendUser>
+				</el>
+			</ROOT>
+		</filteroptions>
+        <!--
+        <ecosystemoptions>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.formFields</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+
+					<settings.educationEntryText>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.educationEntryText</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.educationEntryText>
+					<settings.educationPlaceholder>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.educationPlaceholder</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.educationPlaceholder>
+
+
+
+					<settings.politicsEntryText>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.politicsEntryText</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.politicsEntryText>
+					<settings.politicsPlaceholder>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.politicsPlaceholder</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.politicsPlaceholder>
+
+
+					<settings.endCustomerEntryText>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.endCustomerEntryText</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.endCustomerEntryText>
+					<settings.endCustomerPlaceholder>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.endCustomerPlaceholder</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.endCustomerPlaceholder>
+
+
+					<settings.potentialFounderEntryText>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.potentialFounderEntryText</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.potentialFounderEntryText>
+					<settings.potentialFounderPlaceholder>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.potentialFounderPlaceholder</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.potentialFounderPlaceholder>
+
+
+					<settings.inspirationEntryText>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.inspirationEntryText</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.inspirationEntryText>
+					<settings.inspirationPlaceholder>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.inspirationPlaceholder</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.inspirationPlaceholder>
+
+
+					<settings.startUpsEntryText>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.startUpsEntryText</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.startUpsEntryText>
+					<settings.startUpsPlaceholder>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.startUpsPlaceholder</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.startUpsPlaceholder>
+
+
+					<settings.trendEntryText>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.trendEntryText</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.trendEntryText>
+					<settings.trendPlaceholder>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.trendPlaceholder</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.trendPlaceholder>
+
+
+					<settings.demandForSolutionEntryText>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.demandForSolutionEntryText</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.demandForSolutionEntryText>
+							<settings.demandForSolutionPlaceholder>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.demandForSolutionPlaceholder</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.demandForSolutionPlaceholder>
+
+
+					<settings.companyEntryText>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.companyEntryText</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.companyEntryText>
+						<settings.companyPlaceholder>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.companyPlaceholder</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.companyPlaceholder>
+
+
+					<settings.assistanceEntryText>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.assistanceEntryText</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.assistanceEntryText>
+					<settings.assistancePlaceholder>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.assistancePlaceholder</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.assistancePlaceholder>
+
+
+					<settings.businessCustomerEntryText>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.businessCustomerEntryText</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.businessCustomerEntryText>
+						<settings.businessCustomerPlaceholder>
+						<label>LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:flexForm.ecosystem.businessCustomerPlaceholder</label>
+						<config>
+							<type>text</type>
+							<cols>24</cols>
+							<rows>3</rows>
+						</config>
+					</settings.businessCustomerPlaceholder>
+				</el>
+			</ROOT>
+		</ecosystemoptions> -->
+	</sheets>
+</T3DataStructure>

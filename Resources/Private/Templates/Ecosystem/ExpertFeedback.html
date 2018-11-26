@@ -1,0 +1,32 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for displaying a single view for a domain object
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			Show.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="main">
+
+        <h3><f:translate key="templates_ecosystem_feedback.headline" /></h3>
+        <p><f:translate key="templates_ecosystem_feedback.introduction" /></p>
+
+        <f:flashMessages renderMode="div"  />
+
+        <!-- form -->
+		<f:form noCache="true" class="form-fields" action="expertFeedbackSend" name="ecosystem" object="{ecosystem}" >
+			<div class="v320-1">
+                <f:form.textarea name="remark" placeholder="<f:translate key='templates_ecosystem_feedback.placeholder' />" />
+                <f:link.page class="button secondary" pageUid="{settings.ecosystemPid}"><f:translate key="templates_ecosystem_feedback.cancel" /></f:link.page>
+                <f:form.submit class="button" value="<f:translate key='templates_ecosystem_feedback.send' />" />
+            </div>
+		</f:form>
+
+	</f:section>
+</html>

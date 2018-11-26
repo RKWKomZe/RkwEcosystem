@@ -1,0 +1,131 @@
+{namespace rkwRegistration=RKW\RkwRegistration\ViewHelpers}
+
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for displaying a single view for a domain object
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			Show.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="main">
+
+        <f:flashMessages renderMode="div"  />
+
+        <!-- Message for viewport width -->
+        <div class="rkw-ecosystem-viewport-message typo3-messages" role="alert">
+            <p class="alert-danger">
+                <strong><f:translate key="partials_ecosystem_edit.viewportHint" extensionName="RkwEcosystem" /></strong>
+            </p>
+        </div>
+
+        <!-- content -->
+        <div class="rkw-ecosystem-container">
+
+
+            <!-- reopen ecosystem data -->
+            <f:form id="ecosystem-form-select" class="form-fields" action="edit" name="ecosystem">
+                <div class="v320-1">
+                    <p class="v320-1-of-2">
+                        <f:security.ifAuthenticated>
+                            <f:if condition="{frontendUserEcosystemList}">
+                                <f:form.select name="ecosystemId" additionalAttributes="{onChange: 'submit();'}" options="{frontendUserEcosystemList}" value="{ecosystem.uid}" optionValueField="uid" optionLabelField="title" prependOptionLabel="<f:translate key='partials_ecosystem_edit.new' extensionName='RkwEcosystem' />" prependOptionValue="-1" />
+                            </f:if>
+                        </f:security.ifAuthenticated>
+                        <a href="#" class="button start"><f:translate key="partials_ecosystem_edit.start" extensionName="RkwEcosystem" /></a>
+                    </p>
+                </div>
+            </f:form>
+
+
+            <!-- provide start button -->
+
+
+            <!-- svg -->
+            <f:render partial="Ecosystem/SvgImage" arguments="{_all}" />
+
+
+            <!-- hidden form -->
+            <div id="rkw-ecosystem-form-container">
+                <f:form noCache="true" id="rkw-ecosystem-form" class="ajax" action="update" name="ecosystem" pluginName="Ecosystem" extensionName="RkwEcosystem" object="{ecosystem}" pageType="1513597215" additionalAttributes="{data-page-type: '1513597215'}">
+
+                    <f:for each="{
+                        0: 'education',
+                        1: 'politics',
+                        2: 'endCustomer',
+                        3: 'potentialFounder',
+                        4: 'inspiration',
+                        5: 'startUps',
+                        6: 'trend',
+                        7: 'demandForSolution',
+                        8: 'company',
+                        9: 'assistance',
+                        10: 'businessCustomer'
+                    }" as="item"  iteration="iterator" >
+                        <f:render partial="Ecosystem/FormFields" arguments="{ecosystem: ecosystem, element: item, iterator: iterator}"/>
+                    </f:for>
+
+                    <!-- Override typeNum for AJAX -->
+                    <input type="hidden" name="type" value="1513597215">
+
+                </f:form>
+            </div>
+
+
+            <!-- further options -->
+            <div class="form-fields">
+                <fieldset>
+                    <legend><f:translate key="partials_ecosystem_edit.actions" /></legend>
+                    <div>
+                        <f:security.ifAuthenticated>
+                            <f:then>
+                                <f:link.action action="save" class="button"><f:translate key="partials_ecosystem_edit.persist" /></f:link.action>
+                            </f:then>
+                            <f:else>
+                                <a class="button" href="<rkwRegistration:xdlLink referrer='<f:uri.action noCache=\'true\' noCacheHash=\'true\' action=\'save\' absolute=\'true\' />' loginPid='{settings.loginPid}' xdlPid='{settings.xdlPid}' />"><f:translate key="partials_ecosystem_edit.persist" /></a>
+                            </f:else>
+                        </f:security.ifAuthenticated>
+                        <f:link.action action="print" class="button" target="_blank" noCache="true"><f:translate key="partials_ecosystem_edit.print" /></f:link.action>
+                        <f:security.ifAuthenticated>
+                            <f:then>
+                                <f:link.action action="expertFeedback" class="button" ><f:translate key="partials_ecosystem_edit.expertFeedback" /></f:link.action>
+                            </f:then>
+                            <f:else>
+                                <a class="button" href="<rkwRegistration:xdlLink referrer='<f:uri.action noCache=\'true\' noCacheHash=\'true\' action=\'expertFeedback\' absolute=\'true\' />' loginPid='{settings.loginPid}' xdlPid='{settings.xdlPid}' />"><f:translate key="partials_ecosystem_edit.expertFeedback" /></a>
+                            </f:else>
+                        </f:security.ifAuthenticated>
+                    </div>
+                    <div>
+                        <f:link.action action="show" class="button secondary" target="_blank" pageType="{settings.pageTypePrint}" noCache="true" arguments="{ttContentUid: ttContentUid}"><f:translate key="partials_ecosystem_edit.show" /></f:link.action>
+                        <f:link.action action="reset" class="button secondary"><f:translate key="partials_ecosystem_edit.reset" /></f:link.action>
+                        <f:security.ifAuthenticated>
+                            <f:if condition="{ecosystem.uid} > 0">
+                                <f:link.action action="delete" class="button secondary" arguments="{ecosystem: ecosystem, redirectToMyList: 0}"><f:translate key="partials_ecosystem_edit.delete" /></f:link.action>
+                            </f:if>
+                        </f:security.ifAuthenticated>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+        <!-- JS - INIT -->
+        <script type="text/javascript">
+            var rkwEcosystemIntroOptions = {
+                 prevLabel: "<f:translate key='partials_ecosystem_edit.prev' />",
+                 nextLabel: "<f:translate key='partials_ecosystem_edit.next' />",
+                 skipLabel: "<f:translate key='partials_ecosystem_edit.skip' />",
+                 doneLabel: "<f:translate key='partials_ecosystem_edit.done' />",
+                 scrollTo: 'tooltip',
+                 tooltipPosition: 'auto',
+                 positionPrecedence: ["bottom", "right", "left", "top"],
+                 keyboardNavigation : false
+             }
+        </script>
+	</f:section>
+</html>

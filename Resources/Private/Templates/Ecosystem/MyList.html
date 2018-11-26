@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="main">
+
+		<f:flashMessages />
+
+		<f:if condition="{ecosystemList}">
+			<f:then>
+				<table class="tx-ecosystem-mylist" >
+					<f:for each="{ecosystemList}" as="ecosystem">
+						<tr>
+							<td>
+								<strong>{ecosystem.title}</strong>
+								<br>
+								<f:link.action action="delete" class="button" arguments="{ecosystem: ecosystem}"><f:translate key="partials_ecosystem_options.delete" /></f:link.action>
+								<f:link.action action="edit" pluginName="ecosystem" pageUid="{settings.ecosystemPid}" class="button" target="_blank" arguments="{ecosystem: ecosystem}"><f:translate key="partials_ecosystem_options.edit" /></f:link.action>
+								<f:link.action action="print" pluginName="ecosystem" pageUid="{settings.ecosystemPid}" class="button" target="_blank" pageType="1513760164" arguments="{ttContentUid: ttContentUid}"><f:translate key="partials_ecosystem_edit.print" /></f:link.action>
+								<f:link.action action="expertFeedback" pluginName="ecosystem" pageUid="{settings.ecosystemPid}" class="button" arguments="{ecosystem: ecosystem, referPageUid: settings.myListPid}"><f:translate key="partials_ecosystem_edit.expertFeedback" /></f:link.action>
+							</td>
+						</tr>
+					</f:for>
+				</table>
+			</f:then>
+			<f:else>
+				<p class="text-message">
+					Kein Gründerökosystem vorhanden.
+				</p>
+			</f:else>
+		</f:if>
+
+	</f:section>
+</html>

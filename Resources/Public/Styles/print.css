@@ -1,0 +1,98 @@
+@page {
+    size: landscape
+}
+
+html {
+    height: auto;
+    min-height: 100%;
+}
+body {
+    height: 100%;
+    min-height: 100%;
+    color: #333;
+    font-family: "Times New Roman", "Times", serif;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 32px;
+    margin: 1cm;
+}
+
+table.content,
+table.page-header {
+    width: 100%;
+    border-spacing: 16px;
+    border-collapse: separate;
+    margin-top:-16px;
+}
+
+/* Header */
+table.page-header {
+    margin-bottom:16px;
+    margin-top:16px;
+}
+table.page-header td {
+    border: none;
+    padding:0;
+    color: #006349;
+    font-size:42px;
+    line-height:42px;
+}
+
+table.page-header td.header-logo {
+    width:300px;
+    border: none;
+}
+
+/* Content */
+table.content td {
+    border: 1px solid darkgreen;
+    vertical-align: top;
+    padding:16px;
+}
+
+/* For pdf view we have to define td width! */
+table.content--three td {
+    width: 33%;
+}
+table.content--five td {
+    width: 19.8%;
+}
+
+table.content p {
+    margin:0;
+    padding:0;
+    margin-bottom:8px;
+    line-height:20px;
+}
+table.content p.description {
+    font-style:italic;
+}
+
+table.content p.headline {
+    font-weight:bold;
+    color: #006349;
+}
+
+table.content p.rating {
+    margin-top:24px;
+    font-weight:bold;
+}
+
+table.content p.text--empty,
+table.content p.rating--empty {
+    font-style:italic;;
+}
+
+/* Footer */
+.page-footer {
+    font-family: Arial, Verdana, Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color:#fff;
+    font-weight: normal;
+    line-height: 16px;
+
+    padding: 8px 16px;
+    margin: 0 16px;
+    margin-top:16px;
+    background-color:#74b929;
+}

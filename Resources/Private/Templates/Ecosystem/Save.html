@@ -1,0 +1,50 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+	<f:layout name="Default" />
+
+	This Template is responsible for displaying a single view for a domain object
+
+	If you modify this template, do not forget to change the overwrite settings
+	in /Configuration/ExtensionBuilder/settings.yaml:
+	  Resources:
+		Private:
+		  Templates:
+			Show.html: keep
+
+	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+	<f:section name="main">
+
+        <h3><f:translate key="templates_ecosystem_save.headline" /></h3>
+
+        <f:flashMessages renderMode="div"  />
+
+        <!-- form -->
+		<f:form noCache="true" class="form-fields" action="persist" name="ecosystem" object="{ecosystem}" >
+			<div class="v320-1">
+                <f:form.textfield property="title" value="{ecosystem.title}" placeholder="<f:translate key='templates_ecosystem_save.placeholder' />" />
+                <f:link.page class="button secondary" pageUid="{settings.ecosystemPid}"><f:translate key="templates_ecosystem_save.cancel" /></f:link.page>
+                <f:form.submit class="button" value="<f:translate key='templates_ecosystem_save.persist' />" />
+            </div>
+
+            <!-- hidden values -->
+            <div id="rkw-ecosystem-form-container">
+                <f:for each="{
+                    0: 'education',
+                    1: 'politics',
+                    2: 'endCustomer',
+                    3: 'potentialFounder',
+                    4: 'inspiration',
+                    5: 'startUps',
+                    6: 'trend',
+                    7: 'demandForSolution',
+                    8: 'company',
+                    9: 'assistance',
+                    10: 'businessCustomer'
+                }" as="item"  iteration="iterator" >
+                    <f:render partial="Ecosystem/FormFields" arguments="{ecosystem: ecosystem, element: item, iterator: iterator}"/>
+                </f:for>
+            </div>
+		</f:form>
+
+	</f:section>
+</html>

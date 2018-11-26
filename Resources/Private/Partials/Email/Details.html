@@ -1,0 +1,40 @@
+{namespace vh=RKW\RkwMailer\ViewHelpers}
+<f:layout name="Email/{mailType}" />
+
+
+<!-- PLAINTEXT -->
+<f:section name="Plaintext">
+=============================================================
+<vh:frontend.translate key="partials_email_details.user" languageKey="{language}" extensionName="rkwEcosystem" />
+=============================================================
+<f:if condition="{frontendUser.company}">{frontendUser.company}
+</f:if>{frontendUser.firstName} {frontendUser.lastName} ({frontendUser.username})<f:if condition="{frontendUser.address}">
+{frontendUser.address}
+{frontendUser.zip} {frontendUser.city}
+</f:if><f:if condition="{remark}">
+
+=============================================================
+<vh:frontend.translate key="partials_email_details.remark" languageKey="{language}" extensionName="rkwEcosystem" />
+=============================================================
+{remark}
+</f:if></f:section>
+<!-- HTML -->
+<f:section name="Html">
+
+    <h2><vh:frontend.translate key="partials_email_details.user" languageKey="{language}" extensionName="rkwEcosystem" /></h2>
+    <p>
+        <f:if condition="{frontendUser.company}">{frontendUser.company}<br/></f:if>
+        {frontendUser.firstName} {frontendUser.lastName} ({frontendUser.username})<br/>
+        <f:if condition="{frontendUser.address}">
+            {frontendUser.address}<br/>
+            {frontendUser.zip} {frontendUser.city}
+        </f:if>
+    </p>
+
+    <f:if condition="{remark}">
+        <h2><vh:frontend.translate key="partials_email_details.remark" languageKey="{language}" extensionName="rkwEcosystem" /></h2>
+        <p>
+            {remark}
+        </p>
+    </f:if>
+</f:section>

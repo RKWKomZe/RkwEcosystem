@@ -1,0 +1,52 @@
+{namespace rkw=RKW\RkwEcosystem\ViewHelpers}
+
+<!-- header -->
+<p class="headline">
+	<f:translate key="partials_ecosystem_introJsContent.header.{element}" extensionName="RkwEcosystem" />
+</p>
+
+<!-- explaining text -->
+<f:comment>
+    <f:if condition="<rkw:fetchFlexFormValue part1='{element}' part2='EntryText' part3='' settings='{settingsArray}' />">
+        <f:then>
+            <p class="description"><rkw:fetchFlexFormValue part1='{element}' part2='EntryText' part3='' settings='{settingsArray}' /></p>
+        </f:then>
+        <f:else>
+            <p class="description"><f:translate key="partials_ecosystem_introJsContent.text.{element}" extensionName="RkwEcosystem" /></p>
+        </f:else>
+    </f:if>
+</f:comment>
+
+<!-- field text -->
+<f:if condition="{text}">
+    <f:then>
+        <p class="text"><f:format.raw>{text}</f:format.raw></p>
+    </f:then>
+    <f:else>
+        <p class="text text--empty"><f:translate key="partials_ecosystem_print.no-content" extensionName="RkwEcosystem" /></p>
+    </f:else>
+</f:if>
+
+<!-- field value -->
+<f:if condition="{value}">
+    <f:then>
+        <p class="rating">
+            <f:translate key="partials_ecosystem_print.rating" extensionName="RkwEcosystem" />
+
+            <f:if condition="{value} == 1">
+                <span style="color:red;"><f:translate key="partials_ecosystem_introJsContent.radio.low" extensionName="RkwEcosystem" /></span>
+            </f:if>
+            <f:if condition="{value} == 2">
+                <span style="color:orange;"><f:translate key="partials_ecosystem_introJsContent.radio.middle" extensionName="RkwEcosystem" /></span>
+            </f:if>
+            <f:if condition="{value} == 3">
+                <span style="color:green;"><f:translate key="partials_ecosystem_introJsContent.radio.high" extensionName="RkwEcosystem" /></span>
+            </f:if>
+        </p>
+        </f:then>
+    <f:else>
+        <p class="rating rating--empty">
+            <f:translate key="partials_ecosystem_print.no-rating" extensionName="RkwEcosystem" />
+        </p>
+    </f:else>
+</f:if>
