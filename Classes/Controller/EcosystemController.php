@@ -393,7 +393,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             }
         } catch (Html2PdfException $e) {
 
-            $this->logger->log(\TYPO3\CMS\Core\Log\LogLevel::ERROR, sprintf('An error occurred while trying to generate a PDF. Message: %s', str_replace(array("\n", "\r"), '', $e->getMessage())));
+            $this->getLogger()->log(\TYPO3\CMS\Core\Log\LogLevel::ERROR, sprintf('An error occurred while trying to generate a PDF. Message: %s', str_replace(array("\n", "\r"), '', $e->getMessage())));
             $this->addFlashMessage(
                 \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('ecosystemController.message.error.somethingWentWrong', 'rkw_ecosystem'),
                 '',
@@ -521,7 +521,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             }
         } catch (\Exception $e) {
 
-            $this->logger->log(\TYPO3\CMS\Core\Log\LogLevel::ERROR, sprintf('An error occurred while trying to generate a PDF. Message: %s', str_replace(array("\n", "\r"), '', $e->getMessage())));
+            $this->getLogger()->log(\TYPO3\CMS\Core\Log\LogLevel::ERROR, sprintf('An error occurred while trying to generate a PDF. Message: %s', str_replace(array("\n", "\r"), '', $e->getMessage())));
             $this->addFlashMessage(
                 \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('ecosystemController.message.error.somethingWentWrong', 'rkw_ecosystem'),
                 '',
@@ -658,5 +658,20 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $GLOBALS['TSFE']->fe_user->setKey('ses', 'rkw_ecosystem', serialize($ecosystem));
         $GLOBALS['TSFE']->storeSessionData();
     }
+
+    /**
+     * Returns logger instance
+     *
+     * @return \TYPO3\CMS\Core\Log\Logger
+     */
+    protected function getLogger()
+    {
+        if (! $this->logger) {
+            $this->logger = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Log\\LogManager')->getLogger(__CLASS__);
+        }
+        
+        return $this->logger;
+        //===
+    }    
 
 }
