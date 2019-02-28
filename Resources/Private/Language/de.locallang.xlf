@@ -217,7 +217,7 @@
 			<!-- Templates/Ecosystem/Print.html -->
 			<trans-unit id="partials_ecosystem_print.rating">
 				<source>Rating:</source>
-				<target>Bewertung:</target>
+				<target>Bedeutung:</target>
 			</trans-unit>
 			<trans-unit id="partials_ecosystem_print.no-content">
 				<source>No Content</source>

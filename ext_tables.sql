@@ -7,6 +7,7 @@ CREATE TABLE tx_rkwecosystem_domain_model_ecosystem (
 	pid int(11) DEFAULT '0' NOT NULL,
 
     title varchar(255) DEFAULT '' NOT NULL,
+    title_alt varchar(255) DEFAULT '' NOT NULL,
 	education text NOT NULL,
 	politics text NOT NULL,
 	end_customer text NOT NULL,

@@ -30,6 +30,7 @@ table.page-header {
     margin-bottom:16px;
     margin-top:16px;
 }
+
 table.page-header td {
     border: none;
     padding:0;
@@ -48,6 +49,8 @@ table.content td {
     border: 1px solid darkgreen;
     vertical-align: top;
     padding:16px;
+    /* maximum height before overlapping on second page */
+    height: 235px;
 }
 
 /* For pdf view we have to define td width! */

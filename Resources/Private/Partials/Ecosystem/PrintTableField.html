@@ -20,7 +20,7 @@
 <!-- field text -->
 <f:if condition="{text}">
     <f:then>
-        <p class="text"><f:format.raw>{text}</f:format.raw></p>
+        <p class="text"><f:format.crop maxCharacters="250"><f:format.raw>{text}</f:format.raw></f:format.crop></p>
     </f:then>
     <f:else>
         <p class="text text--empty"><f:translate key="partials_ecosystem_print.no-content" extensionName="RkwEcosystem" /></p>

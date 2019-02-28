@@ -42,19 +42,30 @@
                     </p>
                 </div>
             </f:form>
-
+            <f:form id="ecosystem-form-title-alt-fake" class="form-fields" additionalAttributes="{onSubmit: 'return false;'}">
+                <div class="v320-1">
+                    <p class="v320-1-of-2" style="float: none; margin: auto;">
+                        <f:form.textfield additionalAttributes="{onkeyup: 'document.getElementById(\'true-title-alt\').value  = this.value;'}" placeholder="<f:translate key='templates_ecosystem_save.placeholder' />" />
+                    </p>
+                </div>
+            </f:form>
 
             <!-- provide start button -->
 
+            <f:comment>
+                <!-- svg -->
+                <!-- Hinweis: Fällt weg, weil bei einer Weiterentwickung irrtümlicherweise eine nicht svg-fähige Grafik geliefert wurde -->
+                <f:render partial="Ecosystem/SvgImage" arguments="{_all}" />
+            </f:comment>
 
-            <!-- svg -->
-            <f:render partial="Ecosystem/SvgImage" arguments="{_all}" />
+            <!-- image -->
+            <f:render partial="Ecosystem/StandardImage" arguments="{_all}" />
 
 
             <!-- hidden form -->
             <div id="rkw-ecosystem-form-container">
                 <f:form noCache="true" id="rkw-ecosystem-form" class="ajax" action="update" name="ecosystem" pluginName="Ecosystem" extensionName="RkwEcosystem" object="{ecosystem}" pageType="1513597215" additionalAttributes="{data-page-type: '1513597215'}">
-
+                    <f:form.hidden id="true-title-alt" property="titleAlt" />
                     <f:for each="{
                         0: 'education',
                         1: 'politics',

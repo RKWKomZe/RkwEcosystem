@@ -8,6 +8,7 @@ use Spipu\Html2Pdf\Html2Pdf;
 use Spipu\Html2Pdf\Exception\Html2PdfException;
 use Spipu\Html2Pdf\Exception\ExceptionFormatter;
 use \RKW\RkwBasics\Helper\Common;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -104,7 +105,6 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function editAction($ecosystemId = -1)
     {
-
         // load from database
         if (
             ($ecosystemId > 0)
@@ -163,7 +163,6 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function updateAction(\RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem)
     {
-
         $this->setEcosystemToSession($ecosystem);
 
         // get JSON helper
@@ -186,7 +185,6 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function resetAction()
     {
-
         /** @var  \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem */
         $ecosystem = $this->getEcosystemFromSession();
 
@@ -217,7 +215,6 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function saveAction($recalled = false)
     {
-
         $this->addFlashMessage(
             \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('ecosystemController.message.enterName', 'rkw_ecosystem'),
             '',
@@ -228,6 +225,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         // just give the form
         /** @var  \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem */
         $ecosystem = $this->getEcosystemFromSession();
+
         $this->view->assign('ecosystem', $ecosystem);
 
     }
@@ -366,7 +364,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             //===
         }
 
-        try {
+    //    try {
             if ($settingsFramework = Common::getTyposcriptConfiguration($this->extensionName, ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK)) {
 
                 /** @var \TYPO3\CMS\Fluid\View\StandaloneView $standaloneView */
@@ -386,11 +384,16 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
                 $html2pdf = new Html2Pdf('L', 'A3', 'de', true, 'UTF-8', 0);
                 $html2pdf->parsingCss;
                 $html2pdf->writeHTML($content);
-                $html2pdf->output(time() . '-ecosystem.pdf', 'D');
 
+                $filename = time() . '-ecosystem.pdf';
+                // Show for Ending "D", "F" or "S": https://github.com/spipu/html2pdf/blob/master/doc/output.md
+                // -> "D" - Forcing the download of PDF via web browser, with a specific name
+                $html2pdf->output(time() . '-ecosystem.pdf', 'D');
+                readfile("$filename");
                 exit;
                 //===
             }
+            /*
         } catch (Html2PdfException $e) {
 
             $this->getLogger()->log(\TYPO3\CMS\Core\Log\LogLevel::ERROR, sprintf('An error occurred while trying to generate a PDF. Message: %s', str_replace(array("\n", "\r"), '', $e->getMessage())));
@@ -402,6 +405,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             $this->redirect('edit', null, null, array('ecosystemId' => $ecosystem->getUid()));
             //===
         }
+            */
     }
 
     /**

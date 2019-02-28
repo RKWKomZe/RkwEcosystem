@@ -177,6 +177,14 @@ jQuery(document).ready(function () {
             rkwEcosystemIntro._currentStep = jQuery(this).attr('data-step') - 2;
             rkwEcosystemIntro.start();
         });
+
+        // save titleAlt (is needed for saving title immediately in session
+        jQuery('#ecosystem-form-title-alt-fake').on('change', function () {
+            jQuery('#rkw-ecosystem-form').submit();
+        });
+
+        // initial: Set "true" titleAlt to fake field
+        jQuery('#ecosystem-form-title-alt-fake input').val(document.getElementById("true-title-alt").value);
     }
 });
 
