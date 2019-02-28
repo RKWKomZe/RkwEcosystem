@@ -1,71 +1,70 @@
 <!-- For PDF! Relative Path with "{f:uri.resource(path:'Styles/print.css')}" does not work here! -->
 <link rel="stylesheet" href="typo3conf/ext/rkw_ecosystem/Resources/Public/Styles/print.css" type="text/css" />
 
+<!-- header -->
+<table class="page-header" cellspacing="16">
+    <tr>
+        <td class="header-logo">
+            <f:image src="EXT:rkw_template/Resources/Public/Kompetenzzentrum/images/logos/logo.png" />
+        </td>
+        <td class="header-text">
+            {ecosystem.titleAlt}
+        </td>
+    </tr>
+</table>
 
-    <!-- header -->
-	<table class="page-header" cellspacing="16">
-        <tr>
-            <td class="header-logo">
-                <f:image src="EXT:rkw_template/Resources/Public/Kompetenzzentrum/images/logos/logo.png" />
-            </td>
-            <td class="header-text">
-                {ecosystem.titleAlt}
-            </td>
-        </tr>
-	</table>
+<!-- first row -->
+<table class="content content--three" cellspacing="16">
+    <tr>
+        <!-- education -->
+        <td>
+            <f:render partial="Ecosystem/PrintTableField" arguments="{element: 'education', text: ecosystem.education, value: ecosystem.educationValue, settingsArray: settingsArray}" />
+        </td>
+        <!-- politics -->
+        <td>
+            <f:render partial="Ecosystem/PrintTableField" arguments="{element: 'politics', text: ecosystem.politics, value: ecosystem.politicsValue, settingsArray: settingsArray}" />
+        </td>
+        <!-- endCustomer -->
+        <td>
+            <f:render partial="Ecosystem/PrintTableField" arguments="{element: 'endCustomer', text: ecosystem.endCustomer, value: ecosystem.endCustomerValue, settingsArray: settingsArray}" />
+        </td>
+    </tr>
+</table>
+<!-- second row -->
+<table class="content content--five" cellspacing="16">
+    <tr>
+        <td>
+            <f:render partial="Ecosystem/PrintTableField" arguments="{element: 'potentialFounder', text: ecosystem.potentialFounder, value: ecosystem.potentialFounderValue, settingsArray: settingsArray, smallBox: 1}" />
+        </td>
+        <td>
+            <f:render partial="Ecosystem/PrintTableField" arguments="{element: 'inspiration', text: ecosystem.inspiration, value: ecosystem.inspirationValue, settingsArray: settingsArray, smallBox: 1}" />
+        </td>
+        <td>
+            <f:render partial="Ecosystem/PrintTableField" arguments="{element: 'startUps', text: ecosystem.startUps, value: ecosystem.startUpsValue, settingsArray: settingsArray, smallBox: 1}" />
+        </td>
+        <td>
+            <f:render partial="Ecosystem/PrintTableField" arguments="{element: 'trend', text: ecosystem.trend, value: ecosystem.trendValue, settingsArray: settingsArray, smallBox: 1}" />
+        </td>
+        <td>
+            <f:render partial="Ecosystem/PrintTableField" arguments="{element: 'demandForSolution', text: ecosystem.demandForSolution, value: ecosystem.demandForSolutionValue, settingsArray: settingsArray, smallBox: 1}" />
+        </td>
+    </tr>
+</table>
+<!-- third row -->
+<table class="content content--three" cellspacing="16">
+    <tr>
+        <td>
+            <f:render partial="Ecosystem/PrintTableField" arguments="{element: 'company', text: ecosystem.company, value: ecosystem.companyValue, settingsArray: settingsArray}" />
+        </td>
+        <td>
+            <f:render partial="Ecosystem/PrintTableField" arguments="{element: 'assistance', text: ecosystem.assistance, value: ecosystem.assistanceValue, settingsArray: settingsArray}" />
+        </td>
+        <td>
+            <f:render partial="Ecosystem/PrintTableField" arguments="{element: 'businessCustomer', text: ecosystem.businessCustomer, value: ecosystem.businessCustomerValue, settingsArray: settingsArray}" />
+        </td>
+    </tr>
+</table>
 
-	<!-- first row -->
-	<table class="content content--three" cellspacing="16">
-		<tr>
-			<!-- education -->
-			<td>
-				<f:render partial="Ecosystem/PrintTableField" arguments="{element: 'education', text: ecosystem.education, value: ecosystem.educationValue, settingsArray: settingsArray}" />
-			</td>
-			<!-- politics -->
-			<td>
-				<f:render partial="Ecosystem/PrintTableField" arguments="{element: 'politics', text: ecosystem.politics, value: ecosystem.politicsValue, settingsArray: settingsArray}" />
-			</td>
-			<!-- endCustomer -->
-			<td>
-				<f:render partial="Ecosystem/PrintTableField" arguments="{element: 'endCustomer', text: ecosystem.endCustomer, value: ecosystem.endCustomerValue, settingsArray: settingsArray}" />
-			</td>
-		</tr>
-	</table>
-	<!-- second row -->
-	<table class="content content--five" cellspacing="16">
-		<tr>
-			<td>
-				<f:render partial="Ecosystem/PrintTableField" arguments="{element: 'potentialFounder', text: ecosystem.potentialFounder, value: ecosystem.potentialFounderValue, settingsArray: settingsArray}" />
-			</td>
-			<td>
-				<f:render partial="Ecosystem/PrintTableField" arguments="{element: 'inspiration', text: ecosystem.inspiration, value: ecosystem.inspirationValue, settingsArray: settingsArray}" />
-			</td>
-			<td>
-				<f:render partial="Ecosystem/PrintTableField" arguments="{element: 'startUps', text: ecosystem.startUps, value: ecosystem.startUpsValue, settingsArray: settingsArray}" />
-			</td>
-			<td>
-				<f:render partial="Ecosystem/PrintTableField" arguments="{element: 'trend', text: ecosystem.trend, value: ecosystem.trendValue, settingsArray: settingsArray}" />
-			</td>
-			<td>
-				<f:render partial="Ecosystem/PrintTableField" arguments="{element: 'demandForSolution', text: ecosystem.demandForSolution, value: ecosystem.demandForSolutionValue, settingsArray: settingsArray}" />
-			</td>
-		</tr>
-	</table>
-	<!-- third row -->
-	<table class="content content--three" cellspacing="16">
-		<tr>
-			<td>
-				<f:render partial="Ecosystem/PrintTableField" arguments="{element: 'company', text: ecosystem.company, value: ecosystem.companyValue, settingsArray: settingsArray}" />
-			</td>
-			<td>
-				<f:render partial="Ecosystem/PrintTableField" arguments="{element: 'assistance', text: ecosystem.assistance, value: ecosystem.assistanceValue, settingsArray: settingsArray}" />
-			</td>
-			<td>
-				<f:render partial="Ecosystem/PrintTableField" arguments="{element: 'businessCustomer', text: ecosystem.businessCustomer, value: ecosystem.businessCustomerValue, settingsArray: settingsArray}" />
-			</td>
-		</tr>
-	</table>
-
-	<div class="page-footer">
-		www.gründerökosystem.de
-	</div>
+<div class="page-footer">
+    www.gründerökosystem.de
+</div>

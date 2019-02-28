@@ -1,9 +1,15 @@
 {namespace rkw=RKW\RkwEcosystem\ViewHelpers}
 
 <!-- header -->
-<p class="headline">
-	<f:translate key="partials_ecosystem_introJsContent.header.{element}" extensionName="RkwEcosystem" />
-</p>
+<div class="header">
+    <p class="headline">
+        <f:translate key="partials_ecosystem_introJsContent.header.{element}" extensionName="RkwEcosystem" />
+    </p>
+    <div class="header-image">
+        <f:image src="EXT:rkw_ecosystem/Resources/Public/Images/Print/{element}.png" />
+    </div>
+
+</div>
 
 <!-- explaining text -->
 <f:comment>
@@ -20,7 +26,16 @@
 <!-- field text -->
 <f:if condition="{text}">
     <f:then>
-        <p class="text"><f:format.crop maxCharacters="250"><f:format.raw>{text}</f:format.raw></f:format.crop></p>
+        <p class="text">
+            <f:if condition="{smallBox}">
+                <f:then>
+                    <f:format.crop maxCharacters="130"><f:format.raw>{text}</f:format.raw></f:format.crop>
+                </f:then>
+                <f:else>
+                    <f:format.crop maxCharacters="330"><f:format.raw>{text}</f:format.raw></f:format.crop>
+                </f:else>
+            </f:if>
+        </p>
     </f:then>
     <f:else>
         <p class="text text--empty"><f:translate key="partials_ecosystem_print.no-content" extensionName="RkwEcosystem" /></p>

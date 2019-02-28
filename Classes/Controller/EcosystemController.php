@@ -385,12 +385,11 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
                 $html2pdf->parsingCss;
                 $html2pdf->writeHTML($content);
 
-                $filename = time() . '-ecosystem.pdf';
                 // Show for Ending "D", "F" or "S": https://github.com/spipu/html2pdf/blob/master/doc/output.md
                 // -> "D" - Forcing the download of PDF via web browser, with a specific name
                 $html2pdf->output(time() . '-ecosystem.pdf', 'D');
-                readfile("$filename");
-                exit;
+                // do not use "exit" here. Is making trouble (provides a unnamed "binary"-file instead a names pdf)
+            //    exit;
                 //===
             }
             /*
