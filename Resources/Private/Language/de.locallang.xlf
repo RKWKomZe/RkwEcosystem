@@ -116,6 +116,10 @@
                 <source>Please enter your question or concern</source>
                 <target>Bitte geben Sie Ihre Frage oder Ihr Anliegen an.</target>
             </trans-unit>
+            <trans-unit id="ecosystemController.message.choose">
+                <source>Please choose an existing ecosystem</source>
+                <target>Bitte wählen Sie ein vorhandenes Ökosystem aus, um es zu öffnen.</target>
+            </trans-unit>
 
 
 
@@ -242,6 +246,10 @@
 				<source>e.g. My Canvas of New York</source>
 				<target>z.B. Mein Canvas der Stadt Eschborn</target>
 			</trans-unit>
+			<trans-unit id="templates_ecosystem_save.placeholderTitle">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
 			<trans-unit id="templates_ecosystem_save.cancel">
                 <source>Cancel</source>
                 <target>Abbrechen</target>
@@ -258,8 +266,8 @@
                 <target>Experten-Feedback</target>
             </trans-unit>
 			<trans-unit id="templates_ecosystem_feedback.introduction">
-				<source>We would be happy to give you feedback on your RKW Entrepreneurship Ecosystem Canvas.</source>
-				<target>Gerne geben wir Ihnen ein Feedback zur Ihrem RKW Gründerökosystem Canvas.</target>
+				<source>We would be happy to give you feedback on your RKW Entrepreneurship Ecosystem Canvas</source>
+				<target>Gerne geben wir Ihnen ein Feedback zur Ihrem RKW Gründerökosystem Canvas</target>
 			</trans-unit>
 			<trans-unit id="templates_ecosystem_feedback.placeholder">
 				<source>Enter your comment</source>
@@ -294,6 +302,13 @@
 			<trans-unit id="partials_email_details.remark">
 				<source>Remark</source>
 				<target>Bemerkung</target>
+			</trans-unit>
+
+
+            <!-- Partials/Ecosystem/Open.html -->
+			<trans-unit id="partials_ecosystem_open.choose">
+				<source>Please choose</source>
+				<target>--- Bitte wählen ---</target>
 			</trans-unit>
 
 

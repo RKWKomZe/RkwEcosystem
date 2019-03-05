@@ -215,19 +215,25 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function saveAction($recalled = false)
     {
+        /** @var  \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem */
+        $ecosystem = $this->getEcosystemFromSession();
+
+        // go forward, if title is already set (and user is already logged in)
+        if ($this->getFrontendUser()) {
+            if ($ecosystem->getTitle()) {
+                $this->redirect('persist');
+                //===
+            }
+        }
+
+        // else: just give the form
         $this->addFlashMessage(
             \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('ecosystemController.message.enterName', 'rkw_ecosystem'),
             '',
             ($recalled ? \TYPO3\CMS\Core\Messaging\AbstractMessage::ERROR : \TYPO3\CMS\Core\Messaging\AbstractMessage::OK)
         );
 
-
-        // just give the form
-        /** @var  \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem */
-        $ecosystem = $this->getEcosystemFromSession();
-
         $this->view->assign('ecosystem', $ecosystem);
-
     }
 
 
@@ -252,6 +258,13 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             );
             $this->redirect('edit', null, null, array('ecosystemId' => $ecosystem->getUid()));
             //===
+        }
+
+        // Because users in "saveAction" simple forwarded, if title is set (but the data not persisted yet)
+        // -> we have to get it from session now
+        if (! $ecosystem) {
+            /** @var  \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem */
+            $ecosystem = $this->getEcosystemFromSession();
         }
 
         if ($ecosystem) {
@@ -279,6 +292,24 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
         } else {
 
+            // now we got a isNew() issue, if we already have saved once, but loaded it via session above
+            // -> get the real one and set the data from the session ecosystem!
+            /** @var  \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystemFromDb */
+            $ecosystemFromDb = $this->ecosystemRepository->findByIdentifier($ecosystem->getUid());
+            $ecosystemFromDb->setTitle($ecosystem->getTitle());
+            // other properties
+            $ecosystemPropertyList = array('education', 'politics', 'endCustomer', 'potentialFounder', 'inspiration', 'startUps', 'trend', 'demandForSolution', 'company', 'assistance', 'businessCustomer');
+            foreach ($ecosystemPropertyList as $ecosystemProperty) {
+                $setter = 'set' . ucfirst($ecosystemProperty);
+                $setterValue = 'set' . ucfirst($ecosystemProperty) . 'Value';
+                $getter = 'get' . ucfirst($ecosystemProperty);
+                $getterValue = 'get' . ucfirst($ecosystemProperty) . 'Value';
+                $ecosystemFromDb->$setter($ecosystem->$getter());
+                $ecosystemFromDb->$setterValue($ecosystem->$getterValue());
+            }
+
+            $ecosystem = $ecosystemFromDb;
+
             // check FE-User-ID!
             if (
                 ($this->getFrontendUser()->getUid())
@@ -305,6 +336,44 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $this->redirect('edit', null, null, array('ecosystemId' => $ecosystem->getUid()));
         //===
     }
+
+
+
+    /**
+     * action open
+     *
+     * @param \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem
+     * @return void
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\IllegalObjectTypeException
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\UnknownObjectException
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\StopActionException
+     */
+    public function openAction(\RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem = null)
+    {
+        if (!$this->getFrontendUser()) {
+
+            $this->addFlashMessage(
+                \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('ecosystemController.message.error.loggedIn', 'rkw_ecosystem'),
+                '',
+                \TYPO3\CMS\Core\Messaging\AbstractMessage::ERROR
+            );
+            $this->redirect('edit', null, null, array('ecosystemId' => $ecosystem->getUid()));
+            //===
+        }
+
+        if ($ecosystem) {
+            $this->redirect('edit', null, null, array('ecosystemId' => $ecosystem->getUid()));
+            //===
+        }
+
+        $this->addFlashMessage(
+            \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('ecosystemController.message.choose', 'rkw_ecosystem')
+        );
+
+        $this->view->assign('frontendUserEcosystemList', $this->ecosystemRepository->findByFrontendUser($this->getFrontendUser()));
+    }
+
 
 
     /**

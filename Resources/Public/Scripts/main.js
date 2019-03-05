@@ -179,12 +179,29 @@ jQuery(document).ready(function () {
         });
 
         // save titleAlt (is needed for saving title immediately in session
-        jQuery('#ecosystem-form-title-alt-fake').on('change', function () {
+        jQuery('#ecosystem-form-title-fake').on('change', function () {
             jQuery('#rkw-ecosystem-form').submit();
         });
 
-        // initial: Set "true" titleAlt to fake field
-        jQuery('#ecosystem-form-title-alt-fake input').val(document.getElementById("true-title-alt").value);
+        // for secure - get it all (-> data from form to session) before persist!
+        jQuery('#save-eco').on('change', function () {
+            jQuery('#rkw-ecosystem-form').submit();
+        });
+
+        // initial: Set "true" title to fake field
+        jQuery('#ecosystem-form-title-fake input').val(document.getElementById("true-title").value);
+
+        /* does not work
+        // scroll to top
+        jQuery(document).on('click', '.introjs-nextbutton', function() {
+           jQuery('html,body').animate(
+                {
+                    scrollTop: jQuery('.introjs-tooltip').offset().top
+                },
+                'slow'
+            );
+        });
+        */
     }
 });
 

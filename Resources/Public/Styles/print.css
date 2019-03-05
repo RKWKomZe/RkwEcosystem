@@ -119,14 +119,12 @@ table.content .header-image {
     margin-top: -40px;
 }
 
-/* the use of <br> with CDATA in language file affected the image on the right */
-table.content.content--five td:first-child .header-image {
-    text-align: right;
-    margin-top: -53px;
+/* the use of <br> with CDATA in language file affected the image on the left and on the right */
+table.content.content--five td:first-child .header-image img {
+    margin-top: -8px;
 }
-table.content.content--five td:last-child .header-image {
-    text-align: right;
-    margin-top: -53px;
+table.content.content--five td:last-child .header-image img {
+    margin-top: -8px;
 }
 
 table.content p.rating {

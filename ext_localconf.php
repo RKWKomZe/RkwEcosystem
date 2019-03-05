@@ -9,11 +9,11 @@ call_user_func(
 			'RKW.RkwEcosystem',
 			'Ecosystem',
 			[
-				'Ecosystem' => 'edit, update, reset, save, persist, print, show, expertFeedback, expertFeedbackSend, delete'
+				'Ecosystem' => 'edit, update, reset, save, persist, print, show, expertFeedback, expertFeedbackSend, delete, open'
 			],
 			// non-cacheable actions
 			[
-				'Ecosystem' => 'edit, update, reset, save, persist, print, show, expertFeedback, expertFeedbackSend, delete'
+				'Ecosystem' => 'edit, update, reset, save, persist, print, show, expertFeedback, expertFeedbackSend, delete, open'
 			]
 		);
 
