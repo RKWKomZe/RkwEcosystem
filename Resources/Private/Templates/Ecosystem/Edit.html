@@ -82,7 +82,7 @@
 
             <!-- hidden form -->
             <div id="rkw-ecosystem-form-container">
-                <f:form noCache="true" id="rkw-ecosystem-form" class="ajax" action="update" name="ecosystem" pluginName="Ecosystem" extensionName="RkwEcosystem" object="{ecosystem}" pageType="1513597215" additionalAttributes="{data-page-type: '1513597215'}">
+                <f:form id="rkw-ecosystem-form" class="ajax" action="update" name="ecosystem" pluginName="Ecosystem" extensionName="RkwEcosystem" object="{ecosystem}" pageType="1513597215" additionalAttributes="{data-page-type: '1513597215'}">
                     <f:form.hidden id="true-title" property="title" />
                     <f:for each="{
                         0: 'education',
@@ -114,7 +114,7 @@
                     <div>
                         <f:security.ifAuthenticated>
                             <f:if condition="<f:count>{frontendUserEcosystemList}</f:count>">
-                                <f:link.action action="open" class="button" noCache="true">Öffnen</f:link.action>
+                                <f:link.action action="open" class="button">Öffnen</f:link.action>
                             </f:if>
                         </f:security.ifAuthenticated>
                         <f:security.ifAuthenticated>
@@ -135,8 +135,8 @@
                         </f:security.ifAuthenticated>
                     </div>
                     <div>
-                        <f:link.action action="print" class="button secondary" target="_blank" noCache="true"><f:translate key="partials_ecosystem_edit.print" /></f:link.action>
-                        <f:link.action action="show" class="button secondary" target="_blank" pageType="{settings.pageTypePrint}" noCache="true" arguments="{ttContentUid: ttContentUid}"><f:translate key="partials_ecosystem_edit.show" /></f:link.action>
+                        <f:link.action action="print" class="button secondary" target="_blank"><f:translate key="partials_ecosystem_edit.print" /></f:link.action>
+                        <f:link.action action="show" class="button secondary" target="_blank" pageType="{settings.pageTypePrint}" arguments="{ttContentUid: ttContentUid}"><f:translate key="partials_ecosystem_edit.show" /></f:link.action>
                         <f:link.action action="reset" class="button secondary"><f:translate key="partials_ecosystem_edit.reset" /></f:link.action>
                         <f:security.ifAuthenticated>
                             <f:if condition="{ecosystem.uid} > 0">
