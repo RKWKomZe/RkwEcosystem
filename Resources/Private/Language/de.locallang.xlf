@@ -338,9 +338,17 @@
 				<target>Endkunden (B2C)</target>
 			</trans-unit>
 			<trans-unit id="partials_ecosystem_introJsContent.header.potentialFounder">
+                <source>PotentialFounder dummy header</source>
+                <target>Potenzielle Gründer und Talentpool</target>
+            </trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.potentialFounder1">
 				<source>PotentialFounder dummy header</source>
-				<target><![CDATA[Potenzielle Gründer<br>und Talentpool]]></target>
+				<target>Potenzielle Gründer</target>
 			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.potentialFounder2">
+                <source>PotentialFounder dummy header</source>
+                <target>und Talentpool</target>
+            </trans-unit>
 			<trans-unit id="partials_ecosystem_introJsContent.header.inspiration">
 				<source>Inspiration dummy header</source>
 				<target>Inspiration</target>
@@ -355,8 +363,16 @@
 			</trans-unit>
 			<trans-unit id="partials_ecosystem_introJsContent.header.demandForSolution">
 				<source>DemandForSolution dummy header</source>
-				<target><![CDATA[Nachfrage /<br>Produkte und Services]]></target>
+				<target><![CDATA[Nachfrage <span class="after">/</span> Produkte und Services]]></target>
 			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.demandForSolution1">
+                <source>DemandForSolution dummy header</source>
+                <target>Nachfrage /</target>
+            </trans-unit>
+            <trans-unit id="partials_ecosystem_introJsContent.header.demandForSolution2">
+                <source>DemandForSolution dummy header</source>
+                <target>Produkte und Services</target>
+            </trans-unit>
 			<trans-unit id="partials_ecosystem_introJsContent.header.company">
 				<source>Company dummy header</source>
 				<target>Unternehmen</target>

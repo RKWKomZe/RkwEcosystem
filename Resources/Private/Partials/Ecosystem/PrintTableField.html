@@ -3,12 +3,42 @@
 <!-- header -->
 <div class="header">
     <p class="headline">
-        <f:translate key="partials_ecosystem_introJsContent.header.{element}" extensionName="RkwEcosystem" />
+        <f:comment>
+            <!--
+             Kreativer Ansatz: Weil jede Form von Zeilenumbruch das Bild im PDF verschiebt (was durch css nicht auszugleichen ist)
+             wird die Überschrift der beiden Elemente, bei welchen ein Umbruch erfolgt, in zwei Teile gesplittet
+             (der zweite Teil wird nach dem Bild ausgegeben und per "position: realtive; top: -50px" an entsprechende Stelle geschraubt)
+             -->
+        </f:comment>
+        <f:switch expression="{element}">
+            <f:case value="potentialFounder">
+                <f:translate key="partials_ecosystem_introJsContent.header.{element}1" extensionName="RkwEcosystem" />
+            </f:case>
+            <f:case value="demandForSolution">
+                <f:translate key="partials_ecosystem_introJsContent.header.{element}1" extensionName="RkwEcosystem" />
+            </f:case>
+            <f:case default="TRUE">
+                <f:translate key="partials_ecosystem_introJsContent.header.{element}" extensionName="RkwEcosystem" />
+            </f:case>
+        </f:switch>
     </p>
+
     <div class="header-image">
-        <f:image src="EXT:rkw_ecosystem/Resources/Public/Images/Print/{element}.png" />
+        <f:image src="EXT:rkw_ecosystem/Resources/Public/Images/Print/{element}.jpg" height="70px" />
     </div>
 
+    <f:switch expression="{element}">
+        <f:case value="potentialFounder">
+            <p class="additional-header">
+                <f:translate key="partials_ecosystem_introJsContent.header.{element}2" extensionName="RkwEcosystem" />
+            </p>
+        </f:case>
+        <f:case value="demandForSolution">
+            <p class="additional-header">
+                <f:translate key="partials_ecosystem_introJsContent.header.{element}2" extensionName="RkwEcosystem" />
+            </p>
+        </f:case>
+    </f:switch>
 </div>
 
 <!-- explaining text -->

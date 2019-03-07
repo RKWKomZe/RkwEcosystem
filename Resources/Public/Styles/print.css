@@ -15,6 +15,7 @@ body {
     font-weight: normal;
     line-height: 32px;
     margin: 1cm;
+    background-color: #fff;
 }
 
 table.content,
@@ -116,15 +117,26 @@ table.content p.headline {
 
 table.content .header-image {
     text-align: right;
-    margin-top: -40px;
+    margin-top: -35px;
 }
 
 /* the use of <br> with CDATA in language file affected the image on the left and on the right */
+/*
 table.content.content--five td:first-child .header-image img {
     margin-top: -8px;
 }
 table.content.content--five td:last-child .header-image img {
     margin-top: -8px;
+}
+*/
+
+/* pseudo additional header, because html2pdf does not works with line breaks of any kind */
+p.additional-header {
+    text-align: left;
+    color: #006349;
+    font-weight: bold;
+    position: relative;
+    top: -50px;
 }
 
 table.content p.rating {
