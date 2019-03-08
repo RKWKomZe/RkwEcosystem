@@ -122,7 +122,7 @@
                                 <f:link.action id="save-eco" action="save" class="button secondary"><f:translate key="partials_ecosystem_edit.persist" /></f:link.action>
                             </f:then>
                             <f:else>
-                                <a id="save-eco" class="button secondary" href="<rkwRegistration:xdlLink referrer='<f:uri.action noCache=\'true\' noCacheHash=\'true\' action=\'save\' absolute=\'true\' />' loginPid='{settings.loginPid}' xdlPid='{settings.xdlPid}' />"><f:translate key="partials_ecosystem_edit.persist" /></a>
+                                <a id="save-eco" class="button secondary" href="<rkwRegistration:xdlLink referrer='<f:uri.action noCacheHash=\'true\' action=\'save\' absolute=\'true\' />' loginPid='{settings.loginPid}' xdlPid='{settings.xdlPid}' />"><f:translate key="partials_ecosystem_edit.persist" /></a>
                             </f:else>
                         </f:security.ifAuthenticated>
                         <f:security.ifAuthenticated>
@@ -130,7 +130,7 @@
                                 <f:link.action action="expertFeedback" class="button secondary" ><f:translate key="partials_ecosystem_edit.expertFeedback" /></f:link.action>
                             </f:then>
                             <f:else>
-                                <a class="button secondary" href="<rkwRegistration:xdlLink referrer='<f:uri.action noCache=\'true\' noCacheHash=\'true\' action=\'expertFeedback\' absolute=\'true\' />' loginPid='{settings.loginPid}' xdlPid='{settings.xdlPid}' />"><f:translate key="partials_ecosystem_edit.expertFeedback" /></a>
+                                <a class="button secondary" href="<rkwRegistration:xdlLink referrer='<f:uri.action noCacheHash=\'true\' action=\'expertFeedback\' absolute=\'true\' />' loginPid='{settings.loginPid}' xdlPid='{settings.xdlPid}' />"><f:translate key="partials_ecosystem_edit.expertFeedback" /></a>
                             </f:else>
                         </f:security.ifAuthenticated>
                     </div>
