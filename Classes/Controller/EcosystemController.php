@@ -8,6 +8,7 @@ use Spipu\Html2Pdf\Html2Pdf;
 use Spipu\Html2Pdf\Exception\Html2PdfException;
 use Spipu\Html2Pdf\Exception\ExceptionFormatter;
 use \RKW\RkwBasics\Helper\Common;
+use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -104,7 +105,6 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function editAction($ecosystemId = -1)
     {
-
         // load from database
         if (
             ($ecosystemId > 0)
@@ -163,7 +163,6 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function updateAction(\RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem)
     {
-
         $this->setEcosystemToSession($ecosystem);
 
         // get JSON helper
@@ -186,7 +185,6 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function resetAction()
     {
-
         /** @var  \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem */
         $ecosystem = $this->getEcosystemFromSession();
 
@@ -217,19 +215,25 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function saveAction($recalled = false)
     {
+        /** @var  \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem */
+        $ecosystem = $this->getEcosystemFromSession();
 
+        // go forward, if title is already set (and user is already logged in)
+        if ($this->getFrontendUser()) {
+            if ($ecosystem->getTitle()) {
+                $this->redirect('persist');
+                //===
+            }
+        }
+
+        // else: just give the form
         $this->addFlashMessage(
             \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('ecosystemController.message.enterName', 'rkw_ecosystem'),
             '',
             ($recalled ? \TYPO3\CMS\Core\Messaging\AbstractMessage::ERROR : \TYPO3\CMS\Core\Messaging\AbstractMessage::OK)
         );
 
-
-        // just give the form
-        /** @var  \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem */
-        $ecosystem = $this->getEcosystemFromSession();
         $this->view->assign('ecosystem', $ecosystem);
-
     }
 
 
@@ -254,6 +258,13 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             );
             $this->redirect('edit', null, null, array('ecosystemId' => $ecosystem->getUid()));
             //===
+        }
+
+        // Because users in "saveAction" simple forwarded, if title is set (but the data not persisted yet)
+        // -> we have to get it from session now
+        if (! $ecosystem) {
+            /** @var  \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem */
+            $ecosystem = $this->getEcosystemFromSession();
         }
 
         if ($ecosystem) {
@@ -281,6 +292,23 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
         } else {
 
+            // now we got a isNew() issue, if we already have saved once, but loaded an older one via session above
+            // -> Solution: Get the real one from DB and set the data from the session ecosystem!
+            /** @var  \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystemFromDb */
+            $ecosystemFromDb = $this->ecosystemRepository->findByIdentifier($ecosystem->getUid());
+            $ecosystemFromDb->setTitle($ecosystem->getTitle());
+            // other properties
+            $ecosystemPropertyList = array('education', 'politics', 'endCustomer', 'potentialFounder', 'inspiration', 'startUps', 'trend', 'demandForSolution', 'company', 'assistance', 'businessCustomer');
+            foreach ($ecosystemPropertyList as $ecosystemProperty) {
+                $setter = 'set' . ucfirst($ecosystemProperty);
+                $setterValue = 'set' . ucfirst($ecosystemProperty) . 'Value';
+                $getter = 'get' . ucfirst($ecosystemProperty);
+                $getterValue = 'get' . ucfirst($ecosystemProperty) . 'Value';
+                $ecosystemFromDb->$setter($ecosystem->$getter());
+                $ecosystemFromDb->$setterValue($ecosystem->$getterValue());
+            }
+            $ecosystem = $ecosystemFromDb;
+
             // check FE-User-ID!
             if (
                 ($this->getFrontendUser()->getUid())
@@ -307,6 +335,44 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $this->redirect('edit', null, null, array('ecosystemId' => $ecosystem->getUid()));
         //===
     }
+
+
+
+    /**
+     * action open
+     *
+     * @param \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem
+     * @return void
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\IllegalObjectTypeException
+     * @throws \TYPO3\CMS\Extbase\Persistence\Exception\UnknownObjectException
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\UnsupportedRequestTypeException
+     * @throws \TYPO3\CMS\Extbase\Mvc\Exception\StopActionException
+     */
+    public function openAction(\RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem = null)
+    {
+        if (!$this->getFrontendUser()) {
+
+            $this->addFlashMessage(
+                \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('ecosystemController.message.error.loggedIn', 'rkw_ecosystem'),
+                '',
+                \TYPO3\CMS\Core\Messaging\AbstractMessage::ERROR
+            );
+            $this->redirect('edit', null, null, array('ecosystemId' => $ecosystem->getUid()));
+            //===
+        }
+
+        if ($ecosystem) {
+            $this->redirect('edit', null, null, array('ecosystemId' => $ecosystem->getUid()));
+            //===
+        }
+
+        $this->addFlashMessage(
+            \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('ecosystemController.message.choose', 'rkw_ecosystem')
+        );
+
+        $this->view->assign('frontendUserEcosystemList', $this->ecosystemRepository->findByFrontendUser($this->getFrontendUser()));
+    }
+
 
 
     /**
@@ -366,7 +432,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             //===
         }
 
-        try {
+    //    try {
             if ($settingsFramework = Common::getTyposcriptConfiguration($this->extensionName, ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK)) {
 
                 /** @var \TYPO3\CMS\Fluid\View\StandaloneView $standaloneView */
@@ -386,11 +452,17 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
                 $html2pdf = new Html2Pdf('L', 'A3', 'de', true, 'UTF-8', 0);
                 $html2pdf->parsingCss;
                 $html2pdf->writeHTML($content);
-                $html2pdf->output(time() . '-ecosystem.pdf', 'D');
 
-                exit;
+                $fileName = time() . '-ecosystem.pdf';
+                // Show for Ending "D", "F" or "S": https://github.com/spipu/html2pdf/blob/master/doc/output.md
+                // -> "D" - Forcing the download of PDF via web browser, with a specific name
+                $html2pdf->output($fileName, 'D');
+                // do not use "exit" here. Is making trouble (provides a unnamed "binary"-file instead a names pdf)
+                readfile($fileName);
+            //    exit;
                 //===
             }
+            /*
         } catch (Html2PdfException $e) {
 
             $this->getLogger()->log(\TYPO3\CMS\Core\Log\LogLevel::ERROR, sprintf('An error occurred while trying to generate a PDF. Message: %s', str_replace(array("\n", "\r"), '', $e->getMessage())));
@@ -402,6 +474,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             $this->redirect('edit', null, null, array('ecosystemId' => $ecosystem->getUid()));
             //===
         }
+            */
     }
 
     /**

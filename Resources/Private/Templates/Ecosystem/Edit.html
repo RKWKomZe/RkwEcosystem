@@ -16,7 +16,21 @@
 
 	<f:section name="main">
 
-        <f:flashMessages renderMode="div"  />
+        <f:flashMessages as="flashMessages">
+            <f:for each="{flashMessages}" as="flashMessage">
+                <div class="typo3-messages">
+                    <div class="alert alert-{flashMessage.class}">
+                        <div class="media">
+                            <div class="media-body">
+                                <div class="alert-message">
+                                    {flashMessage.message}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </f:flashMessages>
 
         <!-- Message for viewport width -->
         <div class="rkw-ecosystem-viewport-message typo3-messages" role="alert">
@@ -28,33 +42,48 @@
         <!-- content -->
         <div class="rkw-ecosystem-container">
 
+            <p class="first-letter"><f:translate key="partials_ecosystem_edit.introText" extensionName="RkwEcosystem" /></p>
 
+            <f:comment>
             <!-- reopen ecosystem data -->
-            <f:form id="ecosystem-form-select" class="form-fields" action="edit" name="ecosystem">
+                <f:form id="ecosystem-form-select" class="form-fields" action="edit" name="ecosystem">
+                    <div class="v320-1">
+                        <p class="v320-1-of-2">
+                            <f:security.ifAuthenticated>
+                                <f:if condition="{frontendUserEcosystemList}">
+                                    <f:form.select name="ecosystemId" additionalAttributes="{onChange: 'submit();'}" options="{frontendUserEcosystemList}" value="{ecosystem.uid}" optionValueField="uid" optionLabelField="title" prependOptionLabel="<f:translate key='partials_ecosystem_edit.new' extensionName='RkwEcosystem' />" prependOptionValue="-1" />
+                                </f:if>
+                            </f:security.ifAuthenticated>
+                            <a href="#" class="button start"><f:translate key="partials_ecosystem_edit.start" extensionName="RkwEcosystem" /></a>
+                        </p>
+                    </div>
+                </f:form>
+            </f:comment>
+            <f:form id="ecosystem-form-title-fake" class="form-fields" additionalAttributes="{onSubmit: 'return false;'}">
                 <div class="v320-1">
-                    <p class="v320-1-of-2">
-                        <f:security.ifAuthenticated>
-                            <f:if condition="{frontendUserEcosystemList}">
-                                <f:form.select name="ecosystemId" additionalAttributes="{onChange: 'submit();'}" options="{frontendUserEcosystemList}" value="{ecosystem.uid}" optionValueField="uid" optionLabelField="title" prependOptionLabel="<f:translate key='partials_ecosystem_edit.new' extensionName='RkwEcosystem' />" prependOptionValue="-1" />
-                            </f:if>
-                        </f:security.ifAuthenticated>
+                    <p class="v320-1-of-2" style="float: none; margin: auto;">
+                        <f:form.textfield additionalAttributes="{onkeyup: 'document.getElementById(\'true-title\').value  = this.value;'}" placeholder="<f:translate key='templates_ecosystem_save.placeholderTitle' />" />
                         <a href="#" class="button start"><f:translate key="partials_ecosystem_edit.start" extensionName="RkwEcosystem" /></a>
                     </p>
                 </div>
             </f:form>
 
-
             <!-- provide start button -->
 
+            <f:comment>
+                <!-- svg -->
+                <!-- Hinweis: Fällt weg, weil bei einer Weiterentwickung irrtümlicherweise eine nicht svg-fähige Grafik geliefert wurde -->
+                <f:render partial="Ecosystem/SvgImage" arguments="{_all}" />
+            </f:comment>
 
-            <!-- svg -->
-            <f:render partial="Ecosystem/SvgImage" arguments="{_all}" />
+            <!-- image -->
+            <f:render partial="Ecosystem/StandardImage" arguments="{_all}" />
 
 
             <!-- hidden form -->
             <div id="rkw-ecosystem-form-container">
-                <f:form noCache="true" id="rkw-ecosystem-form" class="ajax" action="update" name="ecosystem" pluginName="Ecosystem" extensionName="RkwEcosystem" object="{ecosystem}" pageType="1513597215" additionalAttributes="{data-page-type: '1513597215'}">
-
+                <f:form id="rkw-ecosystem-form" class="ajax" action="update" name="ecosystem" pluginName="Ecosystem" extensionName="RkwEcosystem" object="{ecosystem}" pageType="1513597215" additionalAttributes="{data-page-type: '1513597215'}">
+                    <f:form.hidden id="true-title" property="title" />
                     <f:for each="{
                         0: 'education',
                         1: 'politics',
@@ -84,25 +113,30 @@
                     <legend><f:translate key="partials_ecosystem_edit.actions" /></legend>
                     <div>
                         <f:security.ifAuthenticated>
-                            <f:then>
-                                <f:link.action action="save" class="button"><f:translate key="partials_ecosystem_edit.persist" /></f:link.action>
-                            </f:then>
-                            <f:else>
-                                <a class="button" href="<rkwRegistration:xdlLink referrer='<f:uri.action noCache=\'true\' noCacheHash=\'true\' action=\'save\' absolute=\'true\' />' loginPid='{settings.loginPid}' xdlPid='{settings.xdlPid}' />"><f:translate key="partials_ecosystem_edit.persist" /></a>
-                            </f:else>
+                            <f:if condition="<f:count>{frontendUserEcosystemList}</f:count>">
+                                <f:link.action action="open" class="button">Öffnen</f:link.action>
+                            </f:if>
                         </f:security.ifAuthenticated>
-                        <f:link.action action="print" class="button" target="_blank" noCache="true"><f:translate key="partials_ecosystem_edit.print" /></f:link.action>
                         <f:security.ifAuthenticated>
                             <f:then>
-                                <f:link.action action="expertFeedback" class="button" ><f:translate key="partials_ecosystem_edit.expertFeedback" /></f:link.action>
+                                <f:link.action id="save-eco" action="save" class="button secondary"><f:translate key="partials_ecosystem_edit.persist" /></f:link.action>
                             </f:then>
                             <f:else>
-                                <a class="button" href="<rkwRegistration:xdlLink referrer='<f:uri.action noCache=\'true\' noCacheHash=\'true\' action=\'expertFeedback\' absolute=\'true\' />' loginPid='{settings.loginPid}' xdlPid='{settings.xdlPid}' />"><f:translate key="partials_ecosystem_edit.expertFeedback" /></a>
+                                <a id="save-eco" class="button secondary" href="<rkwRegistration:xdlLink referrer='<f:uri.action noCache=\'true\' noCacheHash=\'true\' action=\'save\' absolute=\'true\' />' loginPid='{settings.loginPid}' xdlPid='{settings.xdlPid}' />"><f:translate key="partials_ecosystem_edit.persist" /></a>
+                            </f:else>
+                        </f:security.ifAuthenticated>
+                        <f:security.ifAuthenticated>
+                            <f:then>
+                                <f:link.action action="expertFeedback" class="button secondary" ><f:translate key="partials_ecosystem_edit.expertFeedback" /></f:link.action>
+                            </f:then>
+                            <f:else>
+                                <a class="button secondary" href="<rkwRegistration:xdlLink referrer='<f:uri.action noCache=\'true\' noCacheHash=\'true\' action=\'expertFeedback\' absolute=\'true\' />' loginPid='{settings.loginPid}' xdlPid='{settings.xdlPid}' />"><f:translate key="partials_ecosystem_edit.expertFeedback" /></a>
                             </f:else>
                         </f:security.ifAuthenticated>
                     </div>
                     <div>
-                        <f:link.action action="show" class="button secondary" target="_blank" pageType="{settings.pageTypePrint}" noCache="true" arguments="{ttContentUid: ttContentUid}"><f:translate key="partials_ecosystem_edit.show" /></f:link.action>
+                        <f:link.action action="print" class="button secondary" target="_blank"><f:translate key="partials_ecosystem_edit.print" /></f:link.action>
+                        <f:link.action action="show" class="button secondary" target="_blank" pageType="{settings.pageTypePrint}" arguments="{ttContentUid: ttContentUid}"><f:translate key="partials_ecosystem_edit.show" /></f:link.action>
                         <f:link.action action="reset" class="button secondary"><f:translate key="partials_ecosystem_edit.reset" /></f:link.action>
                         <f:security.ifAuthenticated>
                             <f:if condition="{ecosystem.uid} > 0">

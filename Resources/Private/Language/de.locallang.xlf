@@ -116,6 +116,10 @@
                 <source>Please enter your question or concern</source>
                 <target>Bitte geben Sie Ihre Frage oder Ihr Anliegen an.</target>
             </trans-unit>
+            <trans-unit id="ecosystemController.message.choose">
+                <source>Please choose an existing ecosystem</source>
+                <target>Bitte wählen Sie ein vorhandenes Ökosystem aus, um es zu öffnen.</target>
+            </trans-unit>
 
 
 
@@ -159,6 +163,10 @@
             <trans-unit id="partials_ecosystem_edit.viewportHint">
                 <source>To use the RKW Entrepreneurship Ecosystem Canvas, you need a screen resolution of at least 1200px width.</source>
                 <target>Um das RKW Gründerökosystem Canvas verwenden zu können, benötigen Sie eine Bildschrirmauflösung mit mindestens 1200px Breite.</target>
+            </trans-unit>
+            <trans-unit id="partials_ecosystem_edit.introText">
+                <source>To use the RKW Entrepreneurship Ecosystem Canvas, you need a screen resolution of at least 1200px width.</source>
+                <target>Das Canvas dient als Arbeitsinstrument, um ein regionales Gründerökosystem ganzheitlich zu denken und unterstützt Sie bei der Gestaltung von eigenen Maßnahmen.  Unser Online-Tool führt Sie schrittweise durch die elf Elemente des Ökosystems. Bitte beantworten Sie die Fragen zu Ihrer Region. Nach dem Durchlauf haben Sie die Möglichkeit das Canvas für Ihre Region auszudrucken und zu speichern. Die Inhalte können jederzeit ergänzt oder verändert werden.</target>
             </trans-unit>
 			<trans-unit id="partials_ecosystem_edit.start">
 				<source>Start now</source>
@@ -217,7 +225,7 @@
 			<!-- Templates/Ecosystem/Print.html -->
 			<trans-unit id="partials_ecosystem_print.rating">
 				<source>Rating:</source>
-				<target>Bewertung:</target>
+				<target>Bedeutung:</target>
 			</trans-unit>
 			<trans-unit id="partials_ecosystem_print.no-content">
 				<source>No Content</source>
@@ -238,6 +246,10 @@
 				<source>e.g. My Canvas of New York</source>
 				<target>z.B. Mein Canvas der Stadt Eschborn</target>
 			</trans-unit>
+			<trans-unit id="templates_ecosystem_save.placeholderTitle">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
 			<trans-unit id="templates_ecosystem_save.cancel">
                 <source>Cancel</source>
                 <target>Abbrechen</target>
@@ -254,8 +266,8 @@
                 <target>Experten-Feedback</target>
             </trans-unit>
 			<trans-unit id="templates_ecosystem_feedback.introduction">
-				<source>We would be happy to give you feedback on your RKW Entrepreneurship Ecosystem Canvas.</source>
-				<target>Gerne geben wir Ihnen ein Feedback zur Ihrem RKW Gründerökosystem Canvas.</target>
+				<source>We would be happy to give you feedback on your RKW Entrepreneurship Ecosystem Canvas</source>
+				<target>Gerne geben wir Ihnen ein Feedback zur Ihrem RKW Gründerökosystem Canvas</target>
 			</trans-unit>
 			<trans-unit id="templates_ecosystem_feedback.placeholder">
 				<source>Enter your comment</source>
@@ -293,6 +305,13 @@
 			</trans-unit>
 
 
+            <!-- Partials/Ecosystem/Open.html -->
+			<trans-unit id="partials_ecosystem_open.choose">
+				<source>Please choose</source>
+				<target>--- Bitte wählen ---</target>
+			</trans-unit>
+
+
 			<!-- Partials/Ecosystem/IntroJsContent.html -->
 			<trans-unit id="partials_ecosystem_introJsContent.radio.low">
 				<source>Low</source>
@@ -319,9 +338,17 @@
 				<target>Endkunden (B2C)</target>
 			</trans-unit>
 			<trans-unit id="partials_ecosystem_introJsContent.header.potentialFounder">
+                <source>PotentialFounder dummy header</source>
+                <target>Potenzielle Gründer und Talentpool</target>
+            </trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.potentialFounder1">
 				<source>PotentialFounder dummy header</source>
-				<target>Potenzielle Gründer und Talentpool</target>
+				<target>Potenzielle Gründer</target>
 			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.potentialFounder2">
+                <source>PotentialFounder dummy header</source>
+                <target>und Talentpool</target>
+            </trans-unit>
 			<trans-unit id="partials_ecosystem_introJsContent.header.inspiration">
 				<source>Inspiration dummy header</source>
 				<target>Inspiration</target>
@@ -336,8 +363,16 @@
 			</trans-unit>
 			<trans-unit id="partials_ecosystem_introJsContent.header.demandForSolution">
 				<source>DemandForSolution dummy header</source>
-				<target>Nachfrage/Produkte und Services</target>
+				<target><![CDATA[Nachfrage <span class="after">/</span> Produkte und Services]]></target>
 			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.demandForSolution1">
+                <source>DemandForSolution dummy header</source>
+                <target>Nachfrage /</target>
+            </trans-unit>
+            <trans-unit id="partials_ecosystem_introJsContent.header.demandForSolution2">
+                <source>DemandForSolution dummy header</source>
+                <target>Produkte und Services</target>
+            </trans-unit>
 			<trans-unit id="partials_ecosystem_introJsContent.header.company">
 				<source>Company dummy header</source>
 				<target>Unternehmen</target>
@@ -356,7 +391,7 @@
 			<trans-unit id="partials_ecosystem_introJsContent.text.education">
 				<source>Education dummy text</source>
 				<target><![CDATA[
-                    Schulen, Universitäten und Forschungseinrichtungen agieren im Gründerökosystem als Talentschmieden und stärken den Wissens- und Technologietransfer in der Region.
+                    Bildungseinrichtungen agieren im Gründerökosystem als Talentschmieden und stärken den Wissens- und Technologietransfer in der Region.
                     <br/>Fragen, die Sie sich stellen sollten:
                     <ul>
                         <li>Welche Rolle spielt das Thema Entrepreneurship in der Ausbildung?</li>
@@ -368,10 +403,10 @@
 			<trans-unit id="partials_ecosystem_introJsContent.text.politics">
 				<source>Politics dummy text</source>
 				<target><![CDATA[
-                    Von Seiten der Politik können Rahmenbedingungen geschaffen werden, die Gründungsaktivitäten erleichtern. Darüber hinaus besitzt der Staat die Möglichkeit, mithilfe von Investitionen in Forschung und Entwicklung, neue Technologien und damit die Märkte der Zukunft aktiv mitzugestalten.
+                    Von Seiten der Politik können Rahmenbedingungen geschaffen werden, die Gründungsaktivitäten erleichtern.
                     <br/>Fragen, die Sie sich stellen sollten:
                     <ul>
-                        <li>Wie sind die (regionalen) politischen Rahmenbedingungen für Gründer ausgeprägt?</li>
+                        <li>Wie bewerten Sie die politischen Rahmenbedingungen für Gründer  in Ihrer Region?</li>
                         <li>Welche Förderprogramme gibt es?</li>
                         <li>Bei welchen Förderprogrammen treten Probleme auf und wie kann man diese lösen?</li>
                     </ul>
@@ -395,8 +430,8 @@
                     <br/>Fragen, die Sie sich stellen sollten:
                     <ul>
                         <li>Wie setzt sich mein Talentpool zusammen?</li>
-                        <li>Welche Attraktionen bietet mein Standort für neue (internationale) Talente?</li>
-                        <li>Mit welchen Maßnahmen versuche ich, potenzielle Gründer zu erreichen?</li>
+                        <li>Welche Attraktionen bietet mein Standort für neue Talente?</li>
+                        <li>Wie versuche ich, potenzielle Gründer zu erreichen?</li>
                     </ul>
                 ]]></target>
 			</trans-unit>
@@ -427,7 +462,7 @@
 			<trans-unit id="partials_ecosystem_introJsContent.text.trend">
 				<source>Trend dummy text</source>
 				<target><![CDATA[
-                    Gründerökosysteme können entweder neue Trends setzen oder bereits vorhandene aufgreifen (z. B. soziokulturelle Trends, Zeitgeist- oder Konsumtrends, Mikrotrends). Nur ein Ökosystem, das in der Lage ist, sich für Ideen und Trends von außen zu öffnen, kann langfristig erfolgreich sein.
+                    Gründerökosysteme können entweder neue Trends setzen oder bereits vorhandene aufgreifen (z. B. soziokulturelle Trends, Zeitgeist- oder Konsumtrends, Mikrotrends).
                     <br/>Fragen, die Sie sich stellen sollten:
                     <ul>
                         <li>Welche nationalen oder globalen Trends beeinflussen die Gründungschancen?</li>
@@ -439,7 +474,7 @@
 			<trans-unit id="partials_ecosystem_introJsContent.text.demandForSolution">
 				<source>DemandForSolution dummy text</source>
                 <target><![CDATA[
-                    Die Marktstruktur, -größe und -dynamik resultieren aus dem Vorhandensein der regionalen Branchen und Unternehmen (B2B) und potenzieller Endkunden (B2C). Hieraus ergeben sich für Gründerökosysteme jeweils einzigartige Chancen der Spezialisierung und Profilierung.
+                    Die Marktstruktur, -größe und -dynamik resultieren aus dem Vorhandensein der regionalen Branchen und Unternehmen (B2B) und potenzieller Endkunden (B2C).
                     <br/>Fragen, die Sie sich stellen sollten:
                     <ul>
                         <li>Welche Chancen bietet die (regionale) Nachfrage für Gründer?</li>
@@ -450,7 +485,7 @@
 			<trans-unit id="partials_ecosystem_introJsContent.text.company">
 				<source>Company dummy text</source>
                 <target><![CDATA[
-                    Erfolgreiche Unternehmen sind ein Magnet für Talente und hochqualifizierte Mitarbeiter. Durch regelmäßige Weiterbildungs- und Fortbildungsmaßnahmen werden technologische Kompetenzen und Managementfähigkeiten aufgenommen, vermittelt und weiterentwickelt.
+                    Erfolgreiche Unternehmen sind ein Magnet für Talente und hochqualifizierte Mitarbeiter.
                     <br/>Fragen, die Sie sich stellen sollten:
                     <ul>
                         <li>Welche Unternehmen sind für meine Region besonders wichtig?</li>
@@ -462,7 +497,7 @@
 			<trans-unit id="partials_ecosystem_introJsContent.text.assistance">
 				<source>Assistance dummy text</source>
                 <target><![CDATA[
-                    Im Zuge der Entwicklung und Vermarktung ihrer Geschäftsideen benötigen Gründer häufig Unterstützung von Beratern und Investoren in Kombination mit der passenden Infrastruktur (Büroräume und Produktionsmöglichkeiten).
+                    Im Zuge der Entwicklung und Vermarktung ihrer Geschäftsideen benötigen Gründer häufig Unterstützung von Beratern und Investoren in Kombination mit der passenden Infrastruktur.
                     <br/>Fragen, die Sie sich stellen sollten:
                     <ul>
                         <li>Welche Unterstützungsleistungen für Gründer gibt es in meiner Region?</li>
@@ -474,7 +509,7 @@
 			<trans-unit id="partials_ecosystem_introJsContent.text.businessCustomer">
 				<source>BusinessCustomer dummy text</source>
                 <target><![CDATA[
-                    Geschäftskunden sind Unternehmen oder öffentliche Organisationen, die als potenzielle Käufer von Produkten oder Dienstleistungen in Frage kommen. Eine Ballung von Unternehmen und Organisationen aus einer Branche erleichtert für Gründer und Startups den Marktzugang.
+                    Geschäftskunden sind Unternehmen oder öffentliche Organisationen, die als potenzielle Käufer von Produkten oder Dienstleistungen in Frage kommen.
                     <br/>Fragen, die Sie sich stellen sollten:
                     <ul>
                         <li>Gibt es Branchencluster in meiner Region?</li>

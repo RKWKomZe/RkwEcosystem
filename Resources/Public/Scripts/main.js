@@ -177,6 +177,31 @@ jQuery(document).ready(function () {
             rkwEcosystemIntro._currentStep = jQuery(this).attr('data-step') - 2;
             rkwEcosystemIntro.start();
         });
+
+        // save titleAlt (is needed for saving title immediately in session
+        jQuery('#ecosystem-form-title-fake').on('change', function () {
+            jQuery('#rkw-ecosystem-form').submit();
+        });
+
+        // for secure - get it all (-> data from form to session) before persist!
+        jQuery('#save-eco').on('change', function () {
+            jQuery('#rkw-ecosystem-form').submit();
+        });
+
+        // initial: Set "true" title to fake field
+        jQuery('#ecosystem-form-title-fake input').val(document.getElementById("true-title").value);
+
+        /* does not work
+        // scroll to top
+        jQuery(document).on('click', '.introjs-nextbutton', function() {
+           jQuery('html,body').animate(
+                {
+                    scrollTop: jQuery('.introjs-tooltip').offset().top
+                },
+                'slow'
+            );
+        });
+        */
     }
 });
 

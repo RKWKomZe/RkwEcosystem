@@ -1,0 +1,28 @@
+<f:flashMessages as="flashMessages">
+    <f:for each="{flashMessages}" as="flashMessage">
+        <div class="typo3-messages">
+            <div class="alert alert-{flashMessage.class}">
+                <div class="media">
+                    <div class="media-body">
+                        <div class="alert-message">
+                            {flashMessage.message}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </f:for>
+</f:flashMessages>
+
+<f:form id="ecosystem-form-select" class="form-fields" action="edit" name="ecosystem">
+    <div class="v320-1">
+        <p class="v320-1-of-2">
+            <f:security.ifAuthenticated>
+                <f:if condition="{frontendUserEcosystemList}">
+                    <f:form.select name="ecosystemId" additionalAttributes="{onChange: 'submit();'}" options="{frontendUserEcosystemList}" value="{ecosystem.uid}" optionValueField="uid" optionLabelField="title" prependOptionLabel="<f:translate key='partials_ecosystem_open.choose' extensionName='RkwEcosystem' />" />
+                </f:if>
+            </f:security.ifAuthenticated>
+            <f:link.page class="button secondary" pageUid="{settings.ecosystemPid}"><f:translate key="templates_ecosystem_feedback.cancel" /></f:link.page>
+        </p>
+    </div>
+</f:form>

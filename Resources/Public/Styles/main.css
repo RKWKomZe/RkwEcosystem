@@ -105,3 +105,41 @@
 .rkw-ecosystem-container-inner .description ul li + li {
     margin-top: 0 !important;
 }
+
+/************************************************************************/
+/* Following styles are only needed, if the ecosystem canvas is no SVG! */
+/************************************************************************/
+
+/* image table styles */
+.ecosystem-table-list {
+    width: 1024px;
+    margin: 0 auto !important;
+}
+.ecosystem-image-table {
+    margin: 0 !important;
+}
+.ecosystem-image-table tr {
+}
+.ecosystem-image-table td {
+    padding: 0;
+    border: none;
+}
+.ecosystem-image-table a.guided {
+    display: block;
+}
+
+/* optical problems with red border */
+.introjs-tooltipReferenceLayer {
+    border: none;
+}
+
+/* In firefox we got some problems with the magical substracted padding-left of the "body"-element */
+@-moz-document url-prefix() {
+    .introjs-tooltipReferenceLayer, .introjs-helperLayer {
+        margin-left: 64px;
+    }
+}
+
+.rkw-ecosystem-container a.button.start {
+    float: right;
+}
