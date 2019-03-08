@@ -24,7 +24,7 @@ use \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
  * @author Maximilian Fäßler <maximilian@faesslerweb.de>
  * @author Steffen Kroggel <developer@steffenkroggel.de>
  * @copyright Rkw Kompetenzzentrum
- * @package RKW_RkwConsultant
+ * @package RKW_RkwEcosystem
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
 class FetchFlexFormValueViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
