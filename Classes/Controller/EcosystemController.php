@@ -292,8 +292,8 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
         } else {
 
-            // now we got a isNew() issue, if we already have saved once, but loaded it via session above
-            // -> get the real one and set the data from the session ecosystem!
+            // now we got a isNew() issue, if we already have saved once, but loaded an older one via session above
+            // -> Solution: Get the real one from DB and set the data from the session ecosystem!
             /** @var  \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystemFromDb */
             $ecosystemFromDb = $this->ecosystemRepository->findByIdentifier($ecosystem->getUid());
             $ecosystemFromDb->setTitle($ecosystem->getTitle());
@@ -307,7 +307,6 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
                 $ecosystemFromDb->$setter($ecosystem->$getter());
                 $ecosystemFromDb->$setterValue($ecosystem->$getterValue());
             }
-
             $ecosystem = $ecosystemFromDb;
 
             // check FE-User-ID!
