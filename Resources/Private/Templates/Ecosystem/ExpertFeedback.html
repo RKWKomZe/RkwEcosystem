@@ -15,7 +15,7 @@
 	<f:section name="main">
 
         <h3><f:translate key="templates_ecosystem_feedback.headline" /></h3>
-        <p><f:translate key="templates_ecosystem_feedback.introduction" /> "{ecosystem.title}".</p>
+        <p><f:translate key="templates_ecosystem_feedback.introduction" /><f:if condition="{ecosystem.title}"> "{ecosystem.title}"</f:if>.</p>
 
         <f:flashMessages as="flashMessages">
             <f:for each="{flashMessages}" as="flashMessage">
