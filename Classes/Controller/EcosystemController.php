@@ -275,7 +275,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
         } else {
             $this->addFlashMessage(
-                \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('ecosystemController.message.error.somethingWentWrong', 'rkw_ecosystem') . __LINE__,
+                \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('ecosystemController.message.error.somethingWentWrong', 'rkw_ecosystem'),
                 '',
                 \TYPO3\CMS\Core\Messaging\AbstractMessage::ERROR
             );
@@ -318,7 +318,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
             } else {
                 $this->addFlashMessage(
-                    \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('ecosystemController.message.error.somethingWentWrong', 'rkw_ecosystem') . __LINE__,
+                    \TYPO3\CMS\Extbase\Utility\LocalizationUtility::translate('ecosystemController.message.error.somethingWentWrong', 'rkw_ecosystem'),
                     '',
                     \TYPO3\CMS\Core\Messaging\AbstractMessage::ERROR
                 );
