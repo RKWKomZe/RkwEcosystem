@@ -269,6 +269,10 @@
 				<source>We would be happy to give you feedback on your RKW Entrepreneurship Ecosystem Canvas</source>
 				<target>Gerne geben wir Ihnen ein Feedback zur Ihrem RKW Gründerökosystem Canvas</target>
 			</trans-unit>
+			<trans-unit id="templates_ecosystem_feedback.introductionHint">
+                <source>Type in your matter below.</source>
+                <target>Untenstehend haben Sie die Möglichkeit, Ihre Fragen an uns zu notieren. Wir setzen uns umgehend per E-Mail mit Ihnen in Verbindung.</target>
+            </trans-unit>
 			<trans-unit id="templates_ecosystem_feedback.placeholder">
 				<source>Enter your comment</source>
 				<target>Geben Sie hier Ihre Frage oder Ihr Anliegen ein.</target>
