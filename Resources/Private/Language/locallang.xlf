@@ -213,6 +213,9 @@
 			<trans-unit id="templates_ecosystem_feedback.introduction">
 				<source>We would be happy to give you feedback on your RKW Entrepreneurship Ecosystem Canvas.</source>
 			</trans-unit>
+			<trans-unit id="templates_ecosystem_feedback.introductionHint">
+                <source>Type in your matter below.</source>
+            </trans-unit>
 			<trans-unit id="templates_ecosystem_feedback.placeholder">
 				<source>Enter your comment</source>
 			</trans-unit>
