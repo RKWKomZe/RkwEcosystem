@@ -128,6 +128,9 @@
 			<trans-unit id="partials_ecosystem_edit.viewportHint">
 				<source>To use the RKW Entrepreneurship Ecosystem Canvas, you need a screen resolution of at least 1200px width.</source>
 			</trans-unit>
+			<trans-unit id="partials_ecosystem_edit.introText">
+                <source>This canvas is a working tool.</source>
+            </trans-unit>
 			<trans-unit id="partials_ecosystem_edit.entryText">
 				<source>Entry text dummy</source>
 			</trans-unit>
@@ -192,6 +195,9 @@
 			<trans-unit id="templates_ecosystem_save.placeholder">
 				<source>e.g. My Canvas of New York</source>
 			</trans-unit>
+			<trans-unit id="templates_ecosystem_save.placeholderTitle">
+                <source>Title</source>
+            </trans-unit>
 			<trans-unit id="templates_ecosystem_save.cancel">
                 <source>Cancel</source>
             </trans-unit>
@@ -233,6 +239,12 @@
 			</trans-unit>
 			<trans-unit id="partials_email_details.remark">
 				<source>Remark</source>
+			</trans-unit>
+
+
+            <!-- Partials/Ecosystem/Open.html -->
+			<trans-unit id="partials_ecosystem_open.choose">
+				<source>Please choose</source>
 			</trans-unit>
 
 

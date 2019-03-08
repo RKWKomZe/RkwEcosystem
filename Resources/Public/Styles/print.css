@@ -15,6 +15,7 @@ body {
     font-weight: normal;
     line-height: 32px;
     margin: 1cm;
+    background-color: #fff;
 }
 
 table.content,
@@ -30,6 +31,7 @@ table.page-header {
     margin-bottom:16px;
     margin-top:16px;
 }
+
 table.page-header td {
     border: none;
     padding:0;
@@ -48,6 +50,8 @@ table.content td {
     border: 1px solid darkgreen;
     vertical-align: top;
     padding:16px;
+    /* maximum height before overlapping on second page */
+    height: 235px;
 }
 
 /* For pdf view we have to define td width! */
@@ -68,9 +72,71 @@ table.content p.description {
     font-style:italic;
 }
 
+/*
 table.content p.headline {
     font-weight:bold;
     color: #006349;
+}
+*/
+
+table.content table.header td {
+    border:none;
+    padding:0;
+    width:0;
+    height:0;
+}
+
+/* first child get maximum width (force second child completely to the right) */
+/*
+table.content.content--three table.header td:first-child {
+    width:440px;
+}
+table.content.content--five table.header td:first-child {
+    width:240px;
+}
+
+table.content.content--three table.header td:nth-child(2) {
+    width:auto;
+    margin-right: 0;
+    margin-left: auto;
+}
+
+table.content table.header td.headline {
+    font-weight:bold;
+    color:#006349;
+}
+*/
+
+table.content p.headline {
+    font-weight:bold;
+    color:#006349;
+    /* position without float */
+    display:inline-block;
+    text-align:left;
+}
+
+table.content .header-image {
+    text-align: right;
+    margin-top: -35px;
+}
+
+/* the use of <br> with CDATA in language file affected the image on the left and on the right */
+/*
+table.content.content--five td:first-child .header-image img {
+    margin-top: -8px;
+}
+table.content.content--five td:last-child .header-image img {
+    margin-top: -8px;
+}
+*/
+
+/* pseudo additional header, because html2pdf does not works with line breaks of any kind */
+p.additional-header {
+    text-align: left;
+    color: #006349;
+    font-weight: bold;
+    position: relative;
+    top: -50px;
 }
 
 table.content p.rating {

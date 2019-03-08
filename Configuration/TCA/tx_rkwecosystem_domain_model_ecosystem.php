@@ -16,14 +16,14 @@ return [
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		],
-		'searchFields' => 'title, education,politics,end_customer,potential_founder,inspiration,start_ups,trend,demand_for_solution,company,assistance,business_customer,remark,frontend_user,education_value,politics_value,end_customer_value,potential_founder_value,inspiration_value,start_ups_value,trend_value,demand_for_solution_value,company_value,assistance_value,business_customer_value',
+		'searchFields' => 'title,title_alt,education,politics,end_customer,potential_founder,inspiration,start_ups,trend,demand_for_solution,company,assistance,business_customer,remark,frontend_user,education_value,politics_value,end_customer_value,potential_founder_value,inspiration_value,start_ups_value,trend_value,demand_for_solution_value,company_value,assistance_value,business_customer_value',
 		'iconfile' => 'EXT:rkw_ecosystem/Resources/Public/Icons/tx_rkwecosystem_domain_model_ecosystem.gif'
 	],
 	'interface' => [
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, education, politics, end_customer, potential_founder, inspiration, start_ups, trend, demand_for_solution, company, assistance, business_customer, remark, frontend_user, education_value, politics_value, end_customer_value, potential_founder_value, inspiration_value, start_ups_value, trend_value, demand_for_solution_value, company_value, assistance_value, business_customer_value',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, title_alt, education, politics, end_customer, potential_founder, inspiration, start_ups, trend, demand_for_solution, company, assistance, business_customer, remark, frontend_user, education_value, politics_value, end_customer_value, potential_founder_value, inspiration_value, start_ups_value, trend_value, demand_for_solution_value, company_value, assistance_value, business_customer_value',
 	],
 	'types' => [
-		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, education, politics, end_customer, potential_founder, inspiration, start_ups, trend, demand_for_solution, company, assistance, business_customer, remark, frontend_user, education_value, politics_value, end_customer_value, potential_founder_value, inspiration_value, start_ups_value, trend_value, demand_for_solution_value, company_value, assistance_value, business_customer_value, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
+		'1' => ['showitem' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, title, title_alt, education, politics, end_customer, potential_founder, inspiration, start_ups, trend, demand_for_solution, company, assistance, business_customer, remark, frontend_user, education_value, politics_value, end_customer_value, potential_founder_value, inspiration_value, start_ups_value, trend_value, demand_for_solution_value, company_value, assistance_value, business_customer_value, --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.access, starttime, endtime'],
 	],
 	'columns' => [
 		'sys_language_uid' => [
@@ -116,6 +116,15 @@ return [
 				'eval' => 'trim, required'
 			),
 		),
+        'title_alt' => array(
+            'exclude' => 0,
+            'label' => 'LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:tx_rkwecosystem_domain_model_ecosystem.title_alt',
+            'config' => array(
+                'type' => 'input',
+                'size' => 30,
+                'eval' => 'trim, required'
+            ),
+        ),
 		'education' => [
 			'exclude' => true,
 			'label' => 'LLL:EXT:rkw_ecosystem/Resources/Private/Language/locallang_db.xlf:tx_rkwecosystem_domain_model_ecosystem.education',

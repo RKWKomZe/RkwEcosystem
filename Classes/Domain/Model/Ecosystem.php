@@ -41,6 +41,13 @@ class Ecosystem extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     protected $title;
 
     /**
+     * titleAlt
+     *
+     * @var string
+     */
+    protected $titleAlt;
+
+    /**
      * education
      *
      * @var string
@@ -248,6 +255,27 @@ class Ecosystem extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     public function setTitle($title)
     {
         $this->title = $title;
+    }
+
+    /**
+     * Returns the titleAlt
+     *
+     * @return string $titleAlt
+     */
+    public function getTitleAlt()
+    {
+        return $this->titleAlt;
+    }
+
+    /**
+     * Sets the titleAlt
+     *
+     * @param string $titleAlt
+     * @return void
+     */
+    public function setTitleAlt($titleAlt)
+    {
+        $this->titleAlt = $titleAlt;
     }
 
     /**

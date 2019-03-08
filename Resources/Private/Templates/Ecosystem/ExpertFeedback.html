@@ -15,12 +15,26 @@
 	<f:section name="main">
 
         <h3><f:translate key="templates_ecosystem_feedback.headline" /></h3>
-        <p><f:translate key="templates_ecosystem_feedback.introduction" /></p>
+        <p><f:translate key="templates_ecosystem_feedback.introduction" /> "{ecosystem.title}".</p>
 
-        <f:flashMessages renderMode="div"  />
+        <f:flashMessages as="flashMessages">
+            <f:for each="{flashMessages}" as="flashMessage">
+                <div class="typo3-messages">
+                    <div class="alert alert-{flashMessage.class}">
+                        <div class="media">
+                            <div class="media-body">
+                                <div class="alert-message">
+                                    {flashMessage.message}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </f:for>
+        </f:flashMessages>
 
         <!-- form -->
-		<f:form noCache="true" class="form-fields" action="expertFeedbackSend" name="ecosystem" object="{ecosystem}" >
+		<f:form class="form-fields" action="expertFeedbackSend" name="ecosystem" object="{ecosystem}" >
 			<div class="v320-1">
                 <f:form.textarea name="remark" placeholder="<f:translate key='templates_ecosystem_feedback.placeholder' />" />
                 <f:link.page class="button secondary" pageUid="{settings.ecosystemPid}"><f:translate key="templates_ecosystem_feedback.cancel" /></f:link.page>
