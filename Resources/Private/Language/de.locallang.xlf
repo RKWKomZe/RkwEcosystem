@@ -225,7 +225,7 @@
 			<!-- Templates/Ecosystem/Print.html -->
 			<trans-unit id="partials_ecosystem_print.rating">
 				<source>Rating:</source>
-				<target>Bedeutung:</target>
+				<target>Handlungsbedarf:</target>
 			</trans-unit>
 			<trans-unit id="partials_ecosystem_print.no-content">
 				<source>No Content</source>
@@ -396,11 +396,12 @@
 				<source>Education dummy text</source>
 				<target><![CDATA[
                     Bildungseinrichtungen agieren im Gründerökosystem als Talentschmieden und stärken den Wissens- und Technologietransfer in der Region.
-                    <br/>Fragen, die Sie sich stellen sollten:
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
                     <ul>
                         <li>Welche Rolle spielt das Thema Entrepreneurship in der Ausbildung?</li>
                         <li>Welche Unterstützungsprogramme bieten Bildungseinrichtungen in meiner Region?</li>
                         <li>Wie sind die Ausbildungseinrichtungen in meiner Region vernetzt?</li>
+                        <li>Wie bewerten Sie den Handlungsbedarf für dieses Ökosystem-Element?</li>
                     </ul>
                 ]]></target>
 			</trans-unit>
@@ -408,7 +409,7 @@
 				<source>Politics dummy text</source>
 				<target><![CDATA[
                     Von Seiten der Politik können Rahmenbedingungen geschaffen werden, die Gründungsaktivitäten erleichtern.
-                    <br/>Fragen, die Sie sich stellen sollten:
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
                     <ul>
                         <li>Wie bewerten Sie die politischen Rahmenbedingungen für Gründer  in Ihrer Region?</li>
                         <li>Welche Förderprogramme gibt es?</li>
@@ -420,7 +421,7 @@
 				<source>EndCustomer dummy text</source>
 				<target><![CDATA[
                     Hierbei handelt es sich um Privatpersonen, die als potenzielle Käufer von Produkten oder Dienstleistungen in Frage kommen.
-                    <br/>Fragen, die Sie sich stellen sollten:
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
                     <ul>
                         <li>Welche sozioökonomischen Merkmale weist die regionale Bevölkerung auf?</li>
                         <li>Gibt es regionsspezifische Kundengruppen?</li>
@@ -431,7 +432,7 @@
 				<source>PotentialFounder dummy text</source>
 				<target><![CDATA[
                     Die Qualität und Größe des Talentpools resultiert insbesondere aus den Ausbildungsprogrammen regionaler Universitäten, Fachhochschulen und Schulen sowie den ansässigen Unternehmen
-                    <br/>Fragen, die Sie sich stellen sollten:
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
                     <ul>
                         <li>Wie setzt sich mein Talentpool zusammen?</li>
                         <li>Welche Attraktionen bietet mein Standort für neue Talente?</li>
@@ -443,7 +444,7 @@
 				<source>Inspiration dummy text</source>
 				<target><![CDATA[
                     Die Inspiration speist sich im Kontext des Gründerökosystems aus zwei Quellen. Zum einen aus den ansässigen Unternehmen und Bildungseinrichtungen. Zum anderen sind es erfolgreiche Gründer selbst, die ihre Gründungsgeschichte teilen.
-                    <br>Fragen, die Sie sich stellen sollten:
+                    <br>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
                     <ul>
                         <li>Woher beziehen Gründer in meiner Region ihre Ideen?</li>
                         <li>Woher nehmen Gründer ihre Motivation?</li>
@@ -455,7 +456,7 @@
 				<source>StartUps dummy text</source>
 				<target><![CDATA[
                     Gründer und Startups sind die wichtigsten Akteure der Gründerszene. Sie helfen sich gegenseitig und erhalten zusätzliche Unterstützung durch die weiteren Akteure des Gründerökosystems.
-                    <br/>Fragen, die Sie sich stellen sollten:
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
                     <ul>
                     <li>Welche Netzwerke und Events für Gründer gibt es in meiner Region?</li>
                     <li>Wer sind die treibenden Kräfte der Gründerszene? Gibt es Vorbilder?</li>
@@ -467,7 +468,7 @@
 				<source>Trend dummy text</source>
 				<target><![CDATA[
                     Gründerökosysteme können entweder neue Trends setzen oder bereits vorhandene aufgreifen (z. B. soziokulturelle Trends, Zeitgeist- oder Konsumtrends, Mikrotrends).
-                    <br/>Fragen, die Sie sich stellen sollten:
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
                     <ul>
                         <li>Welche nationalen oder globalen Trends beeinflussen die Gründungschancen?</li>
                         <li>Welche Trends machen sich auch in meiner Region bemerkbar?</li>
@@ -479,7 +480,7 @@
 				<source>DemandForSolution dummy text</source>
                 <target><![CDATA[
                     Die Marktstruktur, -größe und -dynamik resultieren aus dem Vorhandensein der regionalen Branchen und Unternehmen (B2B) und potenzieller Endkunden (B2C).
-                    <br/>Fragen, die Sie sich stellen sollten:
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
                     <ul>
                         <li>Welche Chancen bietet die (regionale) Nachfrage für Gründer?</li>
                         <li>Wie stellt sich die Wettbewerbssituation dar?</li>
@@ -490,7 +491,7 @@
 				<source>Company dummy text</source>
                 <target><![CDATA[
                     Erfolgreiche Unternehmen sind ein Magnet für Talente und hochqualifizierte Mitarbeiter.
-                    <br/>Fragen, die Sie sich stellen sollten:
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
                     <ul>
                         <li>Welche Unternehmen sind für meine Region besonders wichtig?</li>
                         <li>Wie unterstützen diese Unternehmen das Thema Gründung?</li>
@@ -502,7 +503,7 @@
 				<source>Assistance dummy text</source>
                 <target><![CDATA[
                     Im Zuge der Entwicklung und Vermarktung ihrer Geschäftsideen benötigen Gründer häufig Unterstützung von Beratern und Investoren in Kombination mit der passenden Infrastruktur.
-                    <br/>Fragen, die Sie sich stellen sollten:
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
                     <ul>
                         <li>Welche Unterstützungsleistungen für Gründer gibt es in meiner Region?</li>
                         <li>Welche Finanzierungsmöglichkeiten bieten sich Gründern und Startups?</li>
@@ -514,7 +515,7 @@
 				<source>BusinessCustomer dummy text</source>
                 <target><![CDATA[
                     Geschäftskunden sind Unternehmen oder öffentliche Organisationen, die als potenzielle Käufer von Produkten oder Dienstleistungen in Frage kommen.
-                    <br/>Fragen, die Sie sich stellen sollten:
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
                     <ul>
                         <li>Gibt es Branchencluster in meiner Region?</li>
                         <li>Welche Produkte und/oder Dienstleistungen werden von regional ansässigen Unternehmen nachgefragt?</li>

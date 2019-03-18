@@ -1079,7 +1079,7 @@
 
       buttonsLayer.appendChild(skipTooltipButton);
 
-      //in order to prevent displaying next/previous button always
+        //in order to prevent displaying next/previous button always
       if (this._introItems.length > 1) {
         buttonsLayer.appendChild(prevTooltipButton);
         buttonsLayer.appendChild(nextTooltipButton);
@@ -1183,6 +1183,16 @@
       if (typeof skipTooltipButton !== "undefined" && skipTooltipButton != null) {
         skipTooltipButton.innerHTML = this._options.skipLabel;
       }
+    }
+
+    // move "done"-button to the right
+    // Equal to: jQuery(buttonsLayer).has('a.introjs-button.introjs-skipbutton.introjs-donebutton').length
+    if (typeof skipTooltipButton !== "undefined" && skipTooltipButton != null && /introjs-donebutton/gi.test(skipTooltipButton.className)) {
+      // skipbutton is used as done-button -> move it to the right, if it's the "finish"-button
+      jQuery('div.introjs-tooltipbuttons').find('a.introjs-skipbutton').appendTo('div.introjs-tooltipbuttons');
+    } else {
+      // move button again to the left, if it's the ordinary skip-button
+      jQuery('div.introjs-tooltipbuttons').find('a.introjs-skipbutton').prependTo('div.introjs-tooltipbuttons');
     }
 
     //Set focus on "next" button, so that hitting Enter always moves you onto the next step

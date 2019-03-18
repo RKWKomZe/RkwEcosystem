@@ -59,10 +59,10 @@
         <p class="text">
             <f:if condition="{smallBox}">
                 <f:then>
-                    <f:format.crop maxCharacters="130"><f:format.raw>{text}</f:format.raw></f:format.crop>
+                    <f:format.crop maxCharacters="130"><f:format.nl2br>{text}</f:format.nl2br></f:format.crop>
                 </f:then>
                 <f:else>
-                    <f:format.crop maxCharacters="330"><f:format.raw>{text}</f:format.raw></f:format.crop>
+                    <f:format.crop maxCharacters="330"><f:format.nl2br>{text}</f:format.nl2br></f:format.crop>
                 </f:else>
             </f:if>
         </p>
