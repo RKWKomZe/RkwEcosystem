@@ -156,13 +156,13 @@
 			</trans-unit>
 			<trans-unit id="templates_email_expertFeedbackAdmin.text1">
 				<source>someone requested an expert feedback for his/her RKW Entrepreneurship Ecosystem Canvas. Please find the canvas attached. You can reply to this e-mail to send your feedback to the user.</source>
-				<target>jemand hat ein Experten-Feedback zum RKW Gründerökosystem Canvas angefordert. Das betreffende Canvas ist dieser E-Mail angehängt. Sie können direkt auf diese E-Mail antworten, um dem Nutzer das Feedbnack zukommen zu lassen.</target>
+				<target>jemand hat ein Experten-Feedback zum RKW Gründerökosystem Canvas angefordert. Das betreffende Canvas ist dieser E-Mail angehängt. Sie können direkt auf diese E-Mail antworten, um dem Nutzer das Feedback zukommen zu lassen.</target>
 			</trans-unit>
 
 			<!-- Templates/Ecosystem/Edit.html -->
             <trans-unit id="partials_ecosystem_edit.viewportHint">
                 <source>To use the RKW Entrepreneurship Ecosystem Canvas, you need a screen resolution of at least 1200px width.</source>
-                <target>Um das RKW Gründerökosystem Canvas verwenden zu können, benötigen Sie eine Bildschrirmauflösung mit mindestens 1200px Breite.</target>
+                <target>Um das RKW Gründerökosystem Canvas verwenden zu können, benötigen Sie eine Bildschirmauflösung mit mindestens 1200px Breite.</target>
             </trans-unit>
             <trans-unit id="partials_ecosystem_edit.introText">
                 <source>To use the RKW Entrepreneurship Ecosystem Canvas, you need a screen resolution of at least 1200px width.</source>
@@ -401,7 +401,6 @@
                         <li>Welche Rolle spielt das Thema Entrepreneurship in der Ausbildung?</li>
                         <li>Welche Unterstützungsprogramme bieten Bildungseinrichtungen in meiner Region?</li>
                         <li>Wie sind die Ausbildungseinrichtungen in meiner Region vernetzt?</li>
-                        <li>Wie bewerten Sie den Handlungsbedarf für dieses Ökosystem-Element?</li>
                     </ul>
                 ]]></target>
 			</trans-unit>
@@ -521,6 +520,10 @@
                         <li>Welche Produkte und/oder Dienstleistungen werden von regional ansässigen Unternehmen nachgefragt?</li>
                     </ul>
                 ]]></target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.ratingHint">
+			    <source>Please rate on scale of high to low.</source>
+                <target>Wie bewerten Sie den Handlungsbedarf für dieses Ökosystem-Element?</target>
 			</trans-unit>
 
 
