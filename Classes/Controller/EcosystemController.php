@@ -432,7 +432,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             //===
         }
 
-    //    try {
+        try {
             if ($settingsFramework = Common::getTyposcriptConfiguration($this->extensionName, ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK)) {
 
                 /** @var \TYPO3\CMS\Fluid\View\StandaloneView $standaloneView */
@@ -462,7 +462,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             //    exit;
                 //===
             }
-            /*
+
         } catch (Html2PdfException $e) {
 
             $this->getLogger()->log(\TYPO3\CMS\Core\Log\LogLevel::ERROR, sprintf('An error occurred while trying to generate a PDF. Message: %s', str_replace(array("\n", "\r"), '', $e->getMessage())));
@@ -474,7 +474,6 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             $this->redirect('edit', null, null, array('ecosystemId' => $ecosystem->getUid()));
             //===
         }
-            */
     }
 
     /**
