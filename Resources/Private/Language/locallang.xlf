@@ -327,6 +327,9 @@
 			<trans-unit id="partials_ecosystem_introJsContent.text.businessCustomer">
 				<source>BusinessCustomer dummy text</source>
 			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.ratingHint">
+                <source>Please rate on scale of high to low.</source>
+            </trans-unit>
 			<trans-unit id="partials_ecosystem_introJsContent.placeholder.education">
 				<source>Education dummy placeholder</source>
 			</trans-unit>
