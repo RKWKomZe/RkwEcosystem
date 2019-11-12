@@ -3,20 +3,8 @@
 	<file source-language="en" datatype="plaintext" original="messages" date="2017-12-15T11:10:36Z" product-name="rkw_ecosystem">
 		<header/>
 		<body>
-			<trans-unit id="tx_rkw_ecosystem_domain_model_ecosystem">
-				<source>RKW Ecosystem: Gründerökosystem</source>
-			</trans-unit>
-			<trans-unit id="tx_rkw_ecosystem_domain_model_ecosystem.description">
-				<source></source>
-			</trans-unit>
-			<trans-unit id="tx_rkw_ecosystem_domain_model_mylist">
-				<source>RKW Ecosystem: Meine Ökosysteme</source>
-			</trans-unit>
-			<trans-unit id="tx_rkw_ecosystem_domain_model_mylist.description">
-				<source></source>
-			</trans-unit>
 			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem">
-				<source>Ecosystem</source>
+				<source>RKW Ecosystem: Entrepreneurship Ecosystem</source>
 			</trans-unit>
 			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.education">
 				<source>Education</source>
