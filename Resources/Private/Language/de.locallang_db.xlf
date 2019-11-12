@@ -6,25 +6,13 @@
 			<!-- ################ -->
 			<!-- MODEL -->
 			<!-- ################ -->
-			<trans-unit id="tx_rkw_ecosystem_domain_model_ecosystem">
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem">
 				<source>RKW Ecosystem: Gründerökosystem</source>
 				<target>RKW Ecosystem: Gründerökosystem</target>
 			</trans-unit>
-			<trans-unit id="tx_rkw_ecosystem_domain_model_ecosystem.description">
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.description">
 				<source>Description</source>
 				<target>Beschreibung</target>
-			</trans-unit>
-			<trans-unit id="tx_rkw_ecosystem_domain_model_mylist">
-				<source>RKW Ecosystem: Meine Ökosysteme</source>
-				<target>RKW Ecosystem: Meine Ökosysteme</target>
-			</trans-unit>
-			<trans-unit id="tx_rkw_ecosystem_domain_model_mylist.description">
-				<source>Description</source>
-				<target>Beschreibung</target>
-			</trans-unit>
-			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem">
-				<source>Ecosystem</source>
-				<target>Gründerökosystem</target>
 			</trans-unit>
 			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.education">
 				<source>Education</source>

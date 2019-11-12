@@ -14,7 +14,7 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 	<f:section name="main">
 
-		<f:flashMessages />
+		<f:render partial="FlashMessages" arguments="{_all}" />
 
 		<f:if condition="{ecosystemList}">
 			<f:then>

@@ -16,21 +16,7 @@
 
         <h3><f:translate key="templates_ecosystem_save.headline" /></h3>
 
-        <f:flashMessages as="flashMessages">
-            <f:for each="{flashMessages}" as="flashMessage">
-                <div class="typo3-messages">
-                    <div class="alert alert-{flashMessage.class}">
-                        <div class="media">
-                            <div class="media-body">
-                                <div class="alert-message">
-                                    {flashMessage.message}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </f:for>
-        </f:flashMessages>
+        <f:render partial="FlashMessages" arguments="{_all}" />
 
         <!-- form -->
 		<f:form class="form-fields" action="persist" name="ecosystem" object="{ecosystem}" >
