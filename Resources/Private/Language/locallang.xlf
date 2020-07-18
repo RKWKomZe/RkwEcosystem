@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2017-12-15T11:10:36Z" product-name="rkw_ecosystem">
+		<header/>
+		<body>
+			<!-- ################ -->
+			<!-- MODEL -->
+			<!-- ################ -->
+			<trans-unit id="tx_rkw_ecosystem_domain_model_ecosystem">
+				<source>RKW Ecosystem: Canvas</source>
+			</trans-unit>
+			<trans-unit id="tx_rkw_ecosystem_domain_model_ecosystem.description">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="tx_rkw_ecosystem_domain_model_mylist">
+				<source>RKW Ecosystem: My Canvases</source>
+			</trans-unit>
+			<trans-unit id="tx_rkw_ecosystem_domain_model_mylist.description">
+				<source></source>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem">
+				<source>Ecosystem</source>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.education">
+				<source>Education</source>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.politics">
+				<source>Politics</source>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.end_customer">
+				<source>Customer (B2C)</source>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.potential_founder">
+				<source>Potential Founders</source>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.inspiration">
+				<source>Inspiration</source>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.start_ups">
+				<source>Start Ups</source>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.trend">
+				<source>Trend</source>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.demand_for_solution">
+				<source>Demand For Solution</source>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.company">
+				<source>Company</source>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.assistance">
+				<source>Assistance</source>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.business_customer">
+				<source>Business Customer</source>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.frontend_user">
+				<source>Frontend User</source>
+			</trans-unit>
+
+
+
+			<!-- ################ -->
+			<!-- CONTROLLER -->
+			<!-- ################ -->
+			<trans-unit id="ecosystemController.message.error.somethingWentWrong">
+				<source>Sorry, something went wrong! Please try again.</source>
+			</trans-unit>
+			<trans-unit id="ecosystemController.message.error.loggedIn">
+				<source>Sorry, you have to be logged in to use this feature.</source>
+			</trans-unit>
+			<trans-unit id="ecosystemController.message.ecosystemSaved">
+				<source>Your RKW Entrepreneurship Ecosystem Canvas has been successfully saved!</source>
+			</trans-unit>
+			<trans-unit id="ecosystemController.message.feedbackSent">
+				<source>Your RKW Entrepreneurship Ecosystem Canvas has been successfully sent to one of our experts!</source>
+			</trans-unit>
+			<trans-unit id="ecosystemController.message.deleted">
+				<source>Your RKW Entrepreneurship Ecosystem Canvas successfully deleted!</source>
+			</trans-unit>
+			<trans-unit id="ecosystemController.message.enterName">
+				<source>Please enter a name for your RKW Entrepreneurship Ecosystem Canvas.</source>
+			</trans-unit>
+            <trans-unit id="ecosystemController.message.resetDatabase">
+                <source>Your RKW Entrepreneurship Ecosystem Canvas was reset to its last saved state.</source>
+            </trans-unit>
+            <trans-unit id="ecosystemController.message.resetAll">
+                <source>Your RKW Entrepreneurship Ecosystem Canvas was reset completely.</source>
+            </trans-unit>
+
+
+
+
+			<!-- ################ -->
+			<!-- SERVICE -->
+			<!-- ################ -->
+			<trans-unit id="rkwMailService.expertFeedbackAdmin.subject">
+				<source>A new RKW Entrepreneurship Ecosystem Canvas is waiting for feedback</source>
+			</trans-unit>
+
+
+
+			<!-- ################ -->
+			<!-- VALIDATOR -->
+			<!-- ################ -->
+			<trans-unit id="validator.ecosystem.notComplete">
+				<source>Ecosystem is not complete yet!</source>
+			</trans-unit>
+			<trans-unit id="validator.ecosystem.hasNoName">
+				<source>Please choose a name! You have to save the ecosystem to set a name.</source>
+			</trans-unit>
+
+
+			<!-- ################ -->
+			<!-- TEMPLATES -->
+			<!-- ################ -->
+
+			<!-- Templates/Email/ExpertFeedbackAdmin.html -->
+			<trans-unit id="templates_email_expertFeedbackAdmin.headline">
+				<source>Hello %s,</source>
+			</trans-unit>
+			<trans-unit id="templates_email_expertFeedbackAdmin.text1">
+				<source>someone requested an expert feedback for his/her RKW Entrepreneurship Ecosystem Canvas. Please find the canvas attached. You can reply to this e-mail to send your feedback to the user.</source>
+			</trans-unit>
+
+
+			<!-- Templates/Ecosystem/Edit.html -->
+			<trans-unit id="partials_ecosystem_edit.viewportHint">
+				<source>To use the RKW Entrepreneurship Ecosystem Canvas, you need a screen resolution of at least 1200px width.</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_edit.introText">
+                <source>This canvas is a working tool.</source>
+            </trans-unit>
+			<trans-unit id="partials_ecosystem_edit.entryText">
+				<source>Entry text dummy</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_edit.start">
+				<source>Start</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_edit.persist">
+				<source>Save</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_edit.reset">
+				<source>Reset</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_edit.delete">
+				<source>Delete</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_edit.print">
+				<source>Download as PDF</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_edit.show">
+				<source>Show all</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_edit.expertFeedback">
+				<source>Ask for Expert Feedback</source>
+			</trans-unit>
+            <trans-unit id="partials_ecosystem_edit.new">
+                <source>Create new Canvas</source>
+            </trans-unit>
+            <trans-unit id="partials_ecosystem_edit.actions">
+                <source>Actions</source>
+            </trans-unit>
+            <trans-unit id="partials_ecosystem_edit.prev">
+                <source><![CDATA[Save &amp; Previous]]></source>
+            </trans-unit>
+            <trans-unit id="partials_ecosystem_edit.next">
+                <source><![CDATA[Save &amp; Next]]></source>
+            </trans-unit>
+            <trans-unit id="partials_ecosystem_edit.skip">
+                <source>Skip</source>
+            </trans-unit>
+            <trans-unit id="partials_ecosystem_edit.done">
+                <source>Done</source>
+            </trans-unit>
+
+
+			<!-- Templates/Ecosystem/Print.html -->
+			<trans-unit id="partials_ecosystem_print.rating">
+				<source>Rating:</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_print.no-content">
+				<source>No Content</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_print.no-rating">
+				<source>No Rating</source>
+			</trans-unit>
+
+
+
+			<!-- Templates/Ecosystem/Save.html -->
+            <trans-unit id="templates_ecosystem_feedback.save">
+                <source>Save</source>
+            </trans-unit>
+			<trans-unit id="templates_ecosystem_save.placeholder">
+				<source>e.g. My Canvas of New York</source>
+			</trans-unit>
+			<trans-unit id="templates_ecosystem_save.placeholderTitle">
+                <source>Title</source>
+            </trans-unit>
+			<trans-unit id="templates_ecosystem_save.cancel">
+                <source>Cancel</source>
+            </trans-unit>
+             <trans-unit id="templates_ecosystem_save.persist">
+                <source>Save</source>
+            </trans-unit>
+
+
+			<!-- Templates/Ecosystem/Feedback.html -->
+            <trans-unit id="templates_ecosystem_feedback.headline">
+                <source>Expert-Feedback</source>
+            </trans-unit>
+			<trans-unit id="templates_ecosystem_feedback.introduction">
+				<source>We would be happy to give you feedback on your RKW Entrepreneurship Ecosystem Canvas.</source>
+			</trans-unit>
+			<trans-unit id="templates_ecosystem_feedback.introductionHint">
+                <source>Type in your matter below.</source>
+            </trans-unit>
+			<trans-unit id="templates_ecosystem_feedback.placeholder">
+				<source>Enter your comment</source>
+			</trans-unit>
+			<trans-unit id="templates_ecosystem_feedback.cancel">
+                <source>Cancel</source>
+            </trans-unit>
+             <trans-unit id="templates_ecosystem_feedback.send">
+                <source>Send</source>
+            </trans-unit>
+
+
+			<!-- Templates/Ecosystem/MyList.html -->
+			<trans-unit id="partials_ecosystem_options.delete">
+				<source>Delete</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_options.edit">
+				<source>Edit</source>
+			</trans-unit>
+
+
+			<!-- Partials/Email/Details.html -->
+			<trans-unit id="partials_email_details.user">
+				<source>Details of user</source>
+			</trans-unit>
+			<trans-unit id="partials_email_details.remark">
+				<source>Remark</source>
+			</trans-unit>
+
+
+            <!-- Partials/Ecosystem/Open.html -->
+			<trans-unit id="partials_ecosystem_open.choose">
+				<source>Please choose</source>
+			</trans-unit>
+
+
+			<!-- Partials/Ecosystem/IntroJsContent.html -->
+			<trans-unit id="partials_ecosystem_introJsContent.radio.low">
+				<source>Low</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.radio.middle">
+				<source>Middle</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.radio.high">
+				<source>High</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.education">
+				<source>Education dummy header</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.politics">
+				<source>Politics dummy header</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.endCustomer">
+				<source>EndCustomer dummy header</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.potentialFounder">
+				<source>PotentialFounder dummy header</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.inspiration">
+				<source>Inspiration dummy header</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.startUps">
+				<source>StartUps dummy header</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.trend">
+				<source>Trend dummy header</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.demandForSolution">
+				<source>DemandForSolution dummy header</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.company">
+				<source>Company dummy header</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.assistance">
+				<source>Assistance dummy header</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.businessCustomer">
+				<source>BusinessCustomer dummy header</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.education">
+				<source>Education dummy text</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.politics">
+				<source>Politics dummy text</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.endCustomer">
+				<source>EndCustomer dummy text</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.potentialFounder">
+				<source>PotentialFounder dummy text</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.inspiration">
+				<source>Inspiration dummy text</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.startUps">
+				<source>StartUps dummy text</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.trend">
+				<source>Trend dummy text</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.demandForSolution">
+				<source>DemandForSolution dummy text</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.company">
+				<source>Company dummy text</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.assistance">
+				<source>Assistance dummy text</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.businessCustomer">
+				<source>BusinessCustomer dummy text</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.ratingHint">
+                <source>Please rate on scale of high to low.</source>
+            </trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.education">
+				<source>Education dummy placeholder</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.politics">
+				<source>Politics dummy placeholder</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.endCustomer">
+				<source>EndCustomer dummy placeholder</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.potentialFounder">
+				<source>PotentialFounder dummy placeholder</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.inspiration">
+				<source>Inspiration dummy placeholder</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.startUps">
+				<source>StartUps dummy placeholder</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.trend">
+				<source>Trend dummy placeholder</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.demandForSolution">
+				<source>DemandForSolution dummy placeholder</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.company">
+				<source>Company dummy placeholder</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.assistance">
+				<source>Assistance dummy placeholder</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.businessCustomer">
+				<source>BusinessCustomer dummy placeholder</source>
+			</trans-unit>
+
+
+
+			<!-- Partials/Ecosystem/SvgImage.html -->
+			<trans-unit id="partials_ecosystem_svgImage.remark.introJs">
+				<source>Remark dummy content</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_svgImage.remark.label">
+				<source>Remark</source>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_svgImage.remark.placeholder">
+				<source>Placeholder</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

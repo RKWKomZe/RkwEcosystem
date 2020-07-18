@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-12-15T11:10:36Z" product-name="rkw_ecosystem">
+		<header/>
+		<body>
+			<!-- ################ -->
+			<!-- MODEL -->
+			<!-- ################ -->
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem">
+				<source>RKW Ecosystem: Gründerökosystem</source>
+				<target>RKW Ecosystem: Gründerökosystem</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.description">
+				<source>Description</source>
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.education">
+				<source>Education</source>
+				<target>Schulen, Fachhochschulen and Universitäten</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.politics">
+				<source>Politics</source>
+				<target>Politik</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.end_customer">
+				<source>End Customer</source>
+				<target>Endkunden (B2C)</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.potential_founder">
+				<source>Potential Founder</source>
+				<target>Potenzielle Gründer</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.inspiration">
+				<source>Inspiration</source>
+				<target>Inspiration</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.start_ups">
+				<source>Start Ups</source>
+				<target>Gründerszene</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.trend">
+				<source>Trend</source>
+				<target>Trends</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.demand_for_solution">
+				<source>Demand For Solution</source>
+				<target>Produkte und Services; Nachfrage</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.company">
+				<source>Company</source>
+				<target>Unternehmen</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.assistance">
+				<source>Assistance</source>
+				<target>Unterstützung und Infrastruktur</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.business_customer">
+				<source>Business Customer</source>
+				<target>Geschäftskunden (B2B)</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.frontend_user">
+				<source>Frontend User</source>
+				<target>Frontend Nutzer</target>
+			</trans-unit>
+
+
+			<!-- FLEXFORM -->
+			<trans-unit id="flexForm.ecosystem.general">
+				<source>General</source>
+				<target>Allgemein</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.entryText">
+				<source>Entry text (can used instead of the standard one)</source>
+				<target>Einleitungstext (Vorhandener wird überschrieben)</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showRemark">
+				<source>Show remark for FrontendUser</source>
+				<target>Nutzern erlauben, eine Anmerkung zu hinterlassen</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.remarkPlaceholder">
+				<source>Overwrite remark placeholder</source>
+				<target>Anmerkungs-Platzhalter überschreiben</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.backendUser">
+				<source>Send feedback to (Backend User)</source>
+				<target>Feedback senden an (Backend User)</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.formFields">
+				<source>FormFields</source>
+				<target>Formularfelder</target>
+			</trans-unit>
+
+			<trans-unit id="flexForm.ecosystem.educationEntryText">
+				<source>1.1 Education: Overwrite Introduction</source>
+				<target>1.1 Bildung: Überschreibe Einleitung</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showEducationTextarea">
+				<source>1.1 Education: Show textarea</source>
+				<target>1.1 Bildung: Zeige Textfeld</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.educationPlaceholder">
+				<source>1.1 Education: Overwrite default textarea placeholder</source>
+				<target>1.1 Bildung: Überschreibe Textfeld-Platzhalter</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showEducationRadio">
+				<source>1.1 Education: Show radio buttons</source>
+				<target>1.1 Bildung: Zeige Bewertungsampel</target>
+			</trans-unit>
+
+			<trans-unit id="flexForm.ecosystem.politicsEntryText">
+				<source>1.2 Politics: Overwrite Introduction</source>
+				<target>1.2 Politik: Überschreibe Einleitung</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showPoliticsTextarea">
+				<source>1.2 Politics: Show textarea</source>
+				<target>1.2 Politik: Zeige Textfeld</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.politicsPlaceholder">
+				<source>1.2 Politics: Overwrite default textarea placeholder</source>
+				<target>1.2 Politik: Überschreibe Textfeld-Platzhalter</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showPoliticsRadio">
+				<source>1.2 Politics: Show radio buttons</source>
+				<target>1.2 Politik: Zeige Bewertungsampel</target>
+			</trans-unit>
+
+			<trans-unit id="flexForm.ecosystem.endCustomerEntryText">
+				<source>1.3 EndCustomer: Overwrite Introduction</source>
+				<target>1.3 Endkunde: Überschreibe Einleitung</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showEndCustomerTextarea">
+				<source>1.3 EndCustomer: Show textarea</source>
+				<target>1.3 Endkunde: Zeige Textfeld</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.endCustomerPlaceholder">
+				<source>1.3 EndCustomer: Overwrite default textarea placeholder</source>
+				<target>1.3 Endkunde: Überschreibe Textfeld-Platzhalter</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showEndCustomerRadio">
+				<source>1.3 EndCustomer: Show radio buttons</source>
+				<target>1.3 Endkunde: Zeige Bewertungsampel</target>
+			</trans-unit>
+
+			<trans-unit id="flexForm.ecosystem.potentialFounderEntryText">
+				<source>2.1 PotentialFounder: Overwrite Introduction</source>
+				<target>2.1 Potenzielle Gründer: Überschreibe Einleitung</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showPotentialFounderTextarea">
+				<source>2.1 PotentialFounder: Show textarea</source>
+				<target>2.1 Potenzielle Gründer: Zeige Textfeld</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.potentialFounderPlaceholder">
+				<source>2.1 PotentialFounder: Overwrite default textarea placeholder</source>
+				<target>2.1 Potenzielle Gründer: Überschreibe Textfeld-Platzhalter</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showPotentialFounderRadio">
+				<source>2.1 PotentialFounder: Show radio buttons</source>
+				<target>2.1 Potenzielle Gründer: Zeige Bewertungsampel</target>
+			</trans-unit>
+
+			<trans-unit id="flexForm.ecosystem.inspirationEntryText">
+				<source>2.2 Inspiration: Overwrite Introduction</source>
+				<target>2.2 Inspiration: Überschreibe Einleitung</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showInspirationTextarea">
+				<source>2.2 Inspiration: Show textarea</source>
+				<target>2.2 Inspiration: Zeige Textfeld</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.inspirationPlaceholder">
+				<source>2.2 Inspiration: Overwrite default textarea placeholder</source>
+				<target>2.2 Inspiration: Überschreibe Textfeld-Platzhalter</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showInspirationRadio">
+				<source>2.2 Inspiration: Show radio buttons</source>
+				<target>2.2 Inspiration: Zeige Bewertungsampel</target>
+			</trans-unit>
+
+			<trans-unit id="flexForm.ecosystem.startUpsEntryText">
+				<source>2.3 StartUps: Overwrite Introduction</source>
+				<target>2.3 Gründerszene: Überschreibe Einleitung</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showStartUpsTextarea">
+				<source>2.3 StartUps: Show textarea</source>
+				<target>2.3 Gründerszene: Zeige Textfeld</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.startUpsPlaceholder">
+				<source>2.3 StartUps: Overwrite default textarea placeholder</source>
+				<target>2.3 Gründerszene: Überschreibe Textfeld-Platzhalter</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showStartUpsRadio">
+				<source>2.3 StartUps: Show radio buttons</source>
+				<target>2.3 Gründerszene: Zeige Bewertungsampel</target>
+			</trans-unit>
+
+			<trans-unit id="flexForm.ecosystem.trendEntryText">
+				<source>2.4 Trend: Overwrite Introduction</source>
+				<target>2.4 Trends: Überschreibe Einleitung</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showTrendTextarea">
+				<source>2.4 Trend: Show textarea</source>
+				<target>2.4 Trends: Zeige Textfeld</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.trendPlaceholder">
+				<source>2.4 Trend: Overwrite default textarea placeholder</source>
+				<target>2.4 Trends: Überschreibe Textfeld-Platzhalter</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showTrendRadio">
+				<source>2.4 Trend: Show radio buttons</source>
+				<target>2.4 Trends: Zeige Bewertungsampel</target>
+			</trans-unit>
+
+			<trans-unit id="flexForm.ecosystem.demandForSolutionEntryText">
+				<source>2.5 DemandForSolution: Overwrite Introduction</source>
+				<target>2.5 Nachfrage: Überschreibe Einleitung</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showDemandForSolutionTextarea">
+				<source>2.5 DemandForSolution: Show textarea</source>
+				<target>2.5 Nachfrage: Zeige Textfeld</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.demandForSolutionPlaceholder">
+				<source>2.5 DemandForSolution: Overwrite default textarea placeholder</source>
+				<target>2.5 Nachfrage: Überschreibe Textfeld-Platzhalter</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showDemandForSolutionRadio">
+				<source>2.5 DemandForSolution: Show radio buttons</source>
+				<target>2.5 Nachfrage: Zeige Bewertungsampel</target>
+			</trans-unit>
+
+			<trans-unit id="flexForm.ecosystem.companyEntryText">
+				<source>3.1 Company: Overwrite Introduction</source>
+				<target>3.1 Unternehmen: Überschreibe Einleitung</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showCompanyTextarea">
+				<source>3.1 Company: Show textarea</source>
+				<target>3.1 Unternehmen: Zeige Textfeld</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.companyPlaceholder">
+				<source>3.1 Company: Overwrite default textarea placeholder</source>
+				<target>3.1 Unternehmen: Überschreibe Textfeld-Platzhalter</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showCompanyRadio">
+				<source>3.1 Company: Show radio buttons</source>
+				<target>3.1 Unternehmen: Zeige Bewertungsampel</target>
+			</trans-unit>
+
+			<trans-unit id="flexForm.ecosystem.assistanceEntryText">
+				<source>3.2 Assistance: Overwrite Introduction</source>
+				<target>3.2 Unterstützung: Überschreibe Einleitung</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showAssistanceTextarea">
+				<source>3.2 Assistance: Show textarea</source>
+				<target>3.2 Unterstützung: Zeige Textfeld</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.assistancePlaceholder">
+				<source>3.2 Assistance: Overwrite default textarea placeholder</source>
+				<target>3.2 Unterstützung: Überschreibe Textfeld-Platzhalter</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showAssistanceRadio">
+				<source>3.2 Assistance: Show radio buttons</source>
+				<target>3.2 Unterstützung: Zeige Bewertungsampel</target>
+			</trans-unit>
+
+			<trans-unit id="flexForm.ecosystem.businessCustomerEntryText">
+				<source>3.3 BusinessCustomer: Overwrite Introduction</source>
+				<target>3.3 Geschäftskunden: Überschreibe Einleitung</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showBusinessCustomerTextarea">
+				<source>3.3 BusinessCustomer: Show textarea</source>
+				<target>3.3 Geschäftskunden: Zeige Textfeld</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.businessCustomerPlaceholder">
+				<source>3.3 BusinessCustomer: Overwrite default textarea placeholder</source>
+				<target>3.3 Geschäftskunden: Überschreibe Textfeld-Platzhalter</target>
+			</trans-unit>
+			<trans-unit id="flexForm.ecosystem.showBusinessCustomerRadio">
+				<source>3.3 BusinessCustomer: Show radio buttons</source>
+				<target>3.3 Geschäftskunden: Zeige Bewertungsampel</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

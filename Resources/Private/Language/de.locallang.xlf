@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-12-15T11:10:36Z" product-name="rkw_ecosystem">
+		<header/>
+		<body>
+			<!-- ################ -->
+			<!-- MODEL -->
+			<!-- ################ -->
+			<trans-unit id="tx_rkw_ecosystem_domain_model_ecosystem">
+				<source>RKW Ecosystem: Canvas</source>
+				<target>RKW Ecosystem: Canvas</target>
+			</trans-unit>
+			<trans-unit id="tx_rkw_ecosystem_domain_model_ecosystem.description">
+				<source>Description</source>
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_rkw_ecosystem_domain_model_mylist">
+				<source>RKW Ecosystem: My Canvases</source>
+				<target>RKW Ecosystem: Meine Canvas</target>
+			</trans-unit>
+			<trans-unit id="tx_rkw_ecosystem_domain_model_mylist.description">
+				<source>Description</source>
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem">
+				<source>Ecosystem</source>
+				<target>Gründerökosystem</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.education">
+				<source>Education</source>
+				<target>Schulen, Fachhochschulen und Universitäten</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.politics">
+				<source>Politics</source>
+				<target>Politik</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.end_customer">
+				<source>Customers (B2C)</source>
+				<target>Endkunden (B2C)</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.potential_founder">
+				<source>Potential Founders</source>
+				<target>Potenzielle Gründer</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.inspiration">
+				<source>Inspiration</source>
+				<target>Inspiration</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.start_ups">
+				<source>Start Ups</source>
+				<target>Gründerszene</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.trend">
+				<source>Trend</source>
+				<target>Trends</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.demand_for_solution">
+				<source>Demand For Solution</source>
+				<target>Produkte und Services; Nachfrage</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.company">
+				<source>Company</source>
+				<target>Unternehmen</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.assistance">
+				<source>Assistance</source>
+				<target>Unterstützung und Infrastruktur</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.business_customer">
+				<source>Business Customer</source>
+				<target>Geschäftskunden (B2B)</target>
+			</trans-unit>
+			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.frontend_user">
+				<source>Frontend User</source>
+				<target>Frontend Nutzer</target>
+			</trans-unit>
+
+
+
+			<!-- ################ -->
+			<!-- CONTROLLER -->
+			<!-- ################ -->
+			<trans-unit id="ecosystemController.message.error.somethingWentWrong">
+				<source>Sorry, something went wrong! Please try again.</source>
+				<target>Upps, da ist wohl etwas schief gelaufen. Bitte versuchen Sie es erneut.</target>
+			</trans-unit>
+            <trans-unit id="ecosystemController.message.error.loggedIn">
+                <source>Sorry, you have to be logged in to use this feature.</source>
+                <target>Upps, da ist wohl etwas schief gelaufen. Sie müssen eingeloggt sein, um diese Funktion nutzen zu können.</target>
+            </trans-unit>
+			<trans-unit id="ecosystemController.message.ecosystemSaved">
+				<source>Your RKW Entrepreneurship Ecosystem Canvas has been successfully saved!</source>
+				<target>Woohoo! Ihr RKW Gründerökosystem Canvas wurde erfolgreich gespeichert!</target>
+			</trans-unit>
+			<trans-unit id="ecosystemController.message.feedbackSent">
+				<source>Your RKW Entrepreneurship Ecosystem Canvas has been successfully sent to one of our experts!</source>
+				<target>Woohoo! Ihr RKW Gründerökosystem Canvas wurde an unsere Experten gesendet. Wir melden uns in Kürze per E-Mail bei Ihnen.</target>
+			</trans-unit>
+			<trans-unit id="ecosystemController.message.deleted">
+				<source>Your RKW Entrepreneurship Ecosystem Canvas successfully deleted!</source>
+				<target>Ihr RKW Gründerökosystem Canvas wurde erfolgreich gelöscht!</target>
+			</trans-unit>
+			<trans-unit id="ecosystemController.message.enterName">
+				<source>Please enter a name for your RKW Entrepreneurship Ecosystem Canvas.</source>
+				<target>Bitte geben Sie einen Namen für Ihr RKW Gründerokosystem Canvas ein.</target>
+			</trans-unit>
+            <trans-unit id="ecosystemController.message.resetDatabase">
+                <source>Your RKW Entrepreneurship Ecosystem Canvas was reset to its last saved state.</source>
+                <target>Ihr RKW Gründerökosystem Canvas wurde auf den letzten gespeicherten Stand zurückgesetzt.</target>
+            </trans-unit>
+            <trans-unit id="ecosystemController.message.resetAll">
+                <source>Your RKW Entrepreneurship Ecosystem Canvas was reset completely.</source>
+                <target>Ihr RKW Gründerökosystem Canvas wurde zurückgesetzt.</target>
+            </trans-unit>
+            <trans-unit id="ecosystemController.message.enterQuestion">
+                <source>Please enter your question or concern</source>
+                <target>Bitte geben Sie Ihre Frage oder Ihr Anliegen an.</target>
+            </trans-unit>
+            <trans-unit id="ecosystemController.message.choose">
+                <source>Please choose an existing ecosystem</source>
+                <target>Bitte wählen Sie ein vorhandenes Ökosystem aus, um es zu öffnen.</target>
+            </trans-unit>
+
+
+
+			<!-- ################ -->
+			<!-- SERVICE -->
+			<!-- ################ -->
+			<trans-unit id="rkwMailService.expertFeedbackAdmin.subject">
+				<source>A new RKW Entrepreneurship Ecosystem Canvas is waiting for feedback</source>
+				<target>Ein neues RKW Gründerökosystem Canvas wartet auf Experten-Feedback</target>
+			</trans-unit>
+
+
+
+			<!-- ################ -->
+			<!-- VALIDATOR -->
+			<!-- ################ -->
+			<trans-unit id="validator.ecosystem.notComplete">
+				<source>Ecosystem is not complete yet!</source>
+				<target>Das Gründerökosystem-Modell ist noch nicht komplett!</target>
+			</trans-unit>
+			<trans-unit id="validator.ecosystem.hasNoName">
+				<source>Please choose a name! You have to save the ecosystem to set a name.</source>
+				<target>Es wird ein Name für das Modell benötigt. Diesen können Sie beim Speichervorgang festlegen.</target>
+			</trans-unit>
+
+
+			<!-- ################ -->
+			<!-- TEMPLATES -->
+			<!-- ################ -->
+			<!-- Templates/Email/ExpertFeedbackAdmin.html -->
+			<trans-unit id="templates_email_expertFeedbackAdmin.headline">
+				<source>Hello %s,</source>
+				<target>Hallo %s,</target>
+			</trans-unit>
+			<trans-unit id="templates_email_expertFeedbackAdmin.text1">
+				<source>someone requested an expert feedback for his/her RKW Entrepreneurship Ecosystem Canvas. Please find the canvas attached. You can reply to this e-mail to send your feedback to the user.</source>
+				<target>jemand hat ein Experten-Feedback zum RKW Gründerökosystem Canvas angefordert. Das betreffende Canvas ist dieser E-Mail angehängt. Sie können direkt auf diese E-Mail antworten, um dem Nutzer das Feedback zukommen zu lassen.</target>
+			</trans-unit>
+
+			<!-- Templates/Ecosystem/Edit.html -->
+            <trans-unit id="partials_ecosystem_edit.viewportHint">
+                <source>To use the RKW Entrepreneurship Ecosystem Canvas, you need a screen resolution of at least 1200px width.</source>
+                <target>Um das RKW Gründerökosystem Canvas verwenden zu können, benötigen Sie eine Bildschirmauflösung mit mindestens 1200px Breite.</target>
+            </trans-unit>
+            <trans-unit id="partials_ecosystem_edit.introText">
+                <source>To use the RKW Entrepreneurship Ecosystem Canvas, you need a screen resolution of at least 1200px width.</source>
+                <target>Das Canvas dient als Arbeitsinstrument, um ein regionales Gründerökosystem ganzheitlich zu denken und unterstützt Sie bei der Gestaltung von eigenen Maßnahmen.  Unser Online-Tool führt Sie schrittweise durch die elf Elemente des Ökosystems. Bitte beantworten Sie die Fragen zu Ihrer Region. Nach dem Durchlauf haben Sie die Möglichkeit das Canvas für Ihre Region auszudrucken und zu speichern. Die Inhalte können jederzeit ergänzt oder verändert werden.</target>
+            </trans-unit>
+			<trans-unit id="partials_ecosystem_edit.start">
+				<source>Start now</source>
+				<target>Jetzt Bearbeitung starten</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_edit.persist">
+				<source>Save</source>
+				<target>Speichern</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_edit.reset">
+				<source>Reset</source>
+				<target>Zurücksetzen</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_edit.delete">
+				<source>Delete</source>
+				<target>Löschen</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_edit.print">
+				<source>Download as PDF</source>
+				<target>Download als PDF</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_edit.show">
+				<source>Show all</source>
+				<target>Alles anzeigen</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_edit.expertFeedback">
+				<source>Ask for Expert Feedback</source>
+				<target>Experten-Feedback anfordern</target>
+			</trans-unit>
+            <trans-unit id="partials_ecosystem_edit.new">
+                <source>Create new Canvas</source>
+                <target>Neues Canvas erstellen</target>
+            </trans-unit>
+            <trans-unit id="partials_ecosystem_edit.actions">
+                <source>Actions</source>
+                <target>Aktionen</target>
+            </trans-unit>
+            <trans-unit id="partials_ecosystem_edit.prev">
+                <source><![CDATA[Save &amp; Previous]]></source>
+                <target><![CDATA[Speichern &amp; Zurück]]></target>
+            </trans-unit>
+            <trans-unit id="partials_ecosystem_edit.next">
+                <source><![CDATA[Save &amp; Next]]></source>
+                <target><![CDATA[Speichern &amp; Weiter]]></target>
+            </trans-unit>
+            <trans-unit id="partials_ecosystem_edit.skip">
+                <source>Skip</source>
+                <target>Abbrechen</target>
+            </trans-unit>
+            <trans-unit id="partials_ecosystem_edit.done">
+                <source>Done</source>
+                <target>Fertig</target>
+            </trans-unit>
+
+
+			<!-- Templates/Ecosystem/Print.html -->
+			<trans-unit id="partials_ecosystem_print.rating">
+				<source>Rating:</source>
+				<target>Handlungsbedarf:</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_print.no-content">
+				<source>No Content</source>
+				<target>Keine Angaben</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_print.no-rating">
+				<source>No Rating</source>
+				<target>Keine Bewertung</target>
+			</trans-unit>
+
+
+			<!-- Templates/Ecosystem/Save.html -->
+            <trans-unit id="templates_ecosystem_feedback.save">
+                <source>Save</source>
+                <target>Speichern</target>
+            </trans-unit>
+			<trans-unit id="templates_ecosystem_save.placeholder">
+				<source>e.g. My Canvas of New York</source>
+				<target>z.B. Mein Canvas der Stadt Eschborn</target>
+			</trans-unit>
+			<trans-unit id="templates_ecosystem_save.placeholderTitle">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+			<trans-unit id="templates_ecosystem_save.cancel">
+                <source>Cancel</source>
+                <target>Abbrechen</target>
+            </trans-unit>
+             <trans-unit id="templates_ecosystem_save.persist">
+                <source>Save</source>
+                <target>Speichern</target>
+            </trans-unit>
+
+
+			<!-- Templates/Ecosystem/Feedback.html -->
+            <trans-unit id="templates_ecosystem_feedback.headline">
+                <source>Expert-Feedback</source>
+                <target>Experten-Feedback</target>
+            </trans-unit>
+			<trans-unit id="templates_ecosystem_feedback.introduction">
+				<source>We would be happy to give you feedback on your RKW Entrepreneurship Ecosystem Canvas</source>
+				<target>Gerne geben wir Ihnen ein Feedback zur Ihrem RKW Gründerökosystem Canvas</target>
+			</trans-unit>
+			<trans-unit id="templates_ecosystem_feedback.introductionHint">
+                <source>Type in your matter below.</source>
+                <target>Untenstehend haben Sie die Möglichkeit, Ihre Fragen an uns zu notieren. Wir setzen uns umgehend per E-Mail mit Ihnen in Verbindung.</target>
+            </trans-unit>
+			<trans-unit id="templates_ecosystem_feedback.placeholder">
+				<source>Enter your comment</source>
+				<target>Geben Sie hier Ihre Frage oder Ihr Anliegen ein.</target>
+			</trans-unit>
+			<trans-unit id="templates_ecosystem_feedback.cancel">
+                <source>Cancel</source>
+                <target>Abbrechen</target>
+            </trans-unit>
+             <trans-unit id="templates_ecosystem_feedback.send">
+                <source>Send</source>
+                <target>Abschicken</target>
+            </trans-unit>
+
+
+			<!-- Templates/Ecosystem/MyList.html -->
+			<trans-unit id="partials_ecosystem_options.delete">
+				<source>Delete</source>
+				<target>Löschen</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_options.edit">
+				<source>Edit</source>
+				<target>Bearbeiten</target>
+			</trans-unit>
+
+
+			<!-- Partials/Email/Details.html -->
+			<trans-unit id="partials_email_details.user">
+				<source>Details of user</source>
+				<target>Details zum Nutzer</target>
+			</trans-unit>
+			<trans-unit id="partials_email_details.remark">
+				<source>Remark</source>
+				<target>Bemerkung</target>
+			</trans-unit>
+
+
+            <!-- Partials/Ecosystem/Open.html -->
+			<trans-unit id="partials_ecosystem_open.choose">
+				<source>Please choose</source>
+				<target>--- Bitte wählen ---</target>
+			</trans-unit>
+
+
+			<!-- Partials/Ecosystem/IntroJsContent.html -->
+			<trans-unit id="partials_ecosystem_introJsContent.radio.low">
+				<source>Low</source>
+				<target>Niedrig</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.radio.middle">
+				<source>Middle</source>
+				<target>Mittel</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.radio.high">
+				<source>High</source>
+				<target>Hoch</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.education">
+				<source>Education dummy header</source>
+				<target>Schulen, Universitäten und Forschungseinrichtungen</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.politics">
+				<source>Politics dummy header</source>
+				<target>Politik</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.endCustomer">
+				<source>EndCustomer dummy header</source>
+				<target>Endkunden (B2C)</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.potentialFounder">
+                <source>PotentialFounder dummy header</source>
+                <target>Potenzielle Gründer und Talentpool</target>
+            </trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.potentialFounder1">
+				<source>PotentialFounder dummy header</source>
+				<target>Potenzielle Gründer</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.potentialFounder2">
+                <source>PotentialFounder dummy header</source>
+                <target>und Talentpool</target>
+            </trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.inspiration">
+				<source>Inspiration dummy header</source>
+				<target>Inspiration</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.startUps">
+				<source>StartUps dummy header</source>
+				<target>Gründerszene</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.trend">
+				<source>Trend dummy header</source>
+				<target>Trends</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.demandForSolution">
+				<source>DemandForSolution dummy header</source>
+				<target><![CDATA[Nachfrage <span class="after">/</span> Produkte und Services]]></target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.demandForSolution1">
+                <source>DemandForSolution dummy header</source>
+                <target>Nachfrage /</target>
+            </trans-unit>
+            <trans-unit id="partials_ecosystem_introJsContent.header.demandForSolution2">
+                <source>DemandForSolution dummy header</source>
+                <target>Produkte und Services</target>
+            </trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.company">
+				<source>Company dummy header</source>
+				<target>Unternehmen</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.assistance">
+				<source>Assistance dummy header</source>
+				<target>Unterstützung und Infrastruktur</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.header.businessCustomer">
+				<source>BusinessCustomer dummy header</source>
+				<target>Geschäftskunden (B2B)</target>
+			</trans-unit>
+
+
+
+			<trans-unit id="partials_ecosystem_introJsContent.text.education">
+				<source>Education dummy text</source>
+				<target><![CDATA[
+                    Bildungseinrichtungen agieren im Gründerökosystem als Talentschmieden und stärken den Wissens- und Technologietransfer in der Region.
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
+                    <ul>
+                        <li>Welche Rolle spielt das Thema Entrepreneurship in der Ausbildung?</li>
+                        <li>Welche Unterstützungsprogramme bieten Bildungseinrichtungen in meiner Region?</li>
+                        <li>Wie sind die Ausbildungseinrichtungen in meiner Region vernetzt?</li>
+                    </ul>
+                ]]></target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.politics">
+				<source>Politics dummy text</source>
+				<target><![CDATA[
+                    Von Seiten der Politik können Rahmenbedingungen geschaffen werden, die Gründungsaktivitäten erleichtern.
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
+                    <ul>
+                        <li>Wie bewerten Sie die politischen Rahmenbedingungen für Gründer  in Ihrer Region?</li>
+                        <li>Welche Förderprogramme gibt es?</li>
+                        <li>Bei welchen Förderprogrammen treten Probleme auf und wie kann man diese lösen?</li>
+                    </ul>
+                ]]></target>
+             </trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.endCustomer">
+				<source>EndCustomer dummy text</source>
+				<target><![CDATA[
+                    Hierbei handelt es sich um Privatpersonen, die als potenzielle Käufer von Produkten oder Dienstleistungen in Frage kommen.
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
+                    <ul>
+                        <li>Welche sozioökonomischen Merkmale weist die regionale Bevölkerung auf?</li>
+                        <li>Gibt es regionsspezifische Kundengruppen?</li>
+                    </ul>
+                ]]></target>
+              </trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.potentialFounder">
+				<source>PotentialFounder dummy text</source>
+				<target><![CDATA[
+                    Die Qualität und Größe des Talentpools resultiert insbesondere aus den Ausbildungsprogrammen regionaler Universitäten, Fachhochschulen und Schulen sowie den ansässigen Unternehmen
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
+                    <ul>
+                        <li>Wie setzt sich mein Talentpool zusammen?</li>
+                        <li>Welche Attraktionen bietet mein Standort für neue Talente?</li>
+                        <li>Wie versuche ich, potenzielle Gründer zu erreichen?</li>
+                    </ul>
+                ]]></target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.inspiration">
+				<source>Inspiration dummy text</source>
+				<target><![CDATA[
+                    Die Inspiration speist sich im Kontext des Gründerökosystems aus zwei Quellen. Zum einen aus den ansässigen Unternehmen und Bildungseinrichtungen. Zum anderen sind es erfolgreiche Gründer selbst, die ihre Gründungsgeschichte teilen.
+                    <br>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
+                    <ul>
+                        <li>Woher beziehen Gründer in meiner Region ihre Ideen?</li>
+                        <li>Woher nehmen Gründer ihre Motivation?</li>
+                        <li>Welche Impulse bietet das regionale Umfeld?</li>
+                    </ul>
+                ]]></target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.startUps">
+				<source>StartUps dummy text</source>
+				<target><![CDATA[
+                    Gründer und Startups sind die wichtigsten Akteure der Gründerszene. Sie helfen sich gegenseitig und erhalten zusätzliche Unterstützung durch die weiteren Akteure des Gründerökosystems.
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
+                    <ul>
+                    <li>Welche Netzwerke und Events für Gründer gibt es in meiner Region?</li>
+                    <li>Wer sind die treibenden Kräfte der Gründerszene? Gibt es Vorbilder?</li>
+                    <li>Gibt es bestimmte Zielgruppen, die ich bisher nicht erreicht habe?</li>
+                    </ul>
+                ]]></target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.trend">
+				<source>Trend dummy text</source>
+				<target><![CDATA[
+                    Gründerökosysteme können entweder neue Trends setzen oder bereits vorhandene aufgreifen (z. B. soziokulturelle Trends, Zeitgeist- oder Konsumtrends, Mikrotrends).
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
+                    <ul>
+                        <li>Welche nationalen oder globalen Trends beeinflussen die Gründungschancen?</li>
+                        <li>Welche Trends machen sich auch in meiner Region bemerkbar?</li>
+                        <li>Wie kann die regionale Gründerszene von diesen Trends profitieren?</li>
+                    </ul>
+                ]]></target>
+            </trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.demandForSolution">
+				<source>DemandForSolution dummy text</source>
+                <target><![CDATA[
+                    Die Marktstruktur, -größe und -dynamik resultieren aus dem Vorhandensein der regionalen Branchen und Unternehmen (B2B) und potenzieller Endkunden (B2C).
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
+                    <ul>
+                        <li>Welche Chancen bietet die (regionale) Nachfrage für Gründer?</li>
+                        <li>Wie stellt sich die Wettbewerbssituation dar?</li>
+                    </ul>
+                ]]></target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.company">
+				<source>Company dummy text</source>
+                <target><![CDATA[
+                    Erfolgreiche Unternehmen sind ein Magnet für Talente und hochqualifizierte Mitarbeiter.
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
+                    <ul>
+                        <li>Welche Unternehmen sind für meine Region besonders wichtig?</li>
+                        <li>Wie unterstützen diese Unternehmen das Thema Gründung?</li>
+                        <li>Wie sind die Unternehmen in meiner Region eingebunden?</li>
+                    </ul>
+                ]]></target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.assistance">
+				<source>Assistance dummy text</source>
+                <target><![CDATA[
+                    Im Zuge der Entwicklung und Vermarktung ihrer Geschäftsideen benötigen Gründer häufig Unterstützung von Beratern und Investoren in Kombination mit der passenden Infrastruktur.
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
+                    <ul>
+                        <li>Welche Unterstützungsleistungen für Gründer gibt es in meiner Region?</li>
+                        <li>Welche Finanzierungsmöglichkeiten bieten sich Gründern und Startups?</li>
+                        <li>Stehen ausreichend Flächen und Büros zu einem angemessenen Preis zur Verfügung?</li>
+                    </ul>
+                ]]></target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.businessCustomer">
+				<source>BusinessCustomer dummy text</source>
+                <target><![CDATA[
+                    Geschäftskunden sind Unternehmen oder öffentliche Organisationen, die als potenzielle Käufer von Produkten oder Dienstleistungen in Frage kommen.
+                    <br/>Fragen, die Sie für dieses Canvas-Feld beantworten sollten:
+                    <ul>
+                        <li>Gibt es Branchencluster in meiner Region?</li>
+                        <li>Welche Produkte und/oder Dienstleistungen werden von regional ansässigen Unternehmen nachgefragt?</li>
+                    </ul>
+                ]]></target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.text.ratingHint">
+			    <source>Please rate on scale of high to low.</source>
+                <target>Wie bewerten Sie den Handlungsbedarf für dieses Ökosystem-Element?</target>
+			</trans-unit>
+
+
+
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.education">
+				<source>Education dummy placeholder</source>
+				<target>Ihre Bewertung und Anmerkungen</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.politics">
+				<source>Politics dummy placeholder</source>
+				<target>Ihre Bewertung und Anmerkungen</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.endCustomer">
+				<source>EndCustomer dummy placeholder</source>
+				<target>Ihre Bewertung und Anmerkungen</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.potentialFounder">
+				<source>PotentialFounder dummy placeholder</source>
+				<target>Ihre Bewertung und Anmerkungen</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.inspiration">
+				<source>Inspiration dummy placeholder</source>
+				<target>Ihre Bewertung und Anmerkungen</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.startUps">
+				<source>StartUps dummy placeholder</source>
+				<target>Ihre Bewertung und Anmerkungen</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.trend">
+				<source>Trend dummy placeholder</source>
+				<target>Ihre Bewertung und Anmerkungen</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.demandForSolution">
+				<source>DemandForSolution dummy placeholder</source>
+				<target>Ihre Bewertung und Anmerkungen</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.company">
+				<source>Company dummy placeholder</source>
+				<target>Ihre Bewertung und Anmerkungen</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.assistance">
+				<source>Assistance dummy placeholder</source>
+				<target>Ihre Bewertung und Anmerkungen</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_introJsContent.placeholder.businessCustomer">
+				<source>BusinessCustomer dummy placeholder</source>
+				<target>Ihre Bewertung und Anmerkungen</target>
+			</trans-unit>
+
+
+
+			<!-- Partials/Ecosystem/SvgImage.html -->
+			<trans-unit id="partials_ecosystem_svgImage.remark.introJs">
+				<source>Remark dummy content</source>
+				<target>Anmerkung dummy Text</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_svgImage.remark.label">
+				<source>Remark</source>
+				<target>Anmerkung</target>
+			</trans-unit>
+			<trans-unit id="partials_ecosystem_svgImage.remark.placeholder">
+				<source>Placeholder</source>
+				<target>Anmerkung dummy Platzhalter</target>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>
