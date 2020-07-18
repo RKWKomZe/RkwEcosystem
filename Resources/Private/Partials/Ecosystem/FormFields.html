@@ -9,10 +9,10 @@
         <!-- explaining text -->
         <f:if condition="<rkw:fetchFlexFormValue part1='{element}' part2='EntryText' />">
             <f:then>
-                <div class="description wysiwyg"><rkw:fetchFlexFormValue part1='{element}' part2='EntryText' /></div>
+                <div class="description wysiwyg"><f:format.raw><rkw:fetchFlexFormValue part1='{element}' part2='EntryText' /></f:format.raw></div>
             </f:then>
             <f:else>
-                <div class="description wysiwyg"><f:translate key="partials_ecosystem_introJsContent.text.{element}" /></div>
+                <div class="description wysiwyg"><f:format.raw><f:translate key="partials_ecosystem_introJsContent.text.{element}" /></f:format.raw></div>
             </f:else>
         </f:if>
 
