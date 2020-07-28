@@ -35,7 +35,7 @@ class RkwMailService implements \TYPO3\CMS\Core\SingletonInterface
      * @param \RKW\RkwRegistration\Domain\Model\BackendUser|array $backendUser
      * @param \RKW\RkwRegistration\Domain\Model\FrontendUser $frontendUser
      * @param \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem
-     * @param string remark
+     * @param string $remark
      * @param string $pdfString
      * @throws \RKW\RkwMailer\Service\MailException
      * @throws \TYPO3\CMS\Extbase\Persistence\Generic\Exception

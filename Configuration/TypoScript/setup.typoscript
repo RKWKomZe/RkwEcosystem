@@ -40,7 +40,7 @@ page.includeCSS {
     page.includeJSFooterlibs.txRkwEcosystemJQuery  = EXT:rkw_ecosystem/Resources/Public/Js/jquery-3.1.1.min.js
 [global]
 [globalVar = TSFE:id={$plugin.tx_rkwecosystem.settings.ecosystemPid}]
-    page.includeJSFooterlibs {
+    page.includeJSFooter {
         txRkwEcosystemFile10 = EXT:rkw_ecosystem/Resources/Public/Scripts/intro.js
         txRkwEcosystemFile20 = EXT:rkw_ecosystem/Resources/Public/Scripts/main.js
     }
