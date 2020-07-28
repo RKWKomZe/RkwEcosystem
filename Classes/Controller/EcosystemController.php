@@ -105,6 +105,8 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     public function editAction($ecosystemId = -1)
     {
+        $ecosystem = 0;
+
         // load from database
         if (
             ($ecosystemId > 0)
