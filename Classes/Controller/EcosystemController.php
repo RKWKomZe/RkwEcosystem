@@ -7,7 +7,8 @@ use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 use Spipu\Html2Pdf\Html2Pdf;
 use Spipu\Html2Pdf\Exception\Html2PdfException;
 use Spipu\Html2Pdf\Exception\ExceptionFormatter;
-use \RKW\RkwBasics\Helper\Common;
+use RKW\RkwBasics\Helper\Common;
+use RKW\RkwBasics\Service\CookieService;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
 /*
@@ -730,6 +731,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
     protected function setEcosystemToSession($ecosystem)
     {
         $GLOBALS['TSFE']->fe_user->setKey('ses', 'rkw_ecosystem', serialize($ecosystem));
+        CookieService::setKey('rkw_ecosystem', serialize($ecosystem));
         $GLOBALS['TSFE']->storeSessionData();
     }
 
