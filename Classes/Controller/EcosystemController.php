@@ -35,6 +35,9 @@ use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
  */
 class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
+
+    const SESSION_KEY = 'rkw_ecosystem';
+
     /**
      * ecosystemRepository
      *
@@ -220,6 +223,12 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
     {
         /** @var  \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem */
         $ecosystem = $this->getEcosystemFromSession();
+
+        // after a redirect from "mein.rkw" session data can be lost since TYPO3 8.7
+        if (!$ecosystem) {
+            // re-set data after redirect from mein.rkw (RkwRegistration Login procedure)
+            $ecosystem = CookieService::getKey(self::SESSION_KEY);
+        }
 
         // go forward, if title is already set (and user is already logged in)
         if ($this->getFrontendUser()) {
@@ -718,7 +727,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     protected function getEcosystemFromSession()
     {
-        return unserialize($GLOBALS['TSFE']->fe_user->getKey('ses', 'rkw_ecosystem'));
+        return unserialize($GLOBALS['TSFE']->fe_user->getKey('ses', self::SESSION_KEY));
         //===
     }
 
@@ -730,8 +739,8 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     protected function setEcosystemToSession($ecosystem)
     {
-        $GLOBALS['TSFE']->fe_user->setKey('ses', 'rkw_ecosystem', serialize($ecosystem));
-        CookieService::setKey('rkw_ecosystem', serialize($ecosystem));
+        $GLOBALS['TSFE']->fe_user->setKey('ses', self::SESSION_KEY, serialize($ecosystem));
+        CookieService::setKey(self::SESSION_KEY, serialize($ecosystem));
         $GLOBALS['TSFE']->storeSessionData();
     }
 
