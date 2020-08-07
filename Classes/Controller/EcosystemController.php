@@ -147,9 +147,9 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
 
         // set data to session
         $this->setEcosystemToSession($ecosystem);
-
         // set list if all canvases of user
         if ($this->getFrontendUser()) {
+
             $this->view->assign('frontendUserEcosystemList', $this->ecosystemRepository->findByFrontendUser($this->getFrontendUser()));
         }
 
@@ -338,6 +338,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             '',
             \TYPO3\CMS\Core\Messaging\AbstractMessage::OK
         );
+
         $this->redirect('edit', null, null, array('ecosystemId' => $ecosystem->getUid()));
         //===
     }
@@ -721,6 +722,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      */
     protected function getEcosystemFromSession()
     {
+        /** @var \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystem */
         $ecosystem = unserialize($GLOBALS['TSFE']->fe_user->getKey('ses', self::SESSION_KEY));
 
         // after a redirect from "mein.rkw" session data can be lost since TYPO3 8.7
@@ -741,8 +743,15 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
     protected function setEcosystemToSession($ecosystem)
     {
         $GLOBALS['TSFE']->fe_user->setKey('ses', self::SESSION_KEY, serialize($ecosystem));
-        CookieService::setKey(self::SESSION_KEY, serialize($ecosystem));
         $GLOBALS['TSFE']->storeSessionData();
+
+        // problem: The frontendUser data package is killing the cookie
+        // on the other hand, we only need the RkwCookie if there is no logged user (data would lost on login in RkwRegistration)
+        // -> so we just save the ecosystem additional in a cookie, if there is no frontendUser logged in
+        if (!$this->getFrontendUser()) {
+            CookieService::setKey(self::SESSION_KEY, serialize($ecosystem));
+        }
+
     }
 
     /**
