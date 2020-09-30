@@ -439,7 +439,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             //===
         }
 
-        try {
+       // try {
             if ($settingsFramework = Common::getTyposcriptConfiguration($this->extensionName, ConfigurationManagerInterface::CONFIGURATION_TYPE_FRAMEWORK)) {
 
                 /** @var \TYPO3\CMS\Fluid\View\StandaloneView $standaloneView */
@@ -465,11 +465,13 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
                 // -> "D" - Forcing the download of PDF via web browser, with a specific name
                 $html2pdf->output($fileName, 'D');
                 // do not use "exit" here. Is making trouble (provides a unnamed "binary"-file instead a names pdf)
+
                 readfile($fileName);
-            //    exit;
+
+                //exit;
                 //===
             }
-
+/*
         } catch (Html2PdfException $e) {
 
             $this->getLogger()->log(\TYPO3\CMS\Core\Log\LogLevel::ERROR, sprintf('An error occurred while trying to generate a PDF. Message: %s', str_replace(array("\n", "\r"), '', $e->getMessage())));
@@ -480,7 +482,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
             );
             $this->redirect('edit', null, null, array('ecosystemId' => $ecosystem->getUid()));
             //===
-        }
+        }*/
     }
 
     /**

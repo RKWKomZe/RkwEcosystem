@@ -1,14 +1,30 @@
-<f:render partial="FlashMessages" arguments="{_all}" />
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true">
 
-<f:form id="ecosystem-form-select" class="form-fields" action="edit" name="ecosystem">
-    <div class="v320-1">
-        <p class="v320-1-of-2">
-            <f:security.ifAuthenticated>
-                <f:if condition="{frontendUserEcosystemList}">
-                    <f:form.select name="ecosystemId" additionalAttributes="{onChange: 'submit();'}" options="{frontendUserEcosystemList}" value="{ecosystem.uid}" optionValueField="uid" optionLabelField="title" prependOptionLabel="<f:translate key='partials_ecosystem_open.choose' extensionName='RkwEcosystem' />" />
-                </f:if>
-            </f:security.ifAuthenticated>
-            <f:link.page class="button secondary" pageUid="{settings.ecosystemPid}"><f:translate key="templates_ecosystem_feedback.cancel" /></f:link.page>
-        </p>
-    </div>
-</f:form>
+    <f:render partial="FlashMessages" arguments="{_all}" />
+
+    <f:form id="ecosystem-form-select" class="form-fields" action="edit" name="ecosystem">
+        <div class="flex-container">
+            <div class="form flex flex-basis-12 full-width-medium space-between">
+                <f:security.ifAuthenticated>
+                    <f:if condition="{frontendUserEcosystemList}">
+                        <div class="form__field break-after">
+                            <f:form.select
+                                class="select-field select-field--longer"
+                                name="ecosystemId"
+                                additionalAttributes="{onChange: 'submit();'}"
+                                options="{frontendUserEcosystemList}"
+                                value="{ecosystem.uid}"
+                                optionValueField="uid"
+                                optionLabelField="title"
+                                prependOptionLabel="<f:translate key='partials_ecosystem_open.choose' extensionName='RkwEcosystem' />"
+                            />
+                        </div>
+                    </f:if>
+                </f:security.ifAuthenticated>
+                <f:link.page class="btn btn--secondary" pageUid="{settings.ecosystemPid}"><f:translate key="templates_ecosystem_feedback.cancel" /></f:link.page>
+            </div>
+        </div>
+    </f:form>
+
+</html>

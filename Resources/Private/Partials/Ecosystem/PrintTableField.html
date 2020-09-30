@@ -1,97 +1,100 @@
-{namespace rkw=RKW\RkwEcosystem\ViewHelpers}
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:rkw="http://typo3.org/ns/RKW/RkwEcosystem/ViewHelpers"
+    data-namespace-typo3-fluid="true">
 
-<!-- header -->
-<div class="header">
-    <p class="headline">
-        <f:comment>
-            <!--
-             Kreativer Ansatz: Weil jede Form von Zeilenumbruch das Bild im PDF verschiebt (was durch css nicht auszugleichen ist)
-             wird die Überschrift der beiden Elemente, bei welchen ein Umbruch erfolgt, in zwei Teile gesplittet
-             (der zweite Teil wird nach dem Bild ausgegeben und per "position: realtive; top: -50px" an entsprechende Stelle geschraubt)
-             -->
-        </f:comment>
+    <!-- header -->
+    <div class="header">
+        <p class="headline">
+            <f:comment>
+                <!--
+                 Kreativer Ansatz: Weil jede Form von Zeilenumbruch das Bild im PDF verschiebt (was durch css nicht auszugleichen ist)
+                 wird die Überschrift der beiden Elemente, bei welchen ein Umbruch erfolgt, in zwei Teile gesplittet
+                 (der zweite Teil wird nach dem Bild ausgegeben und per "position: realtive; top: -50px" an entsprechende Stelle geschraubt)
+                 -->
+            </f:comment>
+            <f:switch expression="{element}">
+                <f:case value="potentialFounder">
+                    <f:translate key="partials_ecosystem_introJsContent.header.{element}1" extensionName="RkwEcosystem" />
+                </f:case>
+                <f:case value="demandForSolution">
+                    <f:translate key="partials_ecosystem_introJsContent.header.{element}1" extensionName="RkwEcosystem" />
+                </f:case>
+                <f:case default="TRUE">
+                    <f:translate key="partials_ecosystem_introJsContent.header.{element}" extensionName="RkwEcosystem" />
+                </f:case>
+            </f:switch>
+        </p>
+
+        <div class="header-image">
+            <f:image src="EXT:rkw_ecosystem/Resources/Public/Images/Print/{element}.jpg" height="70px" />
+        </div>
+
         <f:switch expression="{element}">
             <f:case value="potentialFounder">
-                <f:translate key="partials_ecosystem_introJsContent.header.{element}1" extensionName="RkwEcosystem" />
+                <p class="additional-header">
+                    <f:translate key="partials_ecosystem_introJsContent.header.{element}2" extensionName="RkwEcosystem" />
+                </p>
             </f:case>
             <f:case value="demandForSolution">
-                <f:translate key="partials_ecosystem_introJsContent.header.{element}1" extensionName="RkwEcosystem" />
-            </f:case>
-            <f:case default="TRUE">
-                <f:translate key="partials_ecosystem_introJsContent.header.{element}" extensionName="RkwEcosystem" />
+                <p class="additional-header">
+                    <f:translate key="partials_ecosystem_introJsContent.header.{element}2" extensionName="RkwEcosystem" />
+                </p>
             </f:case>
         </f:switch>
-    </p>
-
-    <div class="header-image">
-        <f:image src="EXT:rkw_ecosystem/Resources/Public/Images/Print/{element}.jpg" height="70px" />
     </div>
 
-    <f:switch expression="{element}">
-        <f:case value="potentialFounder">
-            <p class="additional-header">
-                <f:translate key="partials_ecosystem_introJsContent.header.{element}2" extensionName="RkwEcosystem" />
-            </p>
-        </f:case>
-        <f:case value="demandForSolution">
-            <p class="additional-header">
-                <f:translate key="partials_ecosystem_introJsContent.header.{element}2" extensionName="RkwEcosystem" />
-            </p>
-        </f:case>
-    </f:switch>
-</div>
+    <!-- explaining text -->
+    <f:comment>
+        <f:if condition="<rkw:fetchFlexFormValue part1='{element}' part2='EntryText' part3='' settings='{settingsArray}' />">
+            <f:then>
+                <p class="description"><rkw:fetchFlexFormValue part1='{element}' part2='EntryText' part3='' settings='{settingsArray}' /></p>
+            </f:then>
+            <f:else>
+                <p class="description"><f:translate key="partials_ecosystem_introJsContent.text.{element}" extensionName="RkwEcosystem" /></p>
+            </f:else>
+        </f:if>
+    </f:comment>
 
-<!-- explaining text -->
-<f:comment>
-    <f:if condition="<rkw:fetchFlexFormValue part1='{element}' part2='EntryText' part3='' settings='{settingsArray}' />">
+    <!-- field text -->
+    <f:if condition="{text}">
         <f:then>
-            <p class="description"><rkw:fetchFlexFormValue part1='{element}' part2='EntryText' part3='' settings='{settingsArray}' /></p>
+            <p class="text">
+                <f:if condition="{smallBox}">
+                    <f:then>
+                        <f:format.crop maxCharacters="130"><f:format.nl2br>{text}</f:format.nl2br></f:format.crop>
+                    </f:then>
+                    <f:else>
+                        <f:format.crop maxCharacters="330"><f:format.nl2br>{text}</f:format.nl2br></f:format.crop>
+                    </f:else>
+                </f:if>
+            </p>
         </f:then>
         <f:else>
-            <p class="description"><f:translate key="partials_ecosystem_introJsContent.text.{element}" extensionName="RkwEcosystem" /></p>
+            <p class="text text--empty"><f:translate key="partials_ecosystem_print.no-content" extensionName="RkwEcosystem" /></p>
         </f:else>
     </f:if>
-</f:comment>
 
-<!-- field text -->
-<f:if condition="{text}">
-    <f:then>
-        <p class="text">
-            <f:if condition="{smallBox}">
-                <f:then>
-                    <f:format.crop maxCharacters="130"><f:format.nl2br>{text}</f:format.nl2br></f:format.crop>
-                </f:then>
-                <f:else>
-                    <f:format.crop maxCharacters="330"><f:format.nl2br>{text}</f:format.nl2br></f:format.crop>
-                </f:else>
-            </f:if>
-        </p>
-    </f:then>
-    <f:else>
-        <p class="text text--empty"><f:translate key="partials_ecosystem_print.no-content" extensionName="RkwEcosystem" /></p>
-    </f:else>
-</f:if>
+    <!-- field value -->
+    <f:if condition="{value}">
+        <f:then>
+            <p class="rating">
+                <f:translate key="partials_ecosystem_print.rating" extensionName="RkwEcosystem" />
 
-<!-- field value -->
-<f:if condition="{value}">
-    <f:then>
-        <p class="rating">
-            <f:translate key="partials_ecosystem_print.rating" extensionName="RkwEcosystem" />
-
-            <f:if condition="{value} == 1">
-                <span style="color:red;"><f:translate key="partials_ecosystem_introJsContent.radio.low" extensionName="RkwEcosystem" /></span>
-            </f:if>
-            <f:if condition="{value} == 2">
-                <span style="color:orange;"><f:translate key="partials_ecosystem_introJsContent.radio.middle" extensionName="RkwEcosystem" /></span>
-            </f:if>
-            <f:if condition="{value} == 3">
-                <span style="color:green;"><f:translate key="partials_ecosystem_introJsContent.radio.high" extensionName="RkwEcosystem" /></span>
-            </f:if>
-        </p>
-        </f:then>
-    <f:else>
-        <p class="rating rating--empty">
-            <f:translate key="partials_ecosystem_print.no-rating" extensionName="RkwEcosystem" />
-        </p>
-    </f:else>
-</f:if>
+                <f:if condition="{value} == 1">
+                    <span style="color:red;"><f:translate key="partials_ecosystem_introJsContent.radio.low" extensionName="RkwEcosystem" /></span>
+                </f:if>
+                <f:if condition="{value} == 2">
+                    <span style="color:orange;"><f:translate key="partials_ecosystem_introJsContent.radio.middle" extensionName="RkwEcosystem" /></span>
+                </f:if>
+                <f:if condition="{value} == 3">
+                    <span style="color:green;"><f:translate key="partials_ecosystem_introJsContent.radio.high" extensionName="RkwEcosystem" /></span>
+                </f:if>
+            </p>
+            </f:then>
+        <f:else>
+            <p class="rating rating--empty">
+                <f:translate key="partials_ecosystem_print.no-rating" extensionName="RkwEcosystem" />
+            </p>
+        </f:else>
+    </f:if>
+</html>

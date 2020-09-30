@@ -1,48 +1,51 @@
-{namespace rkw=RKW\RkwEcosystem\ViewHelpers}
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:rkw="http://typo3.org/ns/RKW/RkwEcosystem/ViewHelpers"
+    data-namespace-typo3-fluid="true">
 
-<div class="rkw-ecosystem-container" id="rkw-ecosystem-container-step{iterator.cycle}">
-    <div class="rkw-ecosystem-container-inner form-fields">
+    <div class="rkw-ecosystem-container" id="rkw-ecosystem-container-step{iterator.cycle}">
+        <div class="rkw-ecosystem-container-inner form-fields">
 
-        <!-- header -->
-        <h3 class="headline" id="rkw-ecosystem-headline-step{iterator.cycle}"><f:translate key="partials_ecosystem_introJsContent.header.{element}" /></h3>
+            <!-- header -->
+            <h3 class="headline" id="rkw-ecosystem-headline-step{iterator.cycle}"><f:translate key="partials_ecosystem_introJsContent.header.{element}" /></h3>
 
-        <!-- explaining text -->
-        <f:if condition="<rkw:fetchFlexFormValue part1='{element}' part2='EntryText' />">
-            <f:then>
-                <div class="description wysiwyg"><f:format.raw><rkw:fetchFlexFormValue part1='{element}' part2='EntryText' /></f:format.raw></div>
-            </f:then>
-            <f:else>
-                <div class="description wysiwyg"><f:format.raw><f:translate key="partials_ecosystem_introJsContent.text.{element}" /></f:format.raw></div>
-            </f:else>
-        </f:if>
+            <!-- explaining text -->
+            <f:if condition="<rkw:fetchFlexFormValue part1='{element}' part2='EntryText' />">
+                <f:then>
+                    <div class="description wysiwyg"><f:format.raw><rkw:fetchFlexFormValue part1='{element}' part2='EntryText' /></f:format.raw></div>
+                </f:then>
+                <f:else>
+                    <div class="description wysiwyg"><f:format.raw><f:translate key="partials_ecosystem_introJsContent.text.{element}" /></f:format.raw></div>
+                </f:else>
+            </f:if>
 
-        <!-- textarea -->
-        <p class="v320-1">
-            <f:form.textarea class="no-jcf" property="{element}" value="<rkw:getAttributeValue object='{ecosystem}' attribute='{element}' />" placeholder="<f:translate key='partials_ecosystem_introJsContent.placeholder.{element}' />"/>
-        </p>
+            <!-- textarea -->
+            <p class="v320-1">
+                <f:form.textarea class="no-jcf" property="{element}" value="<rkw:getAttributeValue object='{ecosystem}' attribute='{element}' />" placeholder="<f:translate key='partials_ecosystem_introJsContent.placeholder.{element}' />"/>
+            </p>
 
-        <div class="description wysiwyg">
-            <f:translate key="partials_ecosystem_introJsContent.text.ratingHint" />
+            <div class="description wysiwyg">
+                <f:translate key="partials_ecosystem_introJsContent.text.ratingHint" />
+            </div>
+            <!-- Checkboxes -->
+            <span class="checkbox">
+                <label>
+                    <f:form.radio property="{element}Value" value="3" class="no-jcf" checked="<rkw:getAttributeValue object='{ecosystem}' attribute='{element}Value' /> == 3" />
+                    &nbsp;<f:translate key="partials_ecosystem_introJsContent.radio.high" />
+                </label>
+            </span>
+            <span class="checkbox">
+                <label>
+                    <f:form.radio property="{element}Value" value="2" class="no-jcf" checked="<rkw:getAttributeValue object='{ecosystem}' attribute='{element}Value' /> == 2" />
+                    &nbsp;<f:translate key="partials_ecosystem_introJsContent.radio.middle" />
+                </label>
+            </span>
+            <span class="checkbox">
+                <label>
+                     <f:form.radio property="{element}Value" value="1" class="no-jcf" checked="<rkw:getAttributeValue object='{ecosystem}' attribute='{element}Value' /> == 1" />
+                    &nbsp;<f:translate key="partials_ecosystem_introJsContent.radio.low" />
+                </label>
+            </span>
+
         </div>
-        <!-- Checkboxes -->
-        <span class="checkbox">
-            <label>
-                <f:form.radio property="{element}Value" value="3" class="no-jcf" checked="<rkw:getAttributeValue object='{ecosystem}' attribute='{element}Value' /> == 3" />
-                &nbsp;<f:translate key="partials_ecosystem_introJsContent.radio.high" />
-            </label>
-        </span>
-        <span class="checkbox">
-            <label>
-                <f:form.radio property="{element}Value" value="2" class="no-jcf" checked="<rkw:getAttributeValue object='{ecosystem}' attribute='{element}Value' /> == 2" />
-                &nbsp;<f:translate key="partials_ecosystem_introJsContent.radio.middle" />
-            </label>
-        </span>
-        <span class="checkbox">
-            <label>
-                 <f:form.radio property="{element}Value" value="1" class="no-jcf" checked="<rkw:getAttributeValue object='{ecosystem}' attribute='{element}Value' /> == 1" />
-                &nbsp;<f:translate key="partials_ecosystem_introJsContent.radio.low" />
-            </label>
-        </span>
-
     </div>
-</div>
+</html>

@@ -1,4 +1,5 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    data-namespace-typo3-fluid="true">
 	<f:layout name="Default" />
 
 	This Template is responsible for displaying a single view for a domain object
@@ -20,10 +21,21 @@
 
         <!-- form -->
 		<f:form class="form-fields" action="persist" name="ecosystem" object="{ecosystem}" >
-			<div class="v320-1">
-                <f:form.textfield property="title" value="{ecosystem.title}" placeholder="<f:translate key='templates_ecosystem_save.placeholder' />" />
-                <f:link.page class="button secondary" pageUid="{settings.ecosystemPid}"><f:translate key="templates_ecosystem_save.cancel" /></f:link.page>
-                <f:form.submit class="button" value="<f:translate key='templates_ecosystem_save.persist' />" />
+            <div class="flex-container">
+                <div class="form flex flex-basis-12 full-width-medium space-between">
+                    <div class="form__field break-after">
+                        <f:form.textfield
+                            property="title"
+                            value="{ecosystem.title}"
+                            placeholder="<f:translate key='templates_ecosystem_save.placeholder' />"
+                        />
+                    </div>
+
+                    <div class="flex space-start btn-list">
+                        <f:link.page class="btn btn--secondary" pageUid="{settings.ecosystemPid}"><f:translate key="templates_ecosystem_save.cancel" /></f:link.page>
+                        <f:form.submit class="btn btn--primary" value="<f:translate key='templates_ecosystem_save.persist' />" />
+                    </div>
+                </div>
             </div>
 
             <!-- hidden values -->

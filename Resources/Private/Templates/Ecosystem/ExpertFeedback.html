@@ -21,11 +21,20 @@
         <f:render partial="FlashMessages" arguments="{_all}" />
 
         <!-- form -->
-		<f:form class="form-fields" action="expertFeedbackSend" name="ecosystem" object="{ecosystem}" >
-			<div class="v320-1">
-                <f:form.textarea name="remark" placeholder="<f:translate key='templates_ecosystem_feedback.placeholder' />" />
-                <f:link.page class="button secondary" pageUid="{settings.ecosystemPid}"><f:translate key="templates_ecosystem_feedback.cancel" /></f:link.page>
-                <f:form.submit class="button" value="<f:translate key='templates_ecosystem_feedback.send' />" />
+		<f:form action="expertFeedbackSend" name="ecosystem" object="{ecosystem}" >
+            <div class="flex-container">
+                <div class="form flex flex-basis-12 full-width-medium space-between">
+                    <div class="form__field break-after">
+                        <f:form.textarea
+                            name="remark"
+                            placeholder="<f:translate key='templates_ecosystem_feedback.placeholder' />"
+                        />
+                    </div>
+                    <div class="flex space-start btn-list">
+                        <f:link.page class="btn btn--secondary" pageUid="{settings.ecosystemPid}"><f:translate key="templates_ecosystem_feedback.cancel" /></f:link.page>
+                        <f:form.submit class="btn btn--primary" value="<f:translate key='templates_ecosystem_feedback.send' />" />
+                    </div>
+                </div>
             </div>
 		</f:form>
 
