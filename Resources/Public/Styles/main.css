@@ -55,7 +55,7 @@
 }
 .introjs-button.introjs-donebutton,
 .introjs-button.introjs-nextbutton {
-    background-color: #74b929;
+    background-color: #e64415;
     margin-left:5px;
 }
 .introjs-button.introjs-disabled {
@@ -71,8 +71,8 @@
 .introjs-button.introjs-nextbutton:hover,
 .introjs-button.introjs-donebutton:focus,
 .introjs-button.introjs-nextbutton:focus{
-    color: #74b929;
-    border: 2px solid #74b929;
+    color: #e64415;
+    border: 2px solid #e64415;
 
 }
 
@@ -133,12 +133,12 @@
     border: none;
 }
 
-/* In firefox we got some problems with the magical substracted padding-left of the "body"-element */
+/* In firefox we got some problems with the magical substracted padding-left of the "body"-element
 @-moz-document url-prefix() {
     .introjs-tooltipReferenceLayer, .introjs-helperLayer {
         margin-left: 64px;
     }
-}
+}*/
 
 .rkw-ecosystem-container a.button.start {
     float: right;
