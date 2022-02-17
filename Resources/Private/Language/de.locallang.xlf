@@ -1,7 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-12-15T11:10:36Z" product-name="rkw_ecosystem">
-		<header/>
+	<file target-language="de" original="messages" product-name="rkw_ecosystem" source-language="en" datatype="plaintext" date="2017-12-15T11:10:36Z">
+		<header>
+      <phase-group>
+        <phase phase-name="approval-1" tool-id="lokalize-22.03.70" process-name="approval" date="2022-02-17" contact-email="berberich@rkw.de" contact-name="Melanie"/>
+      </phase-group>
+      <tool tool-version="22.03.70" tool-id="lokalize-22.03.70" tool-name="Lokalize"/>
+    </header>
 		<body>
 			<!-- ################ -->
 			<!-- MODEL -->
@@ -38,9 +43,9 @@
 				<source>Customers (B2C)</source>
 				<target>Endkunden (B2C)</target>
 			</trans-unit>
-			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.potential_founder">
+			<trans-unit approved="no" id="tx_rkwecosystem_domain_model_ecosystem.potential_founder">
 				<source>Potential Founders</source>
-				<target>Potenzielle Gründer</target>
+				<target phase-name="approval-1" state="final">Potenzielle Gründende</target>
 			</trans-unit>
 			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.inspiration">
 				<source>Inspiration</source>
@@ -70,9 +75,9 @@
 				<source>Business Customer</source>
 				<target>Geschäftskunden (B2B)</target>
 			</trans-unit>
-			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.frontend_user">
+			<trans-unit approved="no" id="tx_rkwecosystem_domain_model_ecosystem.frontend_user">
 				<source>Frontend User</source>
-				<target>Frontend Nutzer</target>
+				<target phase-name="approval-1" state="final">Frontend Nutzende</target>
 			</trans-unit>
 
 
@@ -154,9 +159,9 @@
 				<source>Hello %s,</source>
 				<target>Hallo %s,</target>
 			</trans-unit>
-			<trans-unit id="templates_email_expertFeedbackAdmin.text1">
+			<trans-unit approved="no" id="templates_email_expertFeedbackAdmin.text1">
 				<source>someone requested an expert feedback for his/her RKW Entrepreneurship Ecosystem Canvas. Please find the canvas attached. You can reply to this e-mail to send your feedback to the user.</source>
-				<target>jemand hat ein Experten-Feedback zum RKW Gründerökosystem Canvas angefordert. Das betreffende Canvas ist dieser E-Mail angehängt. Sie können direkt auf diese E-Mail antworten, um dem Nutzer das Feedback zukommen zu lassen.</target>
+				<target phase-name="approval-1" state="final">jemand hat ein Experten-Feedback zum RKW Gründerökosystem Canvas angefordert. Das betreffende Canvas ist dieser E-Mail angehängt. Sie können direkt auf diese E-Mail antworten, um dem Nutzenden das Feedback zukommen zu lassen.</target>
 			</trans-unit>
 
 			<!-- Templates/Ecosystem/Edit.html -->
@@ -299,9 +304,9 @@
 
 
 			<!-- Partials/Email/Details.html -->
-			<trans-unit id="partials_email_details.user">
+			<trans-unit approved="no" id="partials_email_details.user">
 				<source>Details of user</source>
-				<target>Details zum Nutzer</target>
+				<target phase-name="approval-1" state="final">Details zum Nutzenden</target>
 			</trans-unit>
 			<trans-unit id="partials_email_details.remark">
 				<source>Remark</source>
@@ -345,9 +350,9 @@
                 <source>PotentialFounder dummy header</source>
                 <target>Potenzielle Gründer und Talentpool</target>
             </trans-unit>
-			<trans-unit id="partials_ecosystem_introJsContent.header.potentialFounder1">
+			<trans-unit approved="no" id="partials_ecosystem_introJsContent.header.potentialFounder1">
 				<source>PotentialFounder dummy header</source>
-				<target>Potenzielle Gründer</target>
+				<target phase-name="approval-1" state="final">Potenzielle Gründende</target>
 			</trans-unit>
 			<trans-unit id="partials_ecosystem_introJsContent.header.potentialFounder2">
                 <source>PotentialFounder dummy header</source>
