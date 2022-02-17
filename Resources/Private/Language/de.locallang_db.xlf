@@ -1,14 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version='1.0' encoding='utf-8' standalone='yes'?>
 <xliff version="1.0">
-	<file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2017-12-15T11:10:36Z" product-name="rkw_ecosystem">
-		<header/>
+	<file target-language="de" original="messages" product-name="rkw_ecosystem" source-language="en" datatype="plaintext" date="2017-12-15T11:10:36Z">
+		<header>
+      <phase-group>
+        <phase phase-name="approval-1" tool-id="lokalize-22.03.70" process-name="approval" date="2022-02-17" contact-email="berberich@rkw.de" contact-name="Melanie"/>
+      </phase-group>
+      <tool tool-version="22.03.70" tool-id="lokalize-22.03.70" tool-name="Lokalize"/>
+    </header>
 		<body>
 			<!-- ################ -->
 			<!-- MODEL -->
 			<!-- ################ -->
-			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem">
+			<trans-unit approved="no" id="tx_rkwecosystem_domain_model_ecosystem">
 				<source>RKW Ecosystem: Gründerökosystem</source>
-				<target>RKW Ecosystem: Gründerökosystem</target>
+				<target phase-name="approval-1" state="final">RKW Ecosystem: Gründungsökosystem</target>
 			</trans-unit>
 			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.description">
 				<source>Description</source>
@@ -26,17 +31,17 @@
 				<source>End Customer</source>
 				<target>Endkunden (B2C)</target>
 			</trans-unit>
-			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.potential_founder">
+			<trans-unit approved="no" id="tx_rkwecosystem_domain_model_ecosystem.potential_founder">
 				<source>Potential Founder</source>
-				<target>Potenzielle Gründer</target>
+				<target phase-name="approval-1" state="final">Potenzielle Gründende</target>
 			</trans-unit>
 			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.inspiration">
 				<source>Inspiration</source>
 				<target>Inspiration</target>
 			</trans-unit>
-			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.start_ups">
+			<trans-unit approved="no" id="tx_rkwecosystem_domain_model_ecosystem.start_ups">
 				<source>Start Ups</source>
-				<target>Gründerszene</target>
+				<target phase-name="approval-1" state="final">Gründungsszene</target>
 			</trans-unit>
 			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.trend">
 				<source>Trend</source>
@@ -58,9 +63,9 @@
 				<source>Business Customer</source>
 				<target>Geschäftskunden (B2B)</target>
 			</trans-unit>
-			<trans-unit id="tx_rkwecosystem_domain_model_ecosystem.frontend_user">
+			<trans-unit approved="no" id="tx_rkwecosystem_domain_model_ecosystem.frontend_user">
 				<source>Frontend User</source>
-				<target>Frontend Nutzer</target>
+				<target phase-name="approval-1" state="final">Frontend Nutzende</target>
 			</trans-unit>
 
 
@@ -73,9 +78,9 @@
 				<source>Entry text (can used instead of the standard one)</source>
 				<target>Einleitungstext (Vorhandener wird überschrieben)</target>
 			</trans-unit>
-			<trans-unit id="flexForm.ecosystem.showRemark">
+			<trans-unit approved="no" id="flexForm.ecosystem.showRemark">
 				<source>Show remark for FrontendUser</source>
-				<target>Nutzern erlauben, eine Anmerkung zu hinterlassen</target>
+				<target phase-name="approval-1" state="final">Nutzenden erlauben, eine Anmerkung zu hinterlassen</target>
 			</trans-unit>
 			<trans-unit id="flexForm.ecosystem.remarkPlaceholder">
 				<source>Overwrite remark placeholder</source>
@@ -141,21 +146,21 @@
 				<target>1.3 Endkunde: Zeige Bewertungsampel</target>
 			</trans-unit>
 
-			<trans-unit id="flexForm.ecosystem.potentialFounderEntryText">
+			<trans-unit approved="no" id="flexForm.ecosystem.potentialFounderEntryText">
 				<source>2.1 PotentialFounder: Overwrite Introduction</source>
-				<target>2.1 Potenzielle Gründer: Überschreibe Einleitung</target>
+				<target phase-name="approval-1" state="final">2.1 Potenzielle Gründende: Überschreibe Einleitung</target>
 			</trans-unit>
-			<trans-unit id="flexForm.ecosystem.showPotentialFounderTextarea">
+			<trans-unit approved="no" id="flexForm.ecosystem.showPotentialFounderTextarea">
 				<source>2.1 PotentialFounder: Show textarea</source>
-				<target>2.1 Potenzielle Gründer: Zeige Textfeld</target>
+				<target phase-name="approval-1" state="final">2.1 Potenzielle Gründende: Zeige Textfeld</target>
 			</trans-unit>
-			<trans-unit id="flexForm.ecosystem.potentialFounderPlaceholder">
+			<trans-unit approved="no" id="flexForm.ecosystem.potentialFounderPlaceholder">
 				<source>2.1 PotentialFounder: Overwrite default textarea placeholder</source>
-				<target>2.1 Potenzielle Gründer: Überschreibe Textfeld-Platzhalter</target>
+				<target phase-name="approval-1" state="final">2.1 Potenzielle Gründende: Überschreibe Textfeld-Platzhalter</target>
 			</trans-unit>
-			<trans-unit id="flexForm.ecosystem.showPotentialFounderRadio">
+			<trans-unit approved="no" id="flexForm.ecosystem.showPotentialFounderRadio">
 				<source>2.1 PotentialFounder: Show radio buttons</source>
-				<target>2.1 Potenzielle Gründer: Zeige Bewertungsampel</target>
+				<target phase-name="approval-1" state="final">2.1 Potenzielle Gründende: Zeige Bewertungsampel</target>
 			</trans-unit>
 
 			<trans-unit id="flexForm.ecosystem.inspirationEntryText">
