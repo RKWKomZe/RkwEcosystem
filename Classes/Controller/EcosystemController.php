@@ -7,7 +7,7 @@ use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 use Spipu\Html2Pdf\Html2Pdf;
 use Spipu\Html2Pdf\Exception\Html2PdfException;
 use Spipu\Html2Pdf\Exception\ExceptionFormatter;
-use RKW\RkwBasics\Helper\Common;
+use RKW\RkwBasics\Utility\GeneralUtility as Common;
 use RKW\RkwBasics\Service\CookieService;
 use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
 
@@ -42,7 +42,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      * ecosystemRepository
      *
      * @var \RKW\RkwEcosystem\Domain\Repository\EcosystemRepository
-     * @inject
+     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $ecosystemRepository = null;
 
@@ -50,7 +50,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      * frontendUserRepository
      *
      * @var \RKW\RkwRegistration\Domain\Repository\FrontendUserRepository
-     * @inject
+     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $frontendUserRepository = null;
 
@@ -58,7 +58,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      * backendUserRepository
      *
      * @var \RKW\RkwRegistration\Domain\Repository\BackendUserRepository
-     * @inject
+     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $backendUserRepository = null;
 
@@ -73,7 +73,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      * mailService
      *
      * @var \RKW\RkwEcosystem\Service\RkwMailService
-     * @inject
+     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $mailService = null;
 
@@ -81,7 +81,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      * contentRepository
      *
      * @var \RKW\RkwBasics\Domain\Repository\ContentRepository
-     * @inject
+     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $contentRepository = null;
 
@@ -90,7 +90,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
      * Persistence Manager
      *
      * @var \TYPO3\CMS\Extbase\Persistence\Generic\PersistenceManager
-     * @inject
+     * @TYPO3\CMS\Extbase\Annotation\Inject
      */
     protected $persistenceManager;
 
@@ -172,7 +172,7 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         $this->setEcosystemToSession($ecosystem);
 
         // get JSON helper
-        /** @var \RKW\RkwBasics\Helper\Json $jsonHelper */
+        /** @var \RKW\RkwAjax\Encoder\JsonTemplateEncoder $jsonHelper */
         $jsonHelper = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('RKW\\RkwBasics\\Helper\\Json');
         print (string)$jsonHelper;
         exit();
@@ -764,9 +764,9 @@ class EcosystemController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionContro
         if (! $this->logger) {
             $this->logger = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance('TYPO3\\CMS\\Core\\Log\\LogManager')->getLogger(__CLASS__);
         }
-        
+
         return $this->logger;
         //===
-    }    
+    }
 
 }

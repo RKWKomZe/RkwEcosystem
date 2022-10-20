@@ -2,8 +2,12 @@
 
 namespace RKW\RkwEcosystem\ViewHelpers;
 
-use \RKW\RkwBasics\Helper\Common;
+use RKW\RkwBasics\Utility\GeneralUtility as Common;
+use RKW\RkwBasics\Utility\GeneralUtility;
+use RKW\RkwCheckup\Domain\Model\Question;
 use \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
+use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
+use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -27,46 +31,54 @@ use \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
  * @package RKW_RkwEcosystem
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-class FetchFlexFormValueViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
+class FetchFlexFormValueViewHelper extends \TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 {
+
+    use CompileWithRenderStatic;
+
+
     /**
-     * A helper to return flexForm values
+     * Initialize arguments.
      *
-     * @param string $part1
-     * @param string $part2
-     * @param string $part3
-     * @param array $settings
-     * @return string|integer
+     * @throws \TYPO3Fluid\Fluid\Core\ViewHelper\Exception
      */
-    public function render($part1, $part2, $part3 = null, $settings = null)
+    public function initializeArguments()
     {
+        parent::initializeArguments();
+        $this->registerArgument('part1', 'string', 'Really, I don\'t know what\'s that for', true);
+        $this->registerArgument('part2', 'string', 'Really, I don\'t know what\'s that for', true);
+        $this->registerArgument('part3', 'string', 'Really, I don\'t know what\'s that for', false, '');
+        $this->registerArgument('settings', 'array', 'The FlexForm-array or TypoScript-array for - what ever', false, []);
+    }
+
+
+    /**
+     * @param array $arguments
+     * @param \Closure $renderChildrenClosure
+     * @param \TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface $renderingContext
+     * @return string
+     * @throws \TYPO3\CMS\Extbase\Configuration\Exception\InvalidConfigurationTypeException
+     */
+    static public function renderStatic(
+        array $arguments,
+        \Closure $renderChildrenClosure,
+        RenderingContextInterface $renderingContext
+    ): string {
+
+        $part1 = $arguments['part1'];
+        $part2 = $arguments['part2'];
+        $part3 = $arguments['part3'];
+        $settings = $arguments['settings'];
+
         if (!$settings) {
-            $settings = $this->getSettings();
+            $settings = GeneralUtility::getTyposcriptConfiguration('Rkwecosystem');
         }
 
         if ($part3) {
             $part2 = ucfirst($part2);
-
             return $settings[$part1 . $part2 . $part3];
-            //===
         }
 
         return $settings[$part1 . $part2];
-        //===
     }
-
-
-    /**
-     * Returns TYPO3 settings
-     *
-     * @param string $which Which type of settings will be loaded
-     * @return array
-     */
-    public function getSettings($which = ConfigurationManagerInterface::CONFIGURATION_TYPE_SETTINGS)
-    {
-
-        return Common::getTyposcriptConfiguration('Rkwecosystem', $which);
-        //===
-    }
-
 }

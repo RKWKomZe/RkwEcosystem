@@ -12,7 +12,10 @@ namespace RKW\RkwEcosystem\ViewHelpers;
  *
  * The TYPO3 project - inspiring people to share!
  */
-use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
+
+use TYPO3\CMS\Extbase\Persistence\Generic\QueryResult;
+use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
+use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /**
  * GetAttributeValueViewHelper
@@ -22,23 +25,43 @@ use TYPO3\CMS\Extbase\Utility\DebuggerUtility;
  * @package RKW_RkwEcosystem
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-class UsersEcosystemsViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
+class UsersEcosystemsViewHelper extends \TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 {
+
+    use CompileWithRenderStatic;
+
     /**
-     * Returns boolean, if the user has more than one persisted ecosystem (minus the currently opened)
+     * Initialize arguments.
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\Generic\QueryResult $ecosystemList
-     * @return boolean
+     * @throws \TYPO3Fluid\Fluid\Core\ViewHelper\Exception
      */
-    public function render($ecosystemList)
+    public function initializeArguments()
     {
+        parent::initializeArguments();
+        $this->registerArgument('ecosystemList', QueryResult::class, 'The QueryResult to check', true);
+    }
+
+
+    /**
+     * @param array $arguments
+     * @param \Closure $renderChildrenClosure
+     * @param RenderingContextInterface $renderingContext
+     * @return mixed
+     */
+    static public function renderStatic(
+        array $arguments,
+        \Closure $renderChildrenClosure,
+        RenderingContextInterface $renderingContext
+    ): string {
+
+        $ecosystemList = $arguments['ecosystemList'];
+
         /** @var \RKW\RkwEcosystem\Domain\Model\Ecosystem $ecosystemFromSession */
         $ecosystemFromSession = unserialize($GLOBALS['TSFE']->fe_user->getKey('ses', 'rkw_ecosystem'));
 
         // 1. if there are no items
         if (count($ecosystemList) == 0) {
             return false;
-            //===
         }
 
         // 2. if there is no opened ecosystem yet and the users ecosystemList greater than 0
@@ -47,7 +70,6 @@ class UsersEcosystemsViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\Abstrac
             && count($ecosystemList) > 0
         ) {
             return true;
-            //===
         }
 
         // 3. count if there are additional ecosystems to show
@@ -60,8 +82,5 @@ class UsersEcosystemsViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\Abstrac
         }
 
         return ($i > 0) ? true : false;
-        //===
     }
-
-
 }

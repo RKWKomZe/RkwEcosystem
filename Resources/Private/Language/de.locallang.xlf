@@ -90,11 +90,11 @@
             </trans-unit>
 			<trans-unit id="ecosystemController.message.ecosystemSaved">
 				<source>Your RKW Entrepreneurship Ecosystem Canvas has been successfully saved!</source>
-				<target>Wohoo! Ihr RKW Gründerökosystem Canvas wurde erfolgreich gespeichert!</target>
+				<target>Woohoo! Ihr RKW Gründerökosystem Canvas wurde erfolgreich gespeichert!</target>
 			</trans-unit>
 			<trans-unit id="ecosystemController.message.feedbackSent">
 				<source>Your RKW Entrepreneurship Ecosystem Canvas has been successfully sent to one of our experts!</source>
-				<target>Wohoo! Ihr RKW Gründerökosystem Canvas wurde an unsere Experten gesendet. Wir melden uns in Kürze per E-Mail bei Ihnen.</target>
+				<target>Woohoo! Ihr RKW Gründerökosystem Canvas wurde an unsere Experten gesendet. Wir melden uns in Kürze per E-Mail bei Ihnen.</target>
 			</trans-unit>
 			<trans-unit id="ecosystemController.message.deleted">
 				<source>Your RKW Entrepreneurship Ecosystem Canvas successfully deleted!</source>

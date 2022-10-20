@@ -2,8 +2,10 @@
 
 namespace RKW\RkwEcosystem\ViewHelpers;
 
-use \RKW\RkwBasics\Helper\Common;
+use RKW\RkwBasics\Utility\GeneralUtility as Common;
 use \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
+use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
+use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
 
 /*
  * This file is part of the TYPO3 CMS project.
@@ -27,17 +29,38 @@ use \TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
  * @package RKW_RkwEcosystem
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  */
-class GetAttributeValueViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper
+class GetAttributeValueViewHelper extends \TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper
 {
+
+    use CompileWithRenderStatic;
+
     /**
-     * A helper to return flexForm values
+     * Initialize arguments.
      *
-     * @param object $object
-     * @param string $attribute
+     * @throws \TYPO3Fluid\Fluid\Core\ViewHelper\Exception
+     */
+    public function initializeArguments()
+    {
+        parent::initializeArguments();
+        $this->registerArgument('object', 'object', 'Object to get attribute from', true);
+        $this->registerArgument('attribute', 'string', 'The attribute to get from the object', true);
+    }
+
+
+    /**
+     * @param array $arguments
+     * @param \Closure $renderChildrenClosure
+     * @param RenderingContextInterface $renderingContext
      * @return mixed
      */
-    public function render($object, $attribute)
-    {
+    static public function renderStatic(
+        array $arguments,
+        \Closure $renderChildrenClosure,
+        RenderingContextInterface $renderingContext
+    ): string {
+
+        $object = $arguments['object'];
+        $attribute = $arguments['attribute'];
 
         $getter = 'get' . ucfirst($attribute);
         if (
@@ -45,11 +68,9 @@ class GetAttributeValueViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\Abstr
             && (method_exists($object, $getter))
         ) {
             return $object->$getter();
-            //===
         }
 
-        return null;
-        //===
+        return '';
     }
 
 
